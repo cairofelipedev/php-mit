@@ -1,0 +1,108 @@
+.navbar {
+  padding-top: 0%;
+  padding-bottom: 0%;
+}
+
+.navbar-default img {
+  width: 15%;
+}
+
+.active {
+  color: #135c91;
+}
+
+.text-brand {
+  color: #000000;
+  font-size: 1rem;
+  font-weight: 600;
+  padding-left: 30px;
+}
+.navbar-brand {
+  margin-right: 0%;
+}
+
+.navbar-footer {
+  text-align: center;
+  background-color: white;
+  height: 80px;
+}
+
+.navbar-footer .contents {
+  padding-top: 20px;
+  color: #135c91;
+}
+
+.navbar-footer .btn-footer {
+  background-color: #135c91;
+  font-size: 16px;
+  color: white;
+}
+.navbar-footer .d-grid {
+  padding-left: 10px !important;
+}
+.card-box-c {
+  border: solid 2px #37BD3F;
+  border-radius:5px;
+}
+.btn-plan {
+  background-color:#37BD3F;
+  color:white;
+  margin:10px 0px 20px 0px;
+}
+.card-body-c {
+ background-color:#f2f2f2;
+}
+.content-c {
+  color: #000000;
+  font-weight: 600;
+  margin-bottom: 0%;
+}
+
+.bg-image {
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: contain;
+}
+
+.title-a {
+  text-decoration: none;
+  font-weight: 600;
+}
+
+@media (min-width: 767px) {
+  .intro {
+    height: 70vh;
+    position: relative;
+    color: #ffffff;
+  }
+  .bg-image {
+    background-image: url(../img/banner5.jpg)
+  }
+  .title-a {
+    font-size: 2.6rem;
+  }
+  .title-wrap {
+    display:flex;
+    justify-content: space-between;
+  }
+}
+@media (max-width: 767px) {
+  .bg-image {
+    background-image: url(../img/banner6.jpg)
+  }
+  .text-brand {
+    font-size: 1.8rem;
+  }
+  .navbar-default img {
+    width: 100%;
+  }
+  .intro {
+    height: 30vh;
+  }
+  .title-a {
+    font-size: 1.8rem;
+  }
+  .navbar-footer {
+    font-size:12px;
+  }
+}
