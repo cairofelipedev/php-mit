@@ -69,6 +69,24 @@
   font-weight: 600;
 }
 
+.carousel-pagination-oferece {
+  margin-top: 10px;
+  text-align: center;
+}
+.carousel-pagination-oferece .swiper-pagination-bullet {
+  width: 18px;
+  height: 10px;
+  background-color: #555;
+  margin: 0 4px;
+  border-radius: 0;
+  opacity: 1;
+  transition: 0.3s;
+}
+.carousel-pagination-oferece .swiper-pagination-bullet-active {
+  background-color: #135c91;
+  width: 36px;
+}
+
 @media (min-width: 767px) {
   .intro {
     height: 70vh;
