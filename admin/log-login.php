@@ -37,7 +37,7 @@ endif;
     <form action="" method="POST">
       <input type="hidden" class="form-control" type="text" name="name" value="<?php echo $_SESSION['name']; ?>" />
       <input type="hidden" class="form-control" type="text" name="type" value="login" />
-      <button id="clickButton" type="submit" name="submit" style="background-color:transparent;" value="LOG"></button>
+      <button id="clickButton" type="submit" name="submit" style="background-color:transparent;border: none;" value="LOG"></button>
     </form>
     <div class="d-flex justify-content-center">
       <div class="spinner-border" role="status">
