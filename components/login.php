@@ -10,7 +10,7 @@
         <div class="box">
           <div class="content">
             <div class="form loginBox">
-              <form action="logando.php" method="POST">
+              <form action="./admin/logando.php" method="POST">
                 <input id="login"  class="form-control mb-2" type="text" placeholder="Login" name="login" required>
                 <input id="pass" class="form-control mb-2" type="password" placeholder="Senha" name="pass" required>
                 <input class="btn btn-login" type="submit" name="ok" value="Login">

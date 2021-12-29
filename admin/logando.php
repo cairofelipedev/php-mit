@@ -16,7 +16,7 @@ if (isset($_POST['ok'])) :
 ?>
     <script>
       alert('Usuário ou senha inválidos ...');
-      window.location.href = 'login.php';
+      window.location.href = '../index.php';
     </script>
 <?php
   endif;

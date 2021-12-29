@@ -16,7 +16,7 @@ function showLoginForm(){
             $('.login-footer').fadeIn('fast');    
         });
         
-        $('.modal-title').html('Login MIT');
+        $('.modal-title').html('Login no sistema');
     });       
      $('.error').removeClass('alert alert-danger').html(''); 
 }

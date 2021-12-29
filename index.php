@@ -1,8 +1,3 @@
-<?php 
-session_start();
-require_once "./classes/conexao.php";
-require_once "./classes/logar.php";
-?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
