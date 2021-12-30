@@ -23,8 +23,6 @@ class Login extends Conexao
         return $this->pass;
     }
 
-
-
     public function logar()
     {
         $pdo = parent::getDB();
@@ -44,6 +42,7 @@ class Login extends Conexao
             $_SESSION['type'] = $dados->type;
             $_SESSION['pass'] = $dados->pass;
             $_SESSION['store'] = $dados->store;
+            $_SESSION['img'] = $dados->img;
             $_SESSION['id'] = $dados->id;
 
 
