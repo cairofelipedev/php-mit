@@ -31,7 +31,7 @@
 </head>
 
 <body>
-<?php include "components/navbar.php"; ?>
+  <?php include "components/navbar.php"; ?>
   <!-- ======= Intro Section ======= -->
   <div class="intro intro-carousel swiper position-relative">
     <div class="swiper-wrapper">
@@ -218,6 +218,28 @@
           <div class="oferece-carousel-pagination carousel-pagination-oferece"></div>
         </div>
     </section><!-- End Oferece Section -->
+    <section id="home-igbi">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="d-md-flex align-items-center justify-content-center">
+              <center><img src="./assets/img/igbi.jpg" width="150"></center>
+              <h2 class="title-a text-center">Parceiro oficial</h2>
+              <center><img src="./assets/img/logo-mit.png" class="img-fluid"></center>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6  text-center">
+            <img src="./assets/img/cashimg.png" class="img-fluid">
+          </div>
+          <div class="col-md-6">
+          <h2 class="title-a">O novo aplicativo que vai transformar sua vida e mudar a forma como você compra</h2>
+          <button class="btn btn-igbi">Saiba mais</button>
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- ======= FAQ Section ======= -->
     <section class="section-property section-t4">
       <div class="container">
@@ -239,13 +261,11 @@
         <div class="accordion accordion-flush" id="accordionFlushExample">
           <div class="accordion-item">
             <h2 class="accordion-header" id="flush-headingOne">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
                 Travamentos e lentidão na TV ou assistir videoaula no notebook.
               </button>
             </h2>
-            <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
-              data-bs-parent="#accordionFlushExample">
+            <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
               <div class="accordion-body">
                 Utilize conexões via cabo ethernet, são mais recomendadas para usuários que desejem fazer atividades que
                 requeiram uma grande taxa de transferência de dados, como videoaulas, jogar partidas online e utilizar
@@ -255,13 +275,11 @@
           </div>
           <div class="accordion-item">
             <h2 class="accordion-header" id="flush-headingTwo">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
                 Por quer a internet está lenta em meu celular?
               </button>
             </h2>
-            <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
-              data-bs-parent="#accordionFlushExample">
+            <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
               <div class="accordion-body">
                 Uma das principais causas da internet lenta no celular é quando a memória cache está muito saturada.
                 Isso acaba afetando todo sistema.
@@ -272,13 +290,11 @@
           </div>
           <div class="accordion-item">
             <h2 class="accordion-header" id="flush-headingThree">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
                 Por quer a qualidade do sinal Wifi não é a mesma em toda a residência?
               </button>
             </h2>
-            <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
-              data-bs-parent="#accordionFlushExample">
+            <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
               <div class="accordion-body">Muitos aparelhos causam interferência, como fornos de micro-ondas e telefones
                 sem fio, e evitar obstáculos e barreiras físicas também são essenciais para melhorar a qualidade do
                 sinal nos cômodos de sua residencial.
@@ -287,13 +303,11 @@
           </div>
           <div class="accordion-item">
             <h2 class="accordion-header" id="flush-headingThree">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
                 Como atualizar minhas faturas?
               </button>
             </h2>
-            <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
-              data-bs-parent="#accordionFlushExample">
+            <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
               <div class="accordion-body">
                 Desde o início de 2019, atualizar boleto vencido não é mais necessário. Nosso
                 pagamento do boleto é aceito depois do vencimento, o próprio caixa ou internet banking atualiza o valor
@@ -574,8 +588,7 @@
   </footer><!-- End  Footer -->
 
   <!-- <div id="preloader"></div> -->
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
-      class="bi bi-arrow-up-short"></i></a>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

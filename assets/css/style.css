@@ -1871,3 +1871,14 @@ footer i {
 footer .credits {
   font-size: 14px;
 }
+
+#home-igbi {
+  padding-top:30px;
+  padding-bottom:30px;
+}
+.btn-igbi {
+  background-color: #8B0EFE;
+  color:white;
+  font-weight: 700;
+  border-radius:30px;
+}
