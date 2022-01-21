@@ -56,7 +56,7 @@
         <span></span>
       </button>
       <a class="navbar-brand d-md-none" href="#">
-        <img class="igm-fluid" src="./assets/img/logo-mit.png">
+        <img class="img-fluid" src="./assets/img/logo-mit.png">
       </a>
       <div class="container d-none d-md-block">
         <a class="navbar-brand" href="#">
@@ -67,7 +67,7 @@
       </div>
       <button type="button" class="btn navbar-toggle-box navbar-toggle-box-collapse" data-bs-toggle="collapse"
         data-bs-target="#navbarTogglerDemo01">
-        <i class="bi bi-search"></i>Buscar
+        <i class="bi bi-search"></i><span class="d-none d-md-block">Buscar</span>
       </button>
     </div>
   </nav><!-- End Header/Navbar -->

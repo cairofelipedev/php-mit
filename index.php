@@ -35,7 +35,9 @@
   <!-- ======= Intro Section ======= -->
   <div class="intro intro-carousel swiper position-relative">
     <div class="swiper-wrapper">
-      <div class="swiper-slide carousel-item-a intro-item bg-image">
+      <div class="swiper-slide carousel-item-a intro-item">
+        <img class="img-fluid d-none d-md-block" src="./assets/img/banner5.jpg">
+        <img class="img-fluid d-block d-md-none" src="./assets/img/banner6.jpg">
       </div>
     </div>
     <div class="swiper-pagination"></div>
