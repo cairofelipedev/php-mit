@@ -11,11 +11,11 @@ error_reporting(~E_ALL);
 
 if (isset($_GET['delete_id'])) {
   // it will delete an actual record from db
-  $stmt_delete = $DB_con->prepare('DELETE FROM plans WHERE id =:uid');
+  $stmt_delete = $DB_con->prepare('DELETE FROM banners WHERE id =:uid');
   $stmt_delete->bindParam(':uid', $_GET['delete_id']);
   $stmt_delete->execute();
 
-  header("Location: painel-plans.php");
+  header("Location: painel-banners.php");
 }
 
 ?>
@@ -67,8 +67,8 @@ if (isset($_GET['delete_id'])) {
             <li class="breadcrumb-item active">Planos</li>
           </ol>
         </nav>
-        <a href="add-plano.php">
-          <button type="submit" name="btnsave" class="btn btn-primary"><i class="bi bi-plus-circle-fill"></i> Adicionar Plano</button>
+        <a href="add-banner.php">
+          <button type="submit" name="btnsave" class="btn btn-primary"><i class="bi bi-plus-circle-fill"></i> Adicionar Banner</button>
         </a>
       </div>
     </div><!-- End Page Title -->
@@ -76,7 +76,7 @@ if (isset($_GET['delete_id'])) {
     <section class="section">
       <div class="row">
         <?php
-        $stmt = $DB_con->prepare('SELECT id, speed, data_create FROM plans ORDER BY id DESC');
+        $stmt = $DB_con->prepare('SELECT id, nome, img FROM banners ORDER BY id DESC');
         $stmt->execute();
         if ($stmt->rowCount() > 0) {
           while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
@@ -85,12 +85,15 @@ if (isset($_GET['delete_id'])) {
 
             <div class="col-lg-2">
               <div class="card">
+                <img class="img-fluid" src="./uploads/banners/<?php echo $row['img']; ?>">
                 <div class="card-body">
-                  <h5 class="card-title text-center">PLANO <?php echo $speed; ?> MEGAS</h5>
+                  <h5 class="card-title text-center"><?php echo $nome; ?></h5>
                   <div class="d-flex justify-content-center">
                     <div>
-                      <button type="button" class="btn btn-success">Editar</button>
-                      <button type="button" class="btn btn-danger">Excluir</button>
+                      <!-- <button type="button" class="btn btn-success">Editar</button> -->
+                      <a href="?delete_id=<?php echo $row['id']; ?>">
+                        <button type="button" class="btn btn-danger">Excluir</button>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -100,9 +103,9 @@ if (isset($_GET['delete_id'])) {
           }
         } else {
           ?>
-          <div class="bg-yellow-500 px-4 py-4 rounded">
+          <div>
             <div>
-              <p class="text-blueGray-600 font-bold">Sem plano cadastrado ...</p>
+              <p  class="alert alert-warning">Sem banner cadastrado ...</p>
             </div>
           </div>
         <?php

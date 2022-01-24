@@ -4,13 +4,13 @@
     <ul class="sidebar-nav" id="sidebar-nav">
 
       <li class="nav-item">
-        <a class="nav-link " href="index.html">
+        <a class="nav-link " href="index.php">
           <i class="bi bi-grid"></i>
           <span>Painel Administrativo</span>
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link collapsed" href="pages-blank.html">
+        <a class="nav-link collapsed" href="painel-planos.php">
           <i class="bi bi-bag-fill"></i>
           <span>Planos</span>
         </a>
