@@ -83,7 +83,7 @@ if (isset($_GET['delete_id'])) {
             extract($row);
         ?>
 
-            <div class="col-lg-2">
+            <div class="col-lg-4">
               <div class="card">
                 <img class="img-fluid" src="./uploads/banners/<?php echo $row['img']; ?>">
                 <div class="card-body">

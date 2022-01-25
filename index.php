@@ -1,3 +1,6 @@
+<?php
+require_once './admin/dbconfig.php';
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -35,10 +38,21 @@
   <!-- ======= Intro Section ======= -->
   <div class="intro intro-carousel swiper position-relative">
     <div class="swiper-wrapper">
-      <div class="swiper-slide carousel-item-a intro-item">
-        <img class="img-fluid d-none d-md-block" src="./assets/img/banner5.jpg">
-        <img class="img-fluid d-block d-md-none" src="./assets/img/banner6.jpg">
-      </div>
+      <?php
+      $stmt = $DB_con->prepare('SELECT id, nome, img FROM banners ORDER BY id DESC');
+      $stmt->execute();
+      if ($stmt->rowCount() > 0) {
+        while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+          extract($row);
+      ?>
+          <div class="swiper-slide carousel-item-a intro-item">
+            <img class="img-fluid d-none d-md-block" src="./admin/uploads/banners/<?php echo $row['img']; ?>">
+            <img class="img-fluid d-block d-md-none" src="./admin/uploads/banners/<?php echo $row['img']; ?>">
+          </div>
+      <?php
+        }
+      }
+      ?>
     </div>
     <div class="swiper-pagination"></div>
   </div><!-- End Intro Section -->
@@ -236,8 +250,8 @@
             <img src="./assets/img/cashimg.png" class="img-fluid">
           </div>
           <div class="col-md-6">
-          <h2 class="title-a">O novo aplicativo que vai transformar sua vida e mudar a forma como você compra</h2>
-          <button class="btn btn-igbi">Saiba mais</button>
+            <h2 class="title-a">O novo aplicativo que vai transformar sua vida e mudar a forma como você compra</h2>
+            <button class="btn btn-igbi">Saiba mais</button>
           </div>
         </div>
       </div>
