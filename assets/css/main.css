@@ -303,6 +303,21 @@
     color:  #00A4E4;
 }
 
+.custom-select {
+  border-radius: 0;
+  width: 200px;
+  border-color: #313131;
+}
+.custom-select:hover,
+ .custom-select:active,
+ .custom-select:focus {
+  border-color: #313131;
+}
+ .custom-select option {
+  border-color: #313131;
+}
+
+
 @media (min-width: 767px) {
   .intro {
     height: 70vh;

@@ -72,6 +72,16 @@ require_once './admin/dbconfig.php';
                   aplicativos preferidos.
                 </p>
               </div>
+              <div class="title-link">
+                <form action="#">
+                  <select class="custom-select" name="SelectOptions" id="SelectOptions" required>
+                    <option value="">Escolha sua cidade</option>
+                    <option value="Div1">Div 1</option>
+                    <option value="Div2">Div 2</option>
+                    <option value="Div3">Div 3</option>
+                  </select>
+                </form>
+              </div>
             </div>
           </div>
         </div>
