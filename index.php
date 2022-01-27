@@ -68,8 +68,7 @@ require_once './admin/dbconfig.php';
               <div class="title-box">
                 <h2 class="title-a">Confira nossos planos</h2>
                 <p>
-                  Soluções completas para você e sua casa: banda larga com ultravelocidade acompanhada com seus
-                  aplicativos preferidos.
+                  Soluções para sua casa ou empresa com o melhor custo benefício e vantagens exclusivas.
                 </p>
               </div>
               <div class="title-link">
@@ -86,129 +85,63 @@ require_once './admin/dbconfig.php';
           </div>
         </div>
         <div class="row">
-          <div class="col-md-4">
-            <div class="card-box-c">
-              <h2 class="title-c pt-2">300 MEGAS</h2>
-              <div class="row justify-content-center">
-                <div class="col-5 text-center">
-                  <i class="bi bi-wifi"></i> Wifi Super
-                </div>
-                <div class="col-5 text-center">
-                  <i class="bi bi-bank2"></i> MIT Bank
-                </div>
-                <div class="col-5 text-center">
-                  <i class="bi bi-share-fill"></i> Procotolo2
-                </div>
-                <div class="col-5 text-center">
-                  <i class="bi bi-phone-fill"></i> App MIT
-                </div>
-              </div>
-              <div class="d-grid gap-2 container">
-                <button class="btn btn-plan" type="button">FALE COM UM CONSULTOR</button>
-              </div>
-              <div class="card-body-c pt-2 pb-2">
-                <div class="container">
-                  <p class="content-c">
-                    Assinatura Netflix + GloboPlay
-                  </p>
-                  <p class="content-c2">Séries originais e exclusivas, filmes, infantis, novelas e programas.</p>
-                  <div class="row pb-3">
-                    <div class="col-2">
-                      <img class="img-fluid" src="assets/img/app-netflix-252x252.png">
+          <?php
+          $stmt = $DB_con->prepare('SELECT id, speed FROM plans ORDER BY id DESC');
+          $stmt->execute();
+          if ($stmt->rowCount() > 0) {
+            while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+              extract($row);
+          ?>
+              <div class="col-md-4">
+                <div class="card-box-c">
+                  <h2 class="title-c pt-2"><?php echo $speed; ?> MEGAS</h2>
+                  <div class="row justify-content-center">
+                    <div class="col-5 text-center">
+                      <i class="bi bi-wifi"></i> Conexão Estável
                     </div>
-                    <div class="col-2">
-                      <img class="img-fluid" src="assets/img/app-globo-play-252x252.png">
+                    <div class="col-5 text-center">
+                      <i class="bi bi-bank2"></i> MIT Star
+                    </div>
+                    <div class="col-5 text-center">
+                      <i class="bi bi-share-fill"></i> CashBack
+                    </div>
+                    <div class="col-5 text-center">
+                      <i class="bi bi-phone-fill"></i> App Minha MIT
                     </div>
                   </div>
-                  <a href="#" class="link-c link-icon pt-3">Mais informações
-                    <span class="bi bi-chevron-right"></span>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card-box-c">
-              <h2 class="title-c pt-2">400 MEGAS</h2>
-              <div class="row justify-content-center">
-                <div class="col-5 text-center">
-                  <i class="bi bi-wifi"></i> Wifi Super
-                </div>
-                <div class="col-5 text-center">
-                  <i class="bi bi-bank2"></i> MIT Bank
-                </div>
-                <div class="col-5 text-center">
-                  <i class="bi bi-share-fill"></i> Procotolo2
-                </div>
-                <div class="col-5 text-center">
-                  <i class="bi bi-phone-fill"></i> App MIT
-                </div>
-              </div>
-              <div class="d-grid gap-2 container">
-                <button class="btn btn-plan" type="button">FALE COM UM CONSULTOR</button>
-              </div>
-              <div class="card-body-c pt-2 pb-2">
-                <div class="container">
-                  <p class="content-c">
-                    Assinatura Netflix + GloboPlay
-                  </p>
-                  <p class="content-c2">Séries originais e exclusivas, filmes, infantis, novelas e programas.</p>
-                  <div class="row pb-3">
-                    <div class="col-2">
-                      <img class="img-fluid" src="assets/img/app-netflix-252x252.png">
-                    </div>
-                    <div class="col-2">
-                      <img class="img-fluid" src="assets/img/app-globo-play-252x252.png">
-                    </div>
+                  <div class="d-grid gap-2 container">
+                    <button class="btn btn-plan" type="button">FALE COM UM CONSULTOR</button>
                   </div>
-                  <a href="#" class="link-c link-icon pt-3">Mais informações
-                    <span class="bi bi-chevron-right"></span>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card-box-c">
-              <h2 class="title-c pt-2">500 MEGAS</h2>
-              <div class="row justify-content-center">
-                <div class="col-5 text-center">
-                  <i class="bi bi-wifi"></i> Wifi Super
-                </div>
-                <div class="col-5 text-center">
-                  <i class="bi bi-bank2"></i> MIT Bank
-                </div>
-                <div class="col-5 text-center">
-                  <i class="bi bi-share-fill"></i> Procotolo2
-                </div>
-                <div class="col-5 text-center">
-                  <i class="bi bi-phone-fill"></i> App MIT
-                </div>
-              </div>
-              <div class="d-grid gap-2 container">
-                <button class="btn btn-plan" type="button">FALE COM UM CONSULTOR</button>
-              </div>
-              <div class="card-body-c pt-2 pb-2">
-                <div class="container">
-                  <p class="content-c">
-                    Assinatura Netflix + GloboPlay
-                  </p>
-                  <p class="content-c2">Séries originais e exclusivas, filmes, infantis, novelas e programas.</p>
-                  <div class="row pb-3">
-                    <div class="col-2">
-                      <img class="img-fluid" src="assets/img/app-netflix-252x252.png">
-                    </div>
-                    <div class="col-2">
-                      <img class="img-fluid" src="assets/img/app-globo-play-252x252.png">
-                    </div>
+                  <div class="card-body-c pt-2 pb-2">
+                    <?php if ($speed == '400') { ?>
+                      <div class="container">
+                        <p class="content-c">
+                          Assinatura Netflix ou GloboPlay
+                        </p>
+                        <p class="content-c2">Séries originais e exclusivas, filmes, infantis, novelas e programas.</p>
+                        <div class="row pb-3 align-items-center">
+                          <div class="col-2">
+                            <img class="img-fluid" src="assets/img/app-netflix-252x252.png">
+                          </div>
+                          <div class="col-1">
+                            ou
+                          </div>
+                          <div class="col-2">
+                            <img class="img-fluid" src="assets/img/app-globo-play-252x252.png">
+                          </div>
+                        </div>
+                        <a href="#" class="link-c link-icon pt-3">Mais informações
+                          <span class="bi bi-chevron-right"></span>
+                        </a>
+                      </div>
+                    <?php } ?>
                   </div>
-                  <a href="#" class="link-c link-icon pt-3">Mais informações
-                    <span class="bi bi-chevron-right"></span>
-                  </a>
                 </div>
               </div>
-            </div>
-          </div>
+          <?php
+            }
+          }
+          ?>
         </div>
       </div>
     </section><!-- End Oferece Section -->

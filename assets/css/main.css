@@ -63,7 +63,6 @@
 
 .title-a {
   text-decoration: none;
-  font-weight: 600;
 }
 
 .carousel-pagination-oferece {
@@ -304,8 +303,8 @@
 }
 
 .custom-select {
-  border-radius: 0;
-  width: 200px;
+  border-radius: 5px;
+  width: 300px;
   border-color: #313131;
 }
 .custom-select:hover,
