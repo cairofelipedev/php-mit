@@ -31,6 +31,12 @@ require_once './admin/dbconfig.php';
   <!-- Template Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
   <link href="assets/css/style.css" rel="stylesheet">
+  <style>
+    .Div2,
+    .Div3 {
+      display: none;
+    }
+  </style>
 </head>
 
 <body>
@@ -60,7 +66,7 @@ require_once './admin/dbconfig.php';
   <main id="main">
 
     <!-- ======= Services Section ======= -->
-    <section class="section-services section-t3">
+    <section class="section-services pt-md-3">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
@@ -73,75 +79,108 @@ require_once './admin/dbconfig.php';
               </div>
               <div class="title-link">
                 <form action="#">
-                  <select class="custom-select" name="SelectOptions" id="SelectOptions" required>
-                    <option value="">Escolha sua cidade</option>
-                    <option value="teresina">Teresina</option>
-                    <option value="demerval">Demerval</option>
-                    <option value="Div3">Lagoa PI</option>
+                  <select name="SelectOptions" id="SelectOptions" required>
+                    <option value="Div1">Teresina</option>
+                    <option value="Div2">Div 2</option>
+                    <option value="Div3">Div 3</option>
                   </select>
                 </form>
               </div>
             </div>
           </div>
         </div>
-        <div class="row">
-          <?php
-          $stmt = $DB_con->prepare('SELECT id, speed FROM plans ORDER BY id DESC');
-          $stmt->execute();
-          if ($stmt->rowCount() > 0) {
-            while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-              extract($row);
-          ?>
-              <div class="col-md-4">
-                <div class="card-box-c">
-                  <h2 class="title-c pt-2"><?php echo $speed; ?> MEGAS</h2>
-                  <div class="row justify-content-center">
-                    <div class="col-5 text-center">
-                      <i class="bi bi-wifi"></i> Conexão Estável
-                    </div>
-                    <div class="col-5 text-center">
-                      <i class="bi bi-bank2"></i> MIT Star
-                    </div>
-                    <div class="col-5 text-center">
-                      <i class="bi bi-share-fill"></i> CashBack
-                    </div>
-                    <div class="col-5 text-center">
-                      <i class="bi bi-phone-fill"></i> App Minha MIT
-                    </div>
-                  </div>
-                  <div class="d-grid gap-2 container">
-                    <button class="btn btn-plan" type="button">FALE COM UM CONSULTOR</button>
-                  </div>
-                  <div class="card-body-c pt-2 pb-2">
-                    <?php if ($speed == '400') { ?>
-                      <div class="container">
-                        <p class="content-c">
-                          Assinatura Netflix ou GloboPlay
-                        </p>
-                        <p class="content-c2">Séries originais e exclusivas, filmes, infantis, novelas e programas.</p>
-                        <div class="row pb-3 align-items-center">
-                          <div class="col-2">
-                            <img class="img-fluid" src="assets/img/app-netflix-252x252.png">
-                          </div>
-                          <div class="col-1">
-                            ou
-                          </div>
-                          <div class="col-2">
-                            <img class="img-fluid" src="assets/img/app-globo-play-252x252.png">
-                          </div>
+        <div class="DivPai">
+          <div class="Div1">
+            <div class="row">
+              <?php
+              $stmt = $DB_con->prepare('SELECT id, speed FROM plans ORDER BY id DESC');
+              $stmt->execute();
+              if ($stmt->rowCount() > 0) {
+                while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+                  extract($row);
+              ?>
+                  <div class="col-md-4">
+                    <div class="card-box-c">
+                      <h2 class="title-c pt-2"><?php echo $speed; ?> MEGAS</h2>
+                      <div class="row justify-content-center">
+                        <div class="col-5 text-center">
+                          <i class="bi bi-wifi"></i> Conexão Estável
                         </div>
-                        <a href="#" class="link-c link-icon pt-3">Mais informações
-                          <span class="bi bi-chevron-right"></span>
-                        </a>
+                        <div class="col-5 text-center">
+                          <i class="bi bi-bank2"></i> MIT Star
+                        </div>
+                        <div class="col-5 text-center">
+                          <i class="bi bi-share-fill"></i> CashBack
+                        </div>
+                        <div class="col-5 text-center">
+                          <i class="bi bi-phone-fill"></i> App Minha MIT
+                        </div>
                       </div>
-                    <?php } ?>
+                      <div class="d-grid gap-2 container">
+                        <button class="btn btn-plan" type="button">FALE COM UM CONSULTOR</button>
+                      </div>
+                      <div class="card-body-c pt-2 pb-2">
+                      <?php if ($speed == '500') { ?>
+                          <div class="container">
+                            <p class="content-c">
+                              Telefone Digital ou Amazon Prime
+                            </p>
+                            <p class="content-c2">Telefone digital ou Séries originais e exclusivas, filmes, novelas e programas.</p>
+                            <div class="row pb-3 align-items-center">
+                              <div class="col-2">
+                              <i class="bi bi-phone-fill" style="font-size:30px;"></i>
+                              </div>
+                              <div class="col-1">
+                                ou
+                              </div>
+                              <div class="col-2">
+                                <img class="img-fluid" src="assets/img/app-globo-play-252x252.png">
+                              </div>
+                            </div>
+                            <a href="#" class="link-c link-icon pt-3">Mais informações
+                              <span class="bi bi-chevron-right"></span>
+                            </a>
+                          </div>
+                        <?php } ?>
+                        <?php if ($speed == '400') { ?>
+                          <div class="container">
+                            <p class="content-c">
+                              Assinatura Netflix ou GloboPlay
+                            </p>
+                            <p class="content-c2">Séries originais e exclusivas, filmes, novelas e programas.</p>
+                            <div class="row pb-3 align-items-center">
+                              <div class="col-2">
+                                <img class="img-fluid" src="assets/img/app-netflix-252x252.png">
+                              </div>
+                              <div class="col-1">
+                                ou
+                              </div>
+                              <div class="col-2">
+                                <img class="img-fluid" src="assets/img/amazon.png">
+                              </div>
+                            </div>
+                            <a href="#" class="link-c link-icon pt-3">Mais informações
+                              <span class="bi bi-chevron-right"></span>
+                            </a>
+                          </div>
+                        <?php } ?>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-          <?php
-            }
-          }
-          ?>
+              <?php
+                }
+              }
+              ?>
+            </div>
+          </div>
+
+          <div class="Div2">
+            <img src="Images/Farol.jpg" alt="Foto">
+          </div>
+
+          <div class="Div3">
+            Outro texto
+          </div>
         </div>
       </div>
     </section><!-- End Oferece Section -->
@@ -558,7 +597,16 @@ require_once './admin/dbconfig.php';
   <script src="assets/js/main.js"></script>
   <script src="assets/js/jquery-1.10.2.js" type="text/javascript"></script>
   <script src="assets/js/login-register.js" type="text/javascript"></script>
-
+  <script>
+    $(document).ready(function() {
+      //Select para mostrar e esconder divs
+      $('#SelectOptions').on('change', function() {
+        var SelectValue = '.' + $(this).val();
+        $('.DivPai .Div1').hide();
+        $(SelectValue).toggle();
+      });
+    });
+  </script>
 </body>
 
 </html>
