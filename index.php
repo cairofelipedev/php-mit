@@ -33,7 +33,8 @@ require_once './admin/dbconfig.php';
   <link href="assets/css/style.css" rel="stylesheet">
   <style>
     .Div2,
-    .Div3 {
+    .Div3,
+    .Div4 {
       display: none;
     }
   </style>
@@ -66,7 +67,7 @@ require_once './admin/dbconfig.php';
   <main id="main">
 
     <!-- ======= Services Section ======= -->
-    <section class="section-services pt-md-3">
+    <section id="plans" class="section-services pt-md-3">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
@@ -81,8 +82,9 @@ require_once './admin/dbconfig.php';
                 <form action="#">
                   <select name="SelectOptions" id="SelectOptions" required>
                     <option value="Div1">Teresina</option>
-                    <option value="Div2">Div 2</option>
-                    <option value="Div3">Div 3</option>
+                    <option value="Div2">Demerval</option>
+                    <option value="Div3">Lagoa PI</option>
+                    <option value="Div4">Monsenhor</option>
                   </select>
                 </form>
               </div>
@@ -93,7 +95,7 @@ require_once './admin/dbconfig.php';
           <div class="Div1">
             <div class="row">
               <?php
-              $stmt = $DB_con->prepare('SELECT id, speed FROM plans ORDER BY id DESC');
+              $stmt = $DB_con->prepare('SELECT id, speed FROM plans where city="teresina" ORDER BY id DESC');
               $stmt->execute();
               if ($stmt->rowCount() > 0) {
                 while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
@@ -120,7 +122,29 @@ require_once './admin/dbconfig.php';
                         <button class="btn btn-plan" type="button">FALE COM UM CONSULTOR</button>
                       </div>
                       <div class="card-body-c pt-2 pb-2">
-                      <?php if ($speed == '500') { ?>
+                        <?php if ($speed == '600') { ?>
+                          <div class="container">
+                            <p class="content-c">
+                              Dezzer ou Netflix
+                            </p>
+                            <p class="content-c2">Muita música ou Séries originais e exclusivas, filmes, novelas e programas.</p>
+                            <div class="row pb-3 align-items-center">
+                              <div class="col-2">
+                                <img class="img-fluid" src="assets/img/dezzer.jpg">
+                              </div>
+                              <div class="col-1">
+                                ou
+                              </div>
+                              <div class="col-2">
+                                <img class="img-fluid" src="assets/img/app-netflix-252x252.png">
+                              </div>
+                            </div>
+                            <a href="#" class="link-c link-icon pt-3">Mais informações
+                              <span class="bi bi-chevron-right"></span>
+                            </a>
+                          </div>
+                        <?php } ?>
+                        <?php if ($speed == '500') { ?>
                           <div class="container">
                             <p class="content-c">
                               Telefone Digital ou Amazon Prime
@@ -128,7 +152,7 @@ require_once './admin/dbconfig.php';
                             <p class="content-c2">Telefone digital ou Séries originais e exclusivas, filmes, novelas e programas.</p>
                             <div class="row pb-3 align-items-center">
                               <div class="col-2">
-                              <i class="bi bi-phone-fill" style="font-size:30px;"></i>
+                                <i class="bi bi-phone-fill" style="font-size:30px;"></i>
                               </div>
                               <div class="col-1">
                                 ou
@@ -175,11 +199,320 @@ require_once './admin/dbconfig.php';
           </div>
 
           <div class="Div2">
-            <img src="Images/Farol.jpg" alt="Foto">
+            <div class="row">
+              <?php
+              $stmt = $DB_con->prepare('SELECT id, speed FROM plans where city="demerval" ORDER BY id DESC');
+              $stmt->execute();
+              if ($stmt->rowCount() > 0) {
+                while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+                  extract($row);
+              ?>
+                  <div class="col-md-4">
+                    <div class="card-box-c">
+                      <h2 class="title-c pt-2"><?php echo $speed; ?> MEGAS</h2>
+                      <div class="row justify-content-center">
+                        <div class="col-5 text-center">
+                          <i class="bi bi-wifi"></i> Conexão Estável
+                        </div>
+                        <div class="col-5 text-center">
+                          <i class="bi bi-bank2"></i> MIT Star
+                        </div>
+                        <div class="col-5 text-center">
+                          <i class="bi bi-share-fill"></i> CashBack
+                        </div>
+                        <div class="col-5 text-center">
+                          <i class="bi bi-phone-fill"></i> App Minha MIT
+                        </div>
+                      </div>
+                      <div class="d-grid gap-2 container">
+                        <button class="btn btn-plan" type="button">FALE COM UM CONSULTOR</button>
+                      </div>
+                      <div class="card-body-c pt-2 pb-2">
+                        <?php if ($speed == '600') { ?>
+                          <div class="container">
+                            <p class="content-c">
+                              Dezzer ou Netflix
+                            </p>
+                            <p class="content-c2">Muita música ou Séries originais e exclusivas, filmes, novelas e programas.</p>
+                            <div class="row pb-3 align-items-center">
+                              <div class="col-2">
+                                <img class="img-fluid" src="assets/img/dezzer.jpg">
+                              </div>
+                              <div class="col-1">
+                                ou
+                              </div>
+                              <div class="col-2">
+                                <img class="img-fluid" src="assets/img/app-netflix-252x252.png">
+                              </div>
+                            </div>
+                            <a href="#" class="link-c link-icon pt-3">Mais informações
+                              <span class="bi bi-chevron-right"></span>
+                            </a>
+                          </div>
+                        <?php } ?>
+                        <?php if ($speed == '500') { ?>
+                          <div class="container">
+                            <p class="content-c">
+                              Telefone Digital ou Amazon Prime
+                            </p>
+                            <p class="content-c2">Telefone digital ou Séries originais e exclusivas, filmes, novelas e programas.</p>
+                            <div class="row pb-3 align-items-center">
+                              <div class="col-2">
+                                <i class="bi bi-phone-fill" style="font-size:30px;"></i>
+                              </div>
+                              <div class="col-1">
+                                ou
+                              </div>
+                              <div class="col-2">
+                                <img class="img-fluid" src="assets/img/app-globo-play-252x252.png">
+                              </div>
+                            </div>
+                            <a href="#" class="link-c link-icon pt-3">Mais informações
+                              <span class="bi bi-chevron-right"></span>
+                            </a>
+                          </div>
+                        <?php } ?>
+                        <?php if ($speed == '400') { ?>
+                          <div class="container">
+                            <p class="content-c">
+                              Assinatura Netflix ou GloboPlay
+                            </p>
+                            <p class="content-c2">Séries originais e exclusivas, filmes, novelas e programas.</p>
+                            <div class="row pb-3 align-items-center">
+                              <div class="col-2">
+                                <img class="img-fluid" src="assets/img/app-netflix-252x252.png">
+                              </div>
+                              <div class="col-1">
+                                ou
+                              </div>
+                              <div class="col-2">
+                                <img class="img-fluid" src="assets/img/amazon.png">
+                              </div>
+                            </div>
+                            <a href="#" class="link-c link-icon pt-3">Mais informações
+                              <span class="bi bi-chevron-right"></span>
+                            </a>
+                          </div>
+                        <?php } ?>
+                      </div>
+                    </div>
+                  </div>
+              <?php
+                }
+              }
+              ?>
+            </div>
           </div>
 
           <div class="Div3">
-            Outro texto
+            <div class="row">
+              <?php
+              $stmt = $DB_con->prepare('SELECT id, speed FROM plans where city="lagoa" ORDER BY id DESC');
+              $stmt->execute();
+              if ($stmt->rowCount() > 0) {
+                while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+                  extract($row);
+              ?>
+                  <div class="col-md-4">
+                    <div class="card-box-c">
+                      <h2 class="title-c pt-2"><?php echo $speed; ?> MEGAS</h2>
+                      <div class="row justify-content-center">
+                        <div class="col-5 text-center">
+                          <i class="bi bi-wifi"></i> Conexão Estável
+                        </div>
+                        <div class="col-5 text-center">
+                          <i class="bi bi-bank2"></i> MIT Star
+                        </div>
+                        <div class="col-5 text-center">
+                          <i class="bi bi-share-fill"></i> CashBack
+                        </div>
+                        <div class="col-5 text-center">
+                          <i class="bi bi-phone-fill"></i> App Minha MIT
+                        </div>
+                      </div>
+                      <div class="d-grid gap-2 container">
+                        <button class="btn btn-plan" type="button">FALE COM UM CONSULTOR</button>
+                      </div>
+                      <div class="card-body-c pt-2 pb-2">
+                        <?php if ($speed == '600') { ?>
+                          <div class="container">
+                            <p class="content-c">
+                              Dezzer ou Netflix
+                            </p>
+                            <p class="content-c2">Muita música ou Séries originais e exclusivas, filmes, novelas e programas.</p>
+                            <div class="row pb-3 align-items-center">
+                              <div class="col-2">
+                                <img class="img-fluid" src="assets/img/dezzer.jpg">
+                              </div>
+                              <div class="col-1">
+                                ou
+                              </div>
+                              <div class="col-2">
+                                <img class="img-fluid" src="assets/img/app-netflix-252x252.png">
+                              </div>
+                            </div>
+                            <a href="#" class="link-c link-icon pt-3">Mais informações
+                              <span class="bi bi-chevron-right"></span>
+                            </a>
+                          </div>
+                        <?php } ?>
+                        <?php if ($speed == '500') { ?>
+                          <div class="container">
+                            <p class="content-c">
+                              Telefone Digital ou Amazon Prime
+                            </p>
+                            <p class="content-c2">Telefone digital ou Séries originais e exclusivas, filmes, novelas e programas.</p>
+                            <div class="row pb-3 align-items-center">
+                              <div class="col-2">
+                                <i class="bi bi-phone-fill" style="font-size:30px;"></i>
+                              </div>
+                              <div class="col-1">
+                                ou
+                              </div>
+                              <div class="col-2">
+                                <img class="img-fluid" src="assets/img/app-globo-play-252x252.png">
+                              </div>
+                            </div>
+                            <a href="#" class="link-c link-icon pt-3">Mais informações
+                              <span class="bi bi-chevron-right"></span>
+                            </a>
+                          </div>
+                        <?php } ?>
+                        <?php if ($speed == '400') { ?>
+                          <div class="container">
+                            <p class="content-c">
+                              Assinatura Netflix ou GloboPlay
+                            </p>
+                            <p class="content-c2">Séries originais e exclusivas, filmes, novelas e programas.</p>
+                            <div class="row pb-3 align-items-center">
+                              <div class="col-2">
+                                <img class="img-fluid" src="assets/img/app-netflix-252x252.png">
+                              </div>
+                              <div class="col-1">
+                                ou
+                              </div>
+                              <div class="col-2">
+                                <img class="img-fluid" src="assets/img/amazon.png">
+                              </div>
+                            </div>
+                            <a href="#" class="link-c link-icon pt-3">Mais informações
+                              <span class="bi bi-chevron-right"></span>
+                            </a>
+                          </div>
+                        <?php } ?>
+                      </div>
+                    </div>
+                  </div>
+              <?php
+                }
+              }
+              ?>
+            </div>
+          </div>
+          <div class="Div4">
+            <div class="row">
+              <?php
+              $stmt = $DB_con->prepare('SELECT id, speed FROM plans where city="monsenhor" ORDER BY id DESC');
+              $stmt->execute();
+              if ($stmt->rowCount() > 0) {
+                while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+                  extract($row);
+              ?>
+                  <div class="col-md-4">
+                    <div class="card-box-c">
+                      <h2 class="title-c pt-2"><?php echo $speed; ?> MEGAS</h2>
+                      <div class="row justify-content-center">
+                        <div class="col-5 text-center">
+                          <i class="bi bi-wifi"></i> Conexão Estável
+                        </div>
+                        <div class="col-5 text-center">
+                          <i class="bi bi-bank2"></i> MIT Star
+                        </div>
+                        <div class="col-5 text-center">
+                          <i class="bi bi-share-fill"></i> CashBack
+                        </div>
+                        <div class="col-5 text-center">
+                          <i class="bi bi-phone-fill"></i> App Minha MIT
+                        </div>
+                      </div>
+                      <div class="d-grid gap-2 container">
+                        <button class="btn btn-plan" type="button">FALE COM UM CONSULTOR</button>
+                      </div>
+                      <div class="card-body-c pt-2 pb-2">
+                        <?php if ($speed == '600') { ?>
+                          <div class="container">
+                            <p class="content-c">
+                              Dezzer ou Netflix
+                            </p>
+                            <p class="content-c2">Muita música ou Séries originais e exclusivas, filmes, novelas e programas.</p>
+                            <div class="row pb-3 align-items-center">
+                              <div class="col-2">
+                                <img class="img-fluid" src="assets/img/dezzer.jpg">
+                              </div>
+                              <div class="col-1">
+                                ou
+                              </div>
+                              <div class="col-2">
+                                <img class="img-fluid" src="assets/img/app-netflix-252x252.png">
+                              </div>
+                            </div>
+                            <a href="#" class="link-c link-icon pt-3">Mais informações
+                              <span class="bi bi-chevron-right"></span>
+                            </a>
+                          </div>
+                        <?php } ?>
+                        <?php if ($speed == '500') { ?>
+                          <div class="container">
+                            <p class="content-c">
+                              Telefone Digital ou Amazon Prime
+                            </p>
+                            <p class="content-c2">Telefone digital ou Séries originais e exclusivas, filmes, novelas e programas.</p>
+                            <div class="row pb-3 align-items-center">
+                              <div class="col-2">
+                                <i class="bi bi-phone-fill" style="font-size:30px;"></i>
+                              </div>
+                              <div class="col-1">
+                                ou
+                              </div>
+                              <div class="col-2">
+                                <img class="img-fluid" src="assets/img/app-globo-play-252x252.png">
+                              </div>
+                            </div>
+                            <a href="#" class="link-c link-icon pt-3">Mais informações
+                              <span class="bi bi-chevron-right"></span>
+                            </a>
+                          </div>
+                        <?php } ?>
+                        <?php if ($speed == '400') { ?>
+                          <div class="container">
+                            <p class="content-c">
+                              Assinatura Netflix ou GloboPlay
+                            </p>
+                            <p class="content-c2">Séries originais e exclusivas, filmes, novelas e programas.</p>
+                            <div class="row pb-3 align-items-center">
+                              <div class="col-2">
+                                <img class="img-fluid" src="assets/img/app-netflix-252x252.png">
+                              </div>
+                              <div class="col-1">
+                                ou
+                              </div>
+                              <div class="col-2">
+                                <img class="img-fluid" src="assets/img/amazon.png">
+                              </div>
+                            </div>
+                            <a href="#" class="link-c link-icon pt-3">Mais informações
+                              <span class="bi bi-chevron-right"></span>
+                            </a>
+                          </div>
+                        <?php } ?>
+                      </div>
+                    </div>
+                  </div>
+              <?php
+                }
+              }
+              ?>
+            </div>
           </div>
         </div>
       </div>
@@ -197,9 +530,6 @@ require_once './admin/dbconfig.php';
         </div>
         <div id="oferece-carousel" class="swiper">
           <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <img class="img-fluid" src="assets/img/1.png">
-            </div>
             <div class="swiper-slide">
               <img class="img-fluid" src="assets/img/2.png">
             </div>
@@ -233,7 +563,9 @@ require_once './admin/dbconfig.php';
           </div>
           <div class="col-md-6">
             <h2 class="title-a">O novo aplicativo que vai transformar sua vida e mudar a forma como você compra</h2>
-            <button class="btn btn-igbi">Saiba mais</button>
+            <a href="igbi.php">
+              <button class="btn btn-igbi">Saiba mais</button>
+            </a>
           </div>
         </div>
       </div>
@@ -500,19 +832,19 @@ require_once './admin/dbconfig.php';
             <div class="w-body-a">
               <ul class="list-unstyled">
                 <li class="item-list-a">
-                  <i class="bi bi-chevron-right"></i> <a href="#">Teresina</a>
+                  <i class="bi bi-chevron-right"></i> <a href="#plans">Teresina</a>
                 </li>
                 <li class="item-list-a">
-                  <i class="bi bi-chevron-right"></i> <a href="#">Curralinhos</a>
+                  <i class="bi bi-chevron-right"></i> <a href="#plans">Curralinhos</a>
                 </li>
                 <li class="item-list-a">
-                  <i class="bi bi-chevron-right"></i> <a href="#">Monsenhor Gil</a>
+                  <i class="bi bi-chevron-right"></i> <a href="#plans">Monsenhor Gil</a>
                 </li>
                 <li class="item-list-a">
-                  <i class="bi bi-chevron-right"></i> <a href="#">Lagoa do Piauí</a>
+                  <i class="bi bi-chevron-right"></i> <a href="#plans">Lagoa do Piauí</a>
                 </li>
                 <li class="item-list-a">
-                  <i class="bi bi-chevron-right"></i> <a href="#">Demerval Lobão</a>
+                  <i class="bi bi-chevron-right"></i> <a href="#plans">Demerval Lobão</a>
                 </li>
               </ul>
             </div>
@@ -603,6 +935,9 @@ require_once './admin/dbconfig.php';
       $('#SelectOptions').on('change', function() {
         var SelectValue = '.' + $(this).val();
         $('.DivPai .Div1').hide();
+        $('.DivPai .Div2').hide();
+        $('.DivPai .Div3').hide();
+        $('.DivPai .Div4').hide();
         $(SelectValue).toggle();
       });
     });
