@@ -12,6 +12,7 @@ error_reporting(~E_ALL);
 if (isset($_POST['btnsave'])) {
   $speed = strtolower($_POST['speed']);
   $price = $_POST['price'];
+  $city = $_POST['city'];
 
 
   if (empty($speed)) {
@@ -19,9 +20,10 @@ if (isset($_POST['btnsave'])) {
   }
 
   if (!isset($errMSG)) {
-    $stmt = $DB_con->prepare('INSERT INTO plans (speed,price) VALUES(:uspeed,:uprice)');
+    $stmt = $DB_con->prepare('INSERT INTO plans (speed,price,city) VALUES(:uspeed,:uprice,:ucity)');
     $stmt->bindParam(':uspeed', $speed);
     $stmt->bindParam(':uprice', $price);
+    $stmt->bindParam(':ucity',  $city);
 
     if ($stmt->execute()) {
       header("Location: painel-planos.php");
@@ -75,7 +77,7 @@ if (isset($_POST['btnsave'])) {
       <nav>
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="index.php">Home</a></li>
-          <li class="breadcrumb-item">Painel Planos</li>
+          <li class="breadcrumb-item"><a href="painel-planos.php">Painel Planos</a></li>
           <li class="breadcrumb-item active">Adicionar Plano</li>
         </ol>
       </nav>
@@ -97,6 +99,16 @@ if (isset($_POST['btnsave'])) {
                 <div class="col-12">
                   <label class="form-label">Valor</label>
                   <input value="<?php echo $price; ?>" name="price" type="text" placeholder="Digite o valor do plano" class="form-control">
+                </div>
+                <div class="col-12">
+                  <label class="form-label">Cidade</label>
+                  <select name="city" class="form-select">
+                    <option value="teresina">TERESINA</option>
+                    <option value="demerval">DEMERVAL</option>
+                    <option value="lagoa">LAGOA PI</option>
+                    <option value="monsenhor">MONSENHOR</option>
+                    <option value="curralinhos">CURRALINHOS</option>
+                  </select>
                 </div>
                 <div class="text-center">
                   <button type="submit" name="btnsave" class="btn btn-primary">Adicionar</button>

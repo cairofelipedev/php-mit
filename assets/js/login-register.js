@@ -28,6 +28,15 @@ function openLoginModal(){
     }, 230);
     
 }
+
+function openLoginModal2(){
+    showLoginForm();
+    setTimeout(function(){
+        $('#loginModal2').modal('show');    
+    }, 230);
+    
+}
+
 function openRegisterModal(){
     showRegisterForm();
     setTimeout(function(){

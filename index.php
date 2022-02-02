@@ -34,7 +34,8 @@ require_once './admin/dbconfig.php';
   <style>
     .Div2,
     .Div3,
-    .Div4 {
+    .Div4,
+    .Div5 {
       display: none;
     }
   </style>
@@ -85,6 +86,7 @@ require_once './admin/dbconfig.php';
                     <option value="Div2">Demerval</option>
                     <option value="Div3">Lagoa PI</option>
                     <option value="Div4">Monsenhor</option>
+                    <option value="Div5">Curralinhos e povoados</option>
                   </select>
                 </form>
               </div>
@@ -514,6 +516,76 @@ require_once './admin/dbconfig.php';
               ?>
             </div>
           </div>
+          <div class="Div5">
+            <div class="row">
+              <?php
+              $stmt = $DB_con->prepare('SELECT id, speed FROM plans where city="curralinhos" ORDER BY id DESC');
+              $stmt->execute();
+              if ($stmt->rowCount() > 0) {
+                while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+                  extract($row);
+              ?>
+                  <div class="col-md-4">
+                    <div class="card-box-c">
+                      <h2 class="title-c pt-2"><?php echo $speed; ?> MEGAS</h2>
+                      <div class="row justify-content-center">
+                        <div class="col-5 text-center">
+                          <i class="bi bi-wifi"></i> Conexão Estável
+                        </div>
+                        <div class="col-5 text-center">
+                          <i class="bi bi-bank2"></i> MIT Star
+                        </div>
+                        <div class="col-5 text-center">
+                          <i class="bi bi-share-fill"></i> CashBack
+                        </div>
+                        <div class="col-5 text-center">
+                          <i class="bi bi-phone-fill"></i> App Minha MIT
+                        </div>
+                      </div>
+                      <div class="d-grid gap-2 container">
+                        <button class="btn btn-plan" type="button">FALE COM UM CONSULTOR</button>
+                      </div>
+                      <div class="card-body-c pt-2 pb-2">
+                        <?php if ($speed == '400') { ?>
+                          <div class="container">
+                            <p class="content-c">
+                              Assinatura Netflix
+                            </p>
+                            <p class="content-c2">Séries originais e exclusivas, filmes, novelas e programas.</p>
+                            <div class="row pb-3 align-items-center justify-content-center">
+                              <div class="col-2">
+                                <img class="img-fluid" src="assets/img/app-netflix-252x252.png">
+                              </div>
+                            </div>
+                            <a href="#" class="link-c link-icon pt-3">Mais informações
+                              <span class="bi bi-chevron-right"></span>
+                            </a>
+                          </div>
+                        <?php } else { ?>
+                          <div class="container">
+                            <p class="content-c">
+                              Internet de qualidade e super veloz
+                            </p>
+                            <p class="content-c2">Acesse seus sites e seus aplicativos sem travar e sem lentidão</p>
+                            <div class="row pb-3 align-items-center justify-content-center">
+                              <div class="col-2">
+                       
+                              </div>
+                            </div>
+                            <a href="#" class="link-c link-icon pt-3">Mais informações
+                              <span class="bi bi-chevron-right"></span>
+                            </a>
+                          </div>
+                        <?php } ?>
+                      </div>
+                    </div>
+                  </div>
+              <?php
+                }
+              }
+              ?>
+            </div>
+          </div>
         </div>
       </div>
     </section><!-- End Oferece Section -->
@@ -571,7 +643,7 @@ require_once './admin/dbconfig.php';
       </div>
     </section>
     <!-- ======= FAQ Section ======= -->
-    <section class="section-property section-t4">
+    <section id="faq" class="section-property section-t4">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
@@ -691,7 +763,7 @@ require_once './admin/dbconfig.php';
                   </div>
                 </div>
               </div>
-            </div><!-- End carousel item -->
+            </div>
 
             <div class="carousel-item-c swiper-slide">
               <div class="card-box-b card-shadow news-box">
@@ -714,7 +786,7 @@ require_once './admin/dbconfig.php';
                   </div>
                 </div>
               </div>
-            </div><!-- End carousel item -->
+            </div>
 
             <div class="carousel-item-c swiper-slide">
               <div class="card-box-b card-shadow news-box">
@@ -737,7 +809,7 @@ require_once './admin/dbconfig.php';
                   </div>
                 </div>
               </div>
-            </div><!-- End carousel item -->
+            </div>
 
             <div class="carousel-item-c swiper-slide">
               <div class="card-box-b card-shadow news-box">
@@ -760,14 +832,14 @@ require_once './admin/dbconfig.php';
                   </div>
                 </div>
               </div>
-            </div><!-- End carousel item -->
+            </div>
 
           </div>
         </div>
 
         <div class="news-carousel-pagination carousel-pagination"></div>
       </div>
-    </section><!-- End Latest News Section -->
+    </section>
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
@@ -918,7 +990,6 @@ require_once './admin/dbconfig.php';
   </footer><!-- End  Footer -->
 
   <!-- <div id="preloader"></div> -->
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -938,6 +1009,7 @@ require_once './admin/dbconfig.php';
         $('.DivPai .Div2').hide();
         $('.DivPai .Div3').hide();
         $('.DivPai .Div4').hide();
+        $('.DivPai .Div5').hide();
         $(SelectValue).toggle();
       });
     });

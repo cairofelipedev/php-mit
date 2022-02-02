@@ -20,6 +20,7 @@
 
 
 .navbar-footer {
+  z-index: 2;
   text-align: center;
   background-color: white;
   height: 80px;
@@ -316,7 +317,30 @@
   border-color: #313131;
 }
 
+.contact-nav {
+  position     : fixed;
+  bottom       : 100px;
+  right        : 10px;
+  z-index      : 3;
+  background   : #0079a4;
+  width        : 50px;
+  height       : 50px;
+  border-radius: 50px;
+  overflow     : hidden;
+  float        : left;
 
+  transition: 0.3s ease;
+}
+
+.btn-contact-nav {
+  width      : 60px;
+  padding-top: 7px;
+}
+
+.btn-contact-nav i {
+  color    : white;
+  font-size: 22px;
+}
 @media (min-width: 767px) {
   .intro {
     height: 70vh;
