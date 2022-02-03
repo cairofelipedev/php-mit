@@ -47,15 +47,17 @@ require_once './admin/dbconfig.php';
   <div class="intro intro-carousel swiper position-relative">
     <div class="swiper-wrapper">
       <?php
-      $stmt = $DB_con->prepare('SELECT id, nome, img FROM banners ORDER BY id DESC');
+      $stmt = $DB_con->prepare('SELECT id, nome, img,link FROM banners ORDER BY id DESC');
       $stmt->execute();
       if ($stmt->rowCount() > 0) {
         while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
           extract($row);
       ?>
           <div class="swiper-slide carousel-item-a intro-item">
-            <img class="img-fluid d-none d-md-block" src="./admin/uploads/banners/<?php echo $row['img']; ?>">
-            <img class="img-fluid d-block d-md-none" src="./admin/uploads/banners/<?php echo $row['img']; ?>">
+            <a href="<?php echo $link; ?>">
+              <img class="img-fluid d-none d-md-block" src="./admin/uploads/banners/<?php echo $row['img']; ?>">
+              <img class="img-fluid d-block d-md-none" src="./admin/uploads/banners/<?php echo $row['img']; ?>">
+            </a>
           </div>
       <?php
         }
@@ -72,14 +74,17 @@ require_once './admin/dbconfig.php';
       <div class="container">
         <div class="row">
           <div class="col-md-12">
-            <div class="title-wrap d-flex justify-content-between">
+            <div class="title-wrap d-md-flex justify-content-between">
               <div class="title-box">
                 <h2 class="title-a">Confira nossos planos</h2>
                 <p>
                   Soluções para sua casa ou empresa com o melhor custo benefício e vantagens exclusivas.
                 </p>
               </div>
-              <div class="title-link">
+              <div class="title-link text-center pb-2">
+                <p>
+                  Escolha sua localização <i class="bi bi-geo-alt-fill"></i>
+                </p>
                 <form action="#">
                   <select name="SelectOptions" id="SelectOptions" required>
                     <option value="Div1">Teresina</option>
@@ -569,7 +574,7 @@ require_once './admin/dbconfig.php';
                             <p class="content-c2">Acesse seus sites e seus aplicativos sem travar e sem lentidão</p>
                             <div class="row pb-3 align-items-center justify-content-center">
                               <div class="col-2">
-                       
+
                               </div>
                             </div>
                             <a href="#" class="link-c link-icon pt-3">Mais informações
