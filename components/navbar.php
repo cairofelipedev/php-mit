@@ -54,11 +54,11 @@
       <span></span>
     </button>
     <a class="navbar-brand d-md-none" href="#">
-      <img class="img-fluid" src="./assets/img/logo-mit.png">
+      <img class="img-fluid" src="../assets/img/logo-mit.png">
     </a>
     <div class="container d-none d-md-block">
       <a class="navbar-brand" href="#">
-        <img class="igm-fluid" src="./assets/img/logo-mit.png">
+        <img class="igm-fluid" src="../assets/img/logo-mit.png">
       </a>
       <a class="text-brand" href="#"><span class="color-b active">Para você</span></a>
     </div>

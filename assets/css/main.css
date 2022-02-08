@@ -341,6 +341,15 @@
   color    : white;
   font-size: 22px;
 }
+
+.home {
+  background-image: url("../img/hero-bg.jpg");
+}
+.btn-mit {
+  background:#0079a4;
+  color:white;
+}
+
 @media (min-width: 767px) {
   .intro {
     height: 70vh;
@@ -356,6 +365,9 @@
   .title-wrap {
     display:flex;
     justify-content: space-between;
+  }
+  .home {
+   padding-top:20%;
   }
 }
 @media (max-width: 767px) {
@@ -377,4 +389,7 @@
   .navbar-footer {
     font-size:12px;
   }
+  .home {
+    padding-top:40%;
+   }
 }
