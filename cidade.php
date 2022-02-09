@@ -39,25 +39,24 @@ require_once './admin/dbconfig.php';
 <body class="home">
   <div class="container">
     <div class="row justify-content-center align-items-center">
-      <div class="col-md-4 d-md-block d-none">
-        <div class="d-grid gap-2">
-          <button class="btn btn-mit" type="button">SOU CLIENTE</button>
-          <button class="btn btn-mit" type="button">NÃO SOU CLIENTE</button>
-        </div>
-      </div>
-      <div class="col-md-6 d-md-block d-none">
+      <div class="col-md-6">
         <center><img src="assets/img/logo-mit.png" width="300px"></center>
-      </div>
-      <div class="col-md-6 d-block d-md-none">
-        <center><img src="assets/img/logo-mit.png" width="300px"></center>
-      </div>
-      <div class="col-md-6 d-block d-md-none">
-        <div class="d-grid gap-2">
-          <button class="btn btn-mit" type="button">SOU CLIENTE</button>
-          <button class="btn btn-mit" type="button">NÃO SOU CLIENTE</button>
+        <div class="select-citys">
+          <p>
+            Escolha sua localização <i class="bi bi-geo-alt-fill"></i>
+          </p>
+          <select class="form-control" onchange="javascript:location.href = this.value;">
+            <option> Escolha sua localização</option>
+            <option value="home/teresina.php">Teresina</option>
+            <option value="home/demerval.php">Demerval</option>
+            <option value="home/lagoa-pi.php">Lagoa PI</option>
+            <option value="home/monsenhor.php">Monsenhor</option>
+            <option value="home/curralinhos-e-povoados.php">Curralinhos e povoados</option>
+          </select>
         </div>
       </div>
     </div>
   </div>
 </body>
+
 </html>

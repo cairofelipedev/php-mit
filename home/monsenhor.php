@@ -87,10 +87,10 @@ require_once '../admin/dbconfig.php';
                 </p>
                 <form action="#">
                   <select name="SelectOptions" id="SelectOptions" required>
-                    <option value="Div1">Teresina</option>
+                    <option value="Div1">Monsenhor</option>
+                    <option value="Div3">Teresina</option>
                     <option value="Div2">Demerval</option>
-                    <option value="Div3">Lagoa PI</option>
-                    <option value="Div4">Monsenhor</option>
+                    <option value="Div4">Lagoa PI</option>
                     <option value="Div5">Curralinhos e povoados</option>
                   </select>
                 </form>
@@ -102,7 +102,7 @@ require_once '../admin/dbconfig.php';
           <div class="Div1">
             <div class="row">
               <?php
-              $stmt = $DB_con->prepare('SELECT id, speed FROM plans where city="teresina" ORDER BY id DESC');
+              $stmt = $DB_con->prepare('SELECT id, speed FROM plans where city="monsenhor" ORDER BY id DESC');
               $stmt->execute();
               if ($stmt->rowCount() > 0) {
                 while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
@@ -208,7 +208,7 @@ require_once '../admin/dbconfig.php';
           <div class="Div2">
             <div class="row">
               <?php
-              $stmt = $DB_con->prepare('SELECT id, speed FROM plans where city="demerval" ORDER BY id DESC');
+              $stmt = $DB_con->prepare('SELECT id, speed FROM plans where city="teresina" ORDER BY id DESC');
               $stmt->execute();
               if ($stmt->rowCount() > 0) {
                 while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
@@ -314,7 +314,7 @@ require_once '../admin/dbconfig.php';
           <div class="Div3">
             <div class="row">
               <?php
-              $stmt = $DB_con->prepare('SELECT id, speed FROM plans where city="lagoa" ORDER BY id DESC');
+              $stmt = $DB_con->prepare('SELECT id, speed FROM plans where city="demerval" ORDER BY id DESC');
               $stmt->execute();
               if ($stmt->rowCount() > 0) {
                 while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
@@ -419,7 +419,7 @@ require_once '../admin/dbconfig.php';
           <div class="Div4">
             <div class="row">
               <?php
-              $stmt = $DB_con->prepare('SELECT id, speed FROM plans where city="monsenhor" ORDER BY id DESC');
+              $stmt = $DB_con->prepare('SELECT id, speed FROM plans where city="lagoa" ORDER BY id DESC');
               $stmt->execute();
               if ($stmt->rowCount() > 0) {
                 while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
@@ -534,16 +534,16 @@ require_once '../admin/dbconfig.php';
                     <div class="card-box-c">
                       <h2 class="title-c pt-2"><?php echo $speed; ?> MEGAS</h2>
                       <div class="row justify-content-center">
-                        <div class="col-6">
+                        <div class="col-6 itens-card">
                           <i class="bi bi-wifi"></i> Conexão Estável
                         </div>
-                        <div class="col-6">
+                        <div class="col-6 itens-card">
                           <i class="bi bi-bank2"></i> MIT Star
                         </div>
-                        <div class="col-6">
+                        <div class="col-6 itens-card">
                           <i class="bi bi-cash-coin"></i> CashBack
                         </div>
-                        <div class="col-6">
+                        <div class="col-6 itens-card">
                           <i class="bi bi-phone-fill"></i> App Minha MIT
                         </div>
                       </div>
@@ -635,10 +635,10 @@ require_once '../admin/dbconfig.php';
           </div>
         </div>
         <div class="row">
-          <div class="col-md-3 igbi-img text-center">
+         <div class="col-md-3 igbi-img text-center">
             <img src="../assets/img/enviar-receber.svg">
           </div>
-          <div class="col-md-8">
+          <div class="col-md-6">
             <h2 class="title-a">Uma plataforma completa que vai transformar o seu negócio através de uma nova forma de comprar: O Cashback!</h2>
             <a href="../igbi.php">
               <button class="btn btn-igbi">Saiba mais</button>

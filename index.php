@@ -41,8 +41,8 @@ require_once './admin/dbconfig.php';
     <div class="row justify-content-center align-items-center">
       <div class="col-md-4 d-md-block d-none">
         <div class="d-grid gap-2">
-          <button class="btn btn-mit" type="button">SOU CLIENTE</button>
-          <button class="btn btn-mit" type="button">NÃO SOU CLIENTE</button>
+          <button class="btn btn-mit" type="button"> <a href="cidade.php">SOU CLIENTE </a></button>
+          <button class="btn btn-mit" type="button"> <a href="cidade.php">NÃO SOU CLIENTE </a></button>
         </div>
       </div>
       <div class="col-md-6 d-md-block d-none">
@@ -53,11 +53,12 @@ require_once './admin/dbconfig.php';
       </div>
       <div class="col-md-6 d-block d-md-none">
         <div class="d-grid gap-2">
-          <button class="btn btn-mit" type="button">SOU CLIENTE</button>
-          <button class="btn btn-mit" type="button">NÃO SOU CLIENTE</button>
+          <button class="btn btn-mit" type="button"><a href="cidade.php">SOU CLIENTE</a></button>
+          <button class="btn btn-mit" type="button"><a href="cidade.php">NÃO SOU CLIENTE</a></button>
         </div>
       </div>
     </div>
   </div>
 </body>
+
 </html>

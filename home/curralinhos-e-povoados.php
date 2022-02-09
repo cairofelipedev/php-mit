@@ -87,11 +87,11 @@ require_once '../admin/dbconfig.php';
                 </p>
                 <form action="#">
                   <select name="SelectOptions" id="SelectOptions" required>
-                    <option value="Div1">Teresina</option>
+                    <option value="Div1">Curralinhos e povoados</option>
                     <option value="Div2">Demerval</option>
                     <option value="Div3">Lagoa PI</option>
                     <option value="Div4">Monsenhor</option>
-                    <option value="Div5">Curralinhos e povoados</option>
+                    <option value="Div5">Teresina</option>
                   </select>
                 </form>
               </div>
@@ -99,7 +99,77 @@ require_once '../admin/dbconfig.php';
           </div>
         </div>
         <div class="DivPai">
-          <div class="Div1">
+        <div class="Div1">
+            <div class="row">
+              <?php
+              $stmt = $DB_con->prepare('SELECT id, speed FROM plans where city="curralinhos" ORDER BY id DESC');
+              $stmt->execute();
+              if ($stmt->rowCount() > 0) {
+                while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+                  extract($row);
+              ?>
+                  <div class="col-md-4">
+                    <div class="card-box-c">
+                      <h2 class="title-c pt-2"><?php echo $speed; ?> MEGAS</h2>
+                      <div class="row justify-content-center">
+                        <div class="col-6 itens-card">
+                          <i class="bi bi-wifi"></i> Conexão Estável
+                        </div>
+                        <div class="col-6 itens-card">
+                          <i class="bi bi-bank2"></i> MIT Star
+                        </div>
+                        <div class="col-6 itens-card">
+                          <i class="bi bi-share-fill"></i> CashBack
+                        </div>
+                        <div class="col-6 itens-card">
+                          <i class="bi bi-phone-fill"></i> App Minha MIT
+                        </div>
+                      </div>
+                      <div class="d-grid gap-2 container">
+                        <button class="btn btn-plan" type="button">FALE COM UM CONSULTOR</button>
+                      </div>
+                      <div class="card-body-c pt-2 pb-2">
+                        <?php if ($speed == '400') { ?>
+                          <div class="container">
+                            <p class="content-c">
+                              Assinatura Netflix
+                            </p>
+                            <p class="content-c2">Séries originais e exclusivas, filmes, novelas e programas.</p>
+                            <div class="row pb-3 align-items-center justify-content-center">
+                              <div class="col-2">
+                                <img class="img-fluid" src="../assets/img/app-netflix-252x252.png">
+                              </div>
+                            </div>
+                            <a href="#" class="link-c link-icon pt-3">Mais informações
+                              <span class="bi bi-chevron-right"></span>
+                            </a>
+                          </div>
+                        <?php } else { ?>
+                          <div class="container">
+                            <p class="content-c">
+                              Internet de qualidade e super veloz
+                            </p>
+                            <p class="content-c2">Acesse seus sites e seus aplicativos sem travar e sem lentidão</p>
+                            <div class="row pb-3 align-items-center justify-content-center">
+                              <div class="col-2">
+
+                              </div>
+                            </div>
+                            <a href="#" class="link-c link-icon pt-3">Mais informações
+                              <span class="bi bi-chevron-right"></span>
+                            </a>
+                          </div>
+                        <?php } ?>
+                      </div>
+                    </div>
+                  </div>
+              <?php
+                }
+              }
+              ?>
+            </div>
+          </div>
+          <div class="Div5">
             <div class="row">
               <?php
               $stmt = $DB_con->prepare('SELECT id, speed FROM plans where city="teresina" ORDER BY id DESC');
@@ -119,7 +189,7 @@ require_once '../admin/dbconfig.php';
                           <i class="bi bi-bank2"></i> MIT Star
                         </div>
                         <div class="col-6 itens-card">
-                          <i class="bi bi-cash-coin"></i> CashBack
+                          <i class="bi bi-share-fill"></i> CashBack
                         </div>
                         <div class="col-6 itens-card">
                           <i class="bi bi-phone-fill"></i> App Minha MIT
@@ -225,7 +295,7 @@ require_once '../admin/dbconfig.php';
                           <i class="bi bi-bank2"></i> MIT Star
                         </div>
                         <div class="col-6 itens-card">
-                          <i class="bi bi-cash-coin"></i> CashBack
+                          <i class="bi bi-share-fill"></i> CashBack
                         </div>
                         <div class="col-6 itens-card">
                           <i class="bi bi-phone-fill"></i> App Minha MIT
@@ -331,7 +401,7 @@ require_once '../admin/dbconfig.php';
                           <i class="bi bi-bank2"></i> MIT Star
                         </div>
                         <div class="col-6 itens-card">
-                          <i class="bi bi-cash-coin"></i> CashBack
+                          <i class="bi bi-share-fill"></i> CashBack
                         </div>
                         <div class="col-6 itens-card">
                           <i class="bi bi-phone-fill"></i> App Minha MIT
@@ -436,7 +506,7 @@ require_once '../admin/dbconfig.php';
                           <i class="bi bi-bank2"></i> MIT Star
                         </div>
                         <div class="col-6 itens-card">
-                          <i class="bi bi-cash-coin"></i> CashBack
+                          <i class="bi bi-share-fill"></i> CashBack
                         </div>
                         <div class="col-6 itens-card">
                           <i class="bi bi-phone-fill"></i> App Minha MIT
@@ -521,76 +591,6 @@ require_once '../admin/dbconfig.php';
               ?>
             </div>
           </div>
-          <div class="Div5">
-            <div class="row">
-              <?php
-              $stmt = $DB_con->prepare('SELECT id, speed FROM plans where city="curralinhos" ORDER BY id DESC');
-              $stmt->execute();
-              if ($stmt->rowCount() > 0) {
-                while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-                  extract($row);
-              ?>
-                  <div class="col-md-4">
-                    <div class="card-box-c">
-                      <h2 class="title-c pt-2"><?php echo $speed; ?> MEGAS</h2>
-                      <div class="row justify-content-center">
-                        <div class="col-6">
-                          <i class="bi bi-wifi"></i> Conexão Estável
-                        </div>
-                        <div class="col-6">
-                          <i class="bi bi-bank2"></i> MIT Star
-                        </div>
-                        <div class="col-6">
-                          <i class="bi bi-cash-coin"></i> CashBack
-                        </div>
-                        <div class="col-6">
-                          <i class="bi bi-phone-fill"></i> App Minha MIT
-                        </div>
-                      </div>
-                      <div class="d-grid gap-2 container">
-                        <button class="btn btn-plan" type="button">FALE COM UM CONSULTOR</button>
-                      </div>
-                      <div class="card-body-c pt-2 pb-2">
-                        <?php if ($speed == '400') { ?>
-                          <div class="container">
-                            <p class="content-c">
-                              Assinatura Netflix
-                            </p>
-                            <p class="content-c2">Séries originais e exclusivas, filmes, novelas e programas.</p>
-                            <div class="row pb-3 align-items-center justify-content-center">
-                              <div class="col-2">
-                                <img class="img-fluid" src="../assets/img/app-netflix-252x252.png">
-                              </div>
-                            </div>
-                            <a href="#" class="link-c link-icon pt-3">Mais informações
-                              <span class="bi bi-chevron-right"></span>
-                            </a>
-                          </div>
-                        <?php } else { ?>
-                          <div class="container">
-                            <p class="content-c">
-                              Internet de qualidade e super veloz
-                            </p>
-                            <p class="content-c2">Acesse seus sites e seus aplicativos sem travar e sem lentidão</p>
-                            <div class="row pb-3 align-items-center justify-content-center">
-                              <div class="col-2">
-
-                              </div>
-                            </div>
-                            <a href="#" class="link-c link-icon pt-3">Mais informações
-                              <span class="bi bi-chevron-right"></span>
-                            </a>
-                          </div>
-                        <?php } ?>
-                      </div>
-                    </div>
-                  </div>
-              <?php
-                }
-              }
-              ?>
-            </div>
-          </div>
         </div>
       </div>
     </section><!-- End Oferece Section -->
@@ -635,10 +635,10 @@ require_once '../admin/dbconfig.php';
           </div>
         </div>
         <div class="row">
-          <div class="col-md-3 igbi-img text-center">
+         <div class="col-md-3 igbi-img text-center">
             <img src="../assets/img/enviar-receber.svg">
           </div>
-          <div class="col-md-8">
+          <div class="col-md-6">
             <h2 class="title-a">Uma plataforma completa que vai transformar o seu negócio através de uma nova forma de comprar: O Cashback!</h2>
             <a href="../igbi.php">
               <button class="btn btn-igbi">Saiba mais</button>
