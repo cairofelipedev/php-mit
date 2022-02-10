@@ -40,12 +40,12 @@ require_once './admin/dbconfig.php';
   <div class="container">
     <div class="row justify-content-center align-items-center">
       <div class="col-md-6">
-        <center><img src="assets/img/logo-mit.png" width="300px"></center>
+        <center><img src="assets/img/logo-nova.png" width="300px"></center>
         <div class="select-citys">
           <p>
             Escolha sua localização <i class="bi bi-geo-alt-fill"></i>
           </p>
-          <select class="form-control" onchange="javascript:location.href = this.value;">
+          <select class="form-control select-city">
             <option> Escolha sua localização</option>
             <option value="home/teresina.php">Teresina</option>
             <option value="home/demerval.php">Demerval</option>
@@ -57,6 +57,36 @@ require_once './admin/dbconfig.php';
       </div>
     </div>
   </div>
+  <script>
+    var select = document.querySelector(".select-city");
+    var selectOption = select.options[select.selectedIndex];
+    var lastSelected = localStorage.getItem('select');
+
+    if (lastSelected) {
+      select.value = lastSelected;
+    }
+
+    select.onchange = function() {
+      lastSelected = select.options[select.selectedIndex].value;
+      localStorage.setItem('select', lastSelected);
+
+      if (lastSelected == 'home/teresina.php') {
+        location.href = this.value;
+      }
+      if (lastSelected == 'home/demerval.php') {
+        location.href = this.value;
+      }
+      if (lastSelected == 'home/lagoa-pi.php') {
+        location.href = this.value;
+      }
+      if (lastSelected == 'home/monsenhor.php') {
+        location.href = this.value;
+      }
+      if (lastSelected == 'home/curralinhos-e-povoados.php') {
+        location.href = this.value;
+      }
+    }
+  </script>
 </body>
 
 </html>

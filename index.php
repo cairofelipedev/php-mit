@@ -46,10 +46,10 @@ require_once './admin/dbconfig.php';
         </div>
       </div>
       <div class="col-md-6 d-md-block d-none">
-        <center><img src="assets/img/logo-mit.png" width="300px"></center>
+        <center><img src="assets/img/logo-nova.png" width="300px"></center>
       </div>
       <div class="col-md-6 d-block d-md-none">
-        <center><img src="assets/img/logo-mit.png" width="300px"></center>
+        <center><img src="assets/img/logo-nova.png" width="300px"></center>
       </div>
       <div class="col-md-6 d-block d-md-none">
         <div class="d-grid gap-2">
@@ -59,6 +59,27 @@ require_once './admin/dbconfig.php';
       </div>
     </div>
   </div>
+  <script>
+    var lastSelected = localStorage.getItem('select');
+    if (lastSelected == 'home/teresina.php') {
+      location.href = 'home/teresina.php';
+    }
+    if (lastSelected == 'home/demerval.php') {
+      location.href = 'home/demerval.php';
+    }
+    if (lastSelected == 'home/lagoa-pi.php') {
+      location.href = 'home/lagoa-pi.php';
+    }
+    if (lastSelected == 'home/monsenhor.php') {
+      location.href = 'home/home/monsenhor.php';
+    }
+    if (lastSelected == 'home/curralinhos-e-povoados.php') {
+      location.href = 'home/curralinhos-e-povoados.php';
+    }
+    if (lastSelected == '') {
+      location.href = 'index.php';
+    }
+  </script>
 </body>
 
 </html>
