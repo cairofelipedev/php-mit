@@ -1,5 +1,6 @@
 <?php
 require_once '../admin/dbconfig.php';
+include "../admin/insert_form.php";
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -745,100 +746,39 @@ require_once '../admin/dbconfig.php';
 
         <div id="news-carousel" class="swiper">
           <div class="swiper-wrapper">
-
-            <div class="carousel-item-c swiper-slide">
-              <div class="card-box-b card-shadow news-box">
-                <div class="img-box-b">
-                  <img src="../assets/img/azul.jpg" alt="" class="img-b img-fluid">
-                </div>
-                <div class="card-overlay">
-                  <div class="card-header-b">
-                    <div class="card-category-b">
-                      <a href="#" class="category-b">Saúde</a>
+            <?php
+            $stmt = $DB_con->prepare('SELECT id, title, img, category FROM posts ORDER BY id DESC');
+            $stmt->execute();
+            if ($stmt->rowCount() > 0) {
+              while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+                extract($row);
+            ?>
+                <div class="carousel-item-c swiper-slide">
+                  <div class="card-box-b card-shadow news-box">
+                    <div class="img-box-b">
+                      <img src="../admin/uploads/blog/<?php echo $row['img']; ?>" alt="" class="img-b img-fluid">
                     </div>
-                    <div class="card-title-b">
-                      <h2 class="title-2">
-                        <a href="#">É melhor prevenir do que remediar
-                          <br>concordam? 🤔</a>
-                      </h2>
-                    </div>
-                    <div class="card-date">
-                      <span class="date-b">1 Nov. 2021</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="carousel-item-c swiper-slide">
-              <div class="card-box-b card-shadow news-box">
-                <div class="img-box-b">
-                  <img src="../assets/img/games.jpg" alt="" class="img-b img-fluid">
-                </div>
-                <div class="card-overlay">
-                  <div class="card-header-b">
-                    <div class="card-category-b">
-                      <a href="#" class="category-b">Diversão</a>
-                    </div>
-                    <div class="card-title-b">
-                      <h2 class="title-2">
-                        <a href="#">03 dicas de jogos para manter esse espírito de adrenalina</a>
-                      </h2>
-                    </div>
-                    <div class="card-date">
-                      <span class="date-b">27 Out. 2021</span>
+                    <div class="card-overlay">
+                      <div class="card-header-b">
+                        <div class="card-category-b">
+                          <a href="post.php?title=<?php echo $title; ?>" class="category-b"><?php echo $category; ?></a>
+                        </div>
+                        <div class="card-title-b">
+                          <h2 class="title-2">
+                            <a href="post.php?title=<?php echo $title; ?>"><?php echo $title; ?></a>
+                          </h2>
+                        </div>
+                        <div class="card-date">
+                          <span class="date-b">1 Nov. 2021</span>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
-
-            <div class="carousel-item-c swiper-slide">
-              <div class="card-box-b card-shadow news-box">
-                <div class="img-box-b">
-                  <img src="../assets/img/rosa.jpg" alt="" class="img-b img-fluid">
-                </div>
-                <div class="card-overlay">
-                  <div class="card-header-b">
-                    <div class="card-category-b">
-                      <a href="#" class="category-b">Saúde</a>
-                    </div>
-                    <div class="card-title-b">
-                      <h2 class="title-2">
-                        <a href="#">É hora de se tocar, não deixe sua saúde para depois.</a>
-                      </h2>
-                    </div>
-                    <div class="card-date">
-                      <span class="date-b">1 Out. 2021</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="carousel-item-c swiper-slide">
-              <div class="card-box-b card-shadow news-box">
-                <div class="img-box-b">
-                  <img src="../assets/img/diversao.jpg" alt="" class="img-b img-fluid">
-                </div>
-                <div class="card-overlay">
-                  <div class="card-header-b">
-                    <div class="card-category-b">
-                      <a href="#" class="category-b">Diversão</a>
-                    </div>
-                    <div class="card-title-b">
-                      <h2 class="title-2">
-                        <a href="#">Fim de semana com diversão tem que ter Mit</a>
-                      </h2>
-                    </div>
-                    <div class="card-date">
-                      <span class="date-b">17 Set. 2021</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
+            <?php
+              }
+            }
+            ?>
           </div>
         </div>
 

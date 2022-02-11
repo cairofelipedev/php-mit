@@ -120,10 +120,10 @@
         </li>
       </ul>
     </div>
-    <button type="button" class="btn d-none d-md-block navbar-toggle-box navbar-toggle-box-collapse" data-toggle="modal" href="javascript:void(0)" onclick="openLoginModal();">
-      <i class="bi bi-person"></i>Login
-    </button>
-
+    <a href="../admin/login.php"><button type="button" class="btn d-none d-md-block navbar-toggle-box navbar-toggle-box-collapse" data-toggle="modal">
+        <i class="bi bi-person"></i>Login
+      </button>
+    </a>
 
   </div>
 </nav><!-- End Header/Navbar -->
@@ -135,7 +135,11 @@
       </div>
       <div class="col-md-2">
         <div class="d-grid">
-          <button href="javascript:void(0)" onclick="openLoginModal2();" class="btn btn-footer btn-lg" type="button">Contato</button>
+          <!-- Button trigger modal -->
+          <button type="button" class="btn btn-footer btn-lg" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Contato
+          </button>
+
         </div>
       </div>
       <div class="col-md-2">
@@ -146,5 +150,59 @@
     </div>
   </div>
 </nav>
-<?php include "login.php" ?>
 <!-- End Header/Navbar -->
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Entre em contato</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form action="" method="POST">
+          <div class="row">
+            <div class="col-md-6 form-group">
+              <input type="text" name="nome" class="form-control" id="nome" placeholder="Nome" required>
+            </div>
+            <div class="col-md-6 form-group mt-3 mt-md-0 pb-3">
+              <input size="20" maxlength="14" type="tel" class="form-control" name="whats" placeholder="Seu número" required>
+            </div>
+            <div class="col-md-12 form-group mt-3 mt-md-0">
+              <input type="text" class="form-control" name="email" id="email" placeholder="E-mail" required>
+            </div>
+          </div>
+
+          <div class="form-group mt-3">
+            <textarea class="form-control" name="msg" rows="3" placeholder="Esreva sua mensagem"></textarea>
+          </div>
+          <input type="hidden" name="tipo" value="1">
+          <div class="text-center pt-3">
+            <button type="submit" class="btn btn-primary-form" name="submit">Enviar</button>
+          </div>
+        </form>
+        <p class="text-center pt-3">OU</p>
+        <div class="row justify-content-center pb-3">
+          <div class="col-4">
+            <a href="">
+              <div class="container-a-i rounded">
+                <i class="bi bi-instagram"></i> Instagram
+              </div>
+            </a>
+          </div>
+          <div class="col-4">
+            <a href="">
+              <div class="container-a-f rounded">
+                <i class="bi bi-facebook"></i> Facebook
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+      </div>
+    </div>
+  </div>
+</div>

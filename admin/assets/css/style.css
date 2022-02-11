@@ -255,7 +255,10 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Poppins", sans-serif;
   font-size: 20px;
 }
-
+.btn-login {
+  background-color: #003c85;
+  color:white;
+}
 /* Close Button */
 .btn-close {
   background-size: 25%;
@@ -346,7 +349,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 .logo img {
-  max-height: 40px;
+  max-height: 50px;
   margin-right: 6px;
 }
 .logo span {

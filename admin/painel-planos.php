@@ -90,7 +90,7 @@ if (isset($_GET['delete_id'])) {
                   <h5 class="card-title text-center">PLANO <?php echo $speed; ?> MEGAS</h5>
                   <div class="d-flex justify-content-center">
                     <div>
-                      <!-- <button type="button" class="btn btn-success">Editar</button> -->
+                      <button type="button" class="btn btn-success">Editar</button>
                       <a href="?delete_id=<?php echo $row['id']; ?>">
                         <button type="button" class="btn btn-danger">Excluir</button>
                       </a>

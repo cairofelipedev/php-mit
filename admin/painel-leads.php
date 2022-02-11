@@ -59,38 +59,38 @@ if (isset($_GET['delete_id'])) {
   <main id="main" class="main">
 
     <div class="pagetitle">
-      <h1>Banners</h1>
+      <h1>Leads do site</h1>
       <div class="d-flex justify-content-between">
         <nav>
           <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="index.php">Home</a></li>
-            <li class="breadcrumb-item active">Planos</li>
+            <li class="breadcrumb-item active">Leads</li>
           </ol>
         </nav>
-        <a href="add-banner.php">
-          <button type="submit" name="btnsave" class="btn btn-primary"><i class="bi bi-plus-circle-fill"></i> Adicionar Banner</button>
-        </a>
       </div>
     </div><!-- End Page Title -->
 
     <section class="section">
       <div class="row">
         <?php
-        $stmt = $DB_con->prepare('SELECT id, nome, img FROM banners ORDER BY id DESC');
+        $stmt = $DB_con->prepare('SELECT id, nome, whats, email, msg, data_envio FROM leads ORDER BY id DESC');
         $stmt->execute();
         if ($stmt->rowCount() > 0) {
           while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
             extract($row);
         ?>
 
-            <div class="col-lg-4">
+            <div class="col-lg-3">
               <div class="card">
-                <img class="img-fluid" src="./uploads/banners/<?php echo $row['img']; ?>">
                 <div class="card-body">
-                  <h5 class="card-title text-center"><?php echo $nome; ?></h5>
+                  <p class="text-center pt-3"><?php echo $data_envio; ?></p>
+                  <h5><?php echo $nome; ?></h5>
+                  <h5><?php echo $whats; ?></h5>
+                  <h5><?php echo $email; ?></h5>
+                  <h5><?php echo $msg; ?></h5>
                   <div class="d-flex justify-content-center">
                     <div>
-                      <button type="button" class="btn btn-success">Editar</button>
+                      <!-- <button type="button" class="btn btn-success">Editar</button> -->
                       <a href="?delete_id=<?php echo $row['id']; ?>">
                         <button type="button" class="btn btn-danger">Excluir</button>
                       </a>
@@ -105,7 +105,7 @@ if (isset($_GET['delete_id'])) {
           ?>
           <div>
             <div>
-              <p  class="alert alert-warning">Sem banner cadastrado ...</p>
+              <p class="alert alert-warning">Sem banner cadastrado ...</p>
             </div>
           </div>
         <?php

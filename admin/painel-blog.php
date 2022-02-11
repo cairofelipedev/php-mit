@@ -59,16 +59,16 @@ if (isset($_GET['delete_id'])) {
   <main id="main" class="main">
 
     <div class="pagetitle">
-      <h1>Banners</h1>
+      <h1>Blog</h1>
       <div class="d-flex justify-content-between">
         <nav>
           <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="index.php">Home</a></li>
-            <li class="breadcrumb-item active">Planos</li>
+            <li class="breadcrumb-item active">Blog</li>
           </ol>
         </nav>
         <a href="add-banner.php">
-          <button type="submit" name="btnsave" class="btn btn-primary"><i class="bi bi-plus-circle-fill"></i> Adicionar Banner</button>
+          <button type="submit" name="btnsave" class="btn btn-primary"><i class="bi bi-plus-circle-fill"></i> Adicionar Post</button>
         </a>
       </div>
     </div><!-- End Page Title -->
@@ -76,7 +76,7 @@ if (isset($_GET['delete_id'])) {
     <section class="section">
       <div class="row">
         <?php
-        $stmt = $DB_con->prepare('SELECT id, nome, img FROM banners ORDER BY id DESC');
+        $stmt = $DB_con->prepare('SELECT id, title, img FROM posts ORDER BY id DESC');
         $stmt->execute();
         if ($stmt->rowCount() > 0) {
           while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
@@ -85,9 +85,9 @@ if (isset($_GET['delete_id'])) {
 
             <div class="col-lg-4">
               <div class="card">
-                <img class="img-fluid" src="./uploads/banners/<?php echo $row['img']; ?>">
+                <img class="img-fluid" src="./uploads/blog/<?php echo $row['img']; ?>">
                 <div class="card-body">
-                  <h5 class="card-title text-center"><?php echo $nome; ?></h5>
+                  <h5 class="card-title text-center"><?php echo $title; ?></h5>
                   <div class="d-flex justify-content-center">
                     <div>
                       <button type="button" class="btn btn-success">Editar</button>
