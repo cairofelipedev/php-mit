@@ -622,7 +622,7 @@ a:hover {
 }
 @media (min-width: 768px) {
   .navbar-default .dropdown .dropdown-menu {
-    width: 500px;
+    width: 850px;
     border-top: 4px solid #37BD3F;
     border-left: 0;
     display: block;

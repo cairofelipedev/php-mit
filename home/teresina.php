@@ -726,6 +726,61 @@ include "../admin/insert_form.php";
         </div>
       </div>
     </section><!-- End FAQ Section -->
+    <section class="section-property section-t4">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="title-wrap">
+              <div class="title-box">
+                <h2 class="title-a">Autoatendimento para Clientes</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-3">
+            <div class="card-body-c pt-2 pb-2">
+              <div class="container">
+                <p class="content-c">
+                  <i class="bi bi-file-earmark-text-fill"></i>
+                </p>
+                <p class="text-black">2º Via de conta móvel</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card-body-c pt-2 pb-2">
+              <div class="container">
+                <p class="content-c">
+                  <i class="bi bi-cash-coin"></i>
+                </p>
+                <p class="text-black">Consulta de saldo</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card-body-c pt-2 pb-2">
+              <div class="container">
+                <p class="content-c">
+                  <i class="bi bi-phone-fill"></i>
+                </p>
+                <p class="text-black">App Mit</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card-body-c pt-2 pb-2">
+              <div class="container">
+                <p class="content-c">
+                  <i class="bi bi-credit-card-2-back-fill"></i>
+                </p>
+                <p class="text-black">Pague a conta com o cartão</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- ======= Latest News Section ======= -->
     <section class="section-news section-t4">
       <div class="container">
@@ -788,154 +843,7 @@ include "../admin/insert_form.php";
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
-  <section class="section-footer">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-12 col-md-4">
-          <div class="widget-a">
-            <div class="w-header-a">
-              <img class="img-fluid" src="../assets/img/logo-mit.png">
-            </div>
-            <div class="w-body-a">
-              <p class="w-text-a color-text-a">
-                MIT Internet que transforma!💙💚
-              </p>
-            </div>
-            <div class="w-footer-a">
-              <ul class="list-unstyled">
-                <li class="color-a">
-                  <span class="color-text-a">Contato </span> (86)3220-2386
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-12 col-md-4 section-md-t3">
-          <div class="widget-a">
-            <div class="w-header-a">
-              <h3 class="w-title-a text-brand">MIT INTERNET</h3>
-            </div>
-            <div class="w-body-a">
-              <div class="w-body-a">
-                <ul class="list-unstyled">
-                  <li class="item-list-a">
-                    <i class="bi bi-chevron-right"></i> <a href="#">Página Principal</a>
-                  </li>
-                  <li class="item-list-a">
-                    <i class="bi bi-chevron-right"></i> <a href="#">Para você</a>
-                  </li>
-                  <li class="item-list-a">
-                    <i class="bi bi-chevron-right"></i> <a href="#">Empresas</a>
-                  </li>
-                  <li class="item-list-a">
-                    <i class="bi bi-chevron-right"></i> <a href="#">Produtos</a>
-                  </li>
-                  <li class="item-list-a">
-                    <i class="bi bi-chevron-right"></i> <a href="#">Serviços</a>
-                  </li>
-                  <li class="item-list-a">
-                    <i class="bi bi-chevron-right"></i> <a href="#">Contato</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-12 col-md-4 section-md-t3">
-          <div class="widget-a">
-            <div class="w-header-a">
-              <h3 class="w-title-a text-brand">Cidades</h3>
-            </div>
-            <div class="w-body-a">
-              <ul class="list-unstyled">
-                <li class="item-list-a">
-                  <i class="bi bi-chevron-right"></i> <a href="#plans">Teresina</a>
-                </li>
-                <li class="item-list-a">
-                  <i class="bi bi-chevron-right"></i> <a href="#plans">Curralinhos</a>
-                </li>
-                <li class="item-list-a">
-                  <i class="bi bi-chevron-right"></i> <a href="#plans">Monsenhor Gil</a>
-                </li>
-                <li class="item-list-a">
-                  <i class="bi bi-chevron-right"></i> <a href="#plans">Lagoa do Piauí</a>
-                </li>
-                <li class="item-list-a">
-                  <i class="bi bi-chevron-right"></i> <a href="#plans">Demerval Lobão</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <footer>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <nav class="nav-footer">
-            <ul class="list-inline">
-              <li class="list-inline-item">
-                <a href="#">Home</a>
-              </li>
-              <li class="list-inline-item">
-                <a href="#">Quem Somos</a>
-              </li>
-              <li class="list-inline-item">
-                <a href="#">Blog</a>
-              </li>
-              <li class="list-inline-item">
-                <a href="#">Contato</a>
-              </li>
-            </ul>
-          </nav>
-          <div class="socials-a">
-            <ul class="list-inline">
-              <li class="list-inline-item">
-                <a href="#">
-                  <i class="bi bi-facebook" aria-hidden="true"></i>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a href="#">
-                  <i class="bi bi-whatsapp" aria-hidden="true"></i>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a href="#">
-                  <i class="bi bi-instagram" aria-hidden="true"></i>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a href="#">
-                  <i class="bi bi-linkedin" aria-hidden="true"></i>
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div class="copyright-footer">
-            <p class="copyright color-text-a">
-              &copy;
-              <span class="color-a">MIT Internet</span> Todos os direitos reservados.
-            </p>
-          </div>
-          <div class="credits">
-            <!--
-            All the links in the footer should remain intact.
-            You can delete the links only if you purchased the pro version.
-            Licensing information: https://bootstrapmade.com/license/
-            Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=EstateAgency
-          -->
-            <!-- Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> -->
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer><!-- End  Footer -->
-
-  <!-- <div id="preloader"></div> -->
-
+  <?php include "../components/footer.php"; ?>
   <!-- Vendor JS Files -->
   <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>

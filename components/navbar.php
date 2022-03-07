@@ -53,7 +53,7 @@
       <span></span>
       <span></span>
     </button>
-    <a class="navbar-brand d-md-none" href="#">
+    <a class="navbar-brand d-md-none" href="../">
       <img class="img-fluid" src="../assets/img/logo-mit.png">
     </a>
     <div class="container d-none d-md-block">
@@ -62,61 +62,97 @@
       </a>
       <a class="text-brand" href="#"><span class="color-b active">Para você</span></a>
     </div>
-    <button type="button" class="btn navbar-toggle-box navbar-toggle-box-collapse" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01">
-      <i class="bi bi-search"></i><span class="d-none d-md-block">Buscar</span>
-    </button>
+    <div class="title-link text-center pb-2">
+      <p>
+        Escolha sua localização <i class="bi bi-geo-alt-fill"></i>
+      </p>
+      <form action="#">
+        <select name="SelectOptions" id="SelectOptions" required>
+          <option value="Div1">Demerval</option>
+          <option value="Div2">Teresina</option>
+          <option value="Div3">Lagoa PI</option>
+          <option value="Div4">Monsenhor</option>
+          <option value="Div5">Curralinhos e povoados</option>
+        </select>
+      </form>
+    </div>
   </div>
 </nav><!-- End Header/Navbar -->
-<nav class="navbar navbar-default navbar-trans navbar-expand-lg">
+<nav class="navbar navbar-default navbar-trans navbar-expand-lg nav2">
   <div class="container">
     <div class="navbar-collapse collapse" id="navbarDefault">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" href="#">Home</a>
+          <a class="nav-link active" href="../">Home</a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Planos</a>
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">App MIT</a>
           <div class="dropdown-menu">
             <div class="row">
               <div class="col-md-6">
-                <a class="dropdown-item title" href="#">INTERNET FIBRA ÓTICA</a>
-                <a class="dropdown-item " href="#plans">300 MEGAS</a>
-                <a class="dropdown-item " href="#plans">400 MEGAS</a>
-                <a class="dropdown-item " href="#plans">500 MEGAS</a>
+                <a class="dropdown-item title" href="#">AQUI VOCÊ TEM</a>
+                <a class="dropdown-item " href="https://mitfibra.com.br/central_assinante_web/login">2ª Via da Fatura </a>
+                <a class="dropdown-item " href="https://mitfibra.com.br/central_assinante_web/login">Consumo de Internet</a>
+                <a class="dropdown-item " href="https://mitfibra.com.br/central_assinante_web/login">Sobre seu plano</a>
+                <a class="dropdown-item " href="https://mitfibra.com.br/central_assinante_web/login">Nota fiscal</a>
+                <a class="dropdown-item " href="https://mitfibra.com.br/central_assinante_web/login">Recibo</a>
               </div>
-              <div class="col-md-6">
+            </div>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Produtos e Serviços</a>
+          <div class="dropdown-menu">
+            <div class="row">
+              <div class="col-md-4">
                 <a class="dropdown-item title" href="#">COMBOS</a>
-                <!-- <a class="dropdown-item " href="#">Monte seu combo</a> -->
-                <a class="dropdown-item " href="#">Indique e ganhe</a>
+                <a class="dropdown-item " href="combos-internet-tv.php">Internet + TV</a>
+                <a class="dropdown-item " href="combos-internet-telefonia-tv.php">Internet + Telefonia + TV</a>
+              </div>
+              <div class="col-md-4">
+                <a class="dropdown-item title" href="#">CASA</a>
+                <a class="dropdown-item " href="casa-internet.php">Internet</a>
+                <a class="dropdown-item " href="casa-tv.php">TV</a>
+                <a class="dropdown-item " href="casa-fixo.php">Telefone Fixo</a>
+              </div>
+              <div class="col-md-4">
+                <a class="dropdown-item title" href="#">SERVIÇOS DIGITAIS</a>
+                <a class="dropdown-item " href="apps.php">Apps em Destaque</a>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Por que a MIT</a>
+          <div class="dropdown-menu">
+            <div class="row">
+              <div class="col-md-3">
+                <a class="dropdown-item title" href="#">HISTÓRIA</a>
+                <a class="dropdown-item">Início de tudo</a>
+              </div>
+              <div class="col-md-3">
+                <a class="dropdown-item title" href="#">INFRAESTRUTURA</a>
+                <a class="dropdown-item " href="#">Equipamentos</a>
+                <a class="dropdown-item " href="#">Rede</a>
+                <a class="dropdown-item " href="#">Cidades de atuação</a>
+                <a class="dropdown-item " href="#">Treinamentos</a>
+              </div>
+              <div class="col-md-3">
+                <a class="dropdown-item title" href="#">Responsabilidade Social</a>
+                <a class="dropdown-item " href="#">Reciclagem</a>
+                <a class="dropdown-item " href="#">Empreendorismo</a>
+                <a class="dropdown-item " href="#">Diversidade</a>
+              </div>
+              <div class="col-md-3">
+                <a class="dropdown-item title" href="#">Protagonismo</a>
+                <a class="dropdown-item " href="#">Feiras</a>
+                <a class="dropdown-item " href="#">Ações Social</a>
               </div>
             </div>
           </div>
         </li>
         <li class="nav-item">
-          <a class="nav-link " href="#">Blog</a>
-        </li>
-        <!-- <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ajuda</a>
-          <div class="dropdown-menu">
-            <div class="row">
-              <div class="col-md-6">
-                <a class="dropdown-item title" href="#">DÚVIDAS</a>
-                <a class="dropdown-item " href="#">Internet</a>
-                <a class="dropdown-item " href="#">Aparelho</a>
-                <a class="dropdown-item " href="#">Fatura</a>
-              </div>
-              <div class="col-md-6">
-                <a class="dropdown-item " href="#">Assistência</a>
-                <a class="dropdown-item " href="#">Cancelamento</a>
-                <a class="dropdown-item " href="#">Aplicativos</a>
-              </div>
-            </div>
-        </li> -->
-        <li class="nav-item">
-          <a class="nav-link " href="#faq">Ajuda</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link " href="#">Contato</a>
+          <a class="nav-link " href="ofertas.php">Melhor oferta</a>
         </li>
       </ul>
     </div>

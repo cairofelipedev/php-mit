@@ -3,6 +3,10 @@
   padding-bottom: 0%;
 }
 
+.nav2 {
+  box-shadow: 1px 1px 1px #dddddd
+}
+
 .navbar-default img {
   width: 15%;
 }
@@ -53,6 +57,24 @@
 
 .card-body-c {
   background-color: #f2f2f2;
+}
+
+.card-body-c i {
+  font-size: 28px;
+  color    : #135c91;
+}
+
+.card-body-f {
+  background-color: #37BD3F;
+  border-radius   : 10px;
+}
+
+.card-body-f i {
+  font-size: 28px;
+}
+
+.card-body-f p {
+  color: white;
 }
 
 .content-c {
@@ -181,6 +203,52 @@
 .itens-card {
   padding-left: 20px;
 }
+
+.about .nav-pills {
+  border-bottom: 1px solid rgba(var(--color-secondary-rgb), 0.2);
+}
+
+.about .nav-pills li+li {
+  margin-left: 40px;
+}
+
+.about .nav-link {
+  background   : none;
+  font-size    : 18px;
+  font-weight  : 400;
+  color        : var(--color-secondary);
+  padding      : 12px 0;
+  margin-bottom: -2px;
+  border-radius: 0;
+  font-family  : var(--font-secondary);
+}
+
+.about .nav-link.active {
+  color        : #37BD3F;
+  background   : none;
+  border-bottom: 3px solid #37BD3F;
+}
+
+@media (max-width: 575px) {
+  .about .nav-link {
+    font-size: 16px;
+  }
+}
+
+.about .tab-content h4 {
+  font-size  : 18px;
+  margin     : 0;
+  font-weight: 700;
+  color      : var(--color-secondary);
+}
+
+.about .tab-content i {
+  font-size   : 22px;
+  line-height : 0;
+  margin-right: 8px;
+  color       : var(--color-primary);
+}
+
 
 @media (min-width: 767px) {
   .intro {
