@@ -1,3 +1,9 @@
+<style>
+  .selectoptions {
+    border: transparent;
+    text-align: right;
+  }
+</style>
 <!-- ======= Search Section ======= -->
 <div class="click-closed"></div>
 <!--/ Form Search Star /-->
@@ -48,14 +54,14 @@
 <!-- ======= Header/Navbar ======= -->
 <nav class="navbar navbar-default navbar-trans navbar-expand-lg pt-2">
   <div class="container">
+    <a class="navbar-brand d-md-none" href="../">
+      <img class="img-fluid" src="../assets/img/logo-mit.png">
+    </a>
     <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarDefault" aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
       <span></span>
       <span></span>
       <span></span>
     </button>
-    <a class="navbar-brand d-md-none" href="../">
-      <img class="img-fluid" src="../assets/img/logo-mit.png">
-    </a>
     <div class="container d-none d-md-block">
       <a class="navbar-brand" href="#">
         <img class="igm-fluid" src="../assets/img/logo-mit.png">
@@ -63,18 +69,43 @@
       <a class="text-brand" href="#"><span class="color-b active">Para você</span></a>
     </div>
     <div class="title-link text-center pb-2">
-      <p>
-        Escolha sua localização <i class="bi bi-geo-alt-fill"></i>
-      </p>
-      <form action="#">
-        <select name="SelectOptions" id="SelectOptions" required>
-          <option value="Div1">Demerval</option>
-          <option value="Div2">Teresina</option>
-          <option value="Div3">Lagoa PI</option>
-          <option value="Div4">Monsenhor</option>
-          <option value="Div5">Curralinhos e povoados</option>
-        </select>
-      </form>
+      <div class="d-flex ">
+        <form id="loc" action="#">
+          <select class="form-control select-city selectoptions">
+            <option value="home/teresina.php">Teresina</option>
+            <option value="home/demerval.php">Demerval</option>
+            <option value="home/lagoa-pi.php">Lagoa PI</option>
+            <option value="home/monsenhor.php">Monsenhor</option>
+            <option value="home/curralinhos-e-povoados.php">Curralinhos e povoados</option>
+          </select>
+        </form>
+        <i data-bs-toggle="modal" data-bs-target="#exampleModal" class="bi bi-geo-alt-fill"></i>
+      </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel"> <i class="bi bi-geo-alt-fill"></i> Localização</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form class="d-md-block d-none" id="loc" action="#">
+              <select class="form-control select-city selectoptions">
+                <option value="home/teresina.php">Teresina</option>
+                <option value="home/demerval.php">Demerval</option>
+                <option value="home/lagoa-pi.php">Lagoa PI</option>
+                <option value="home/monsenhor.php">Monsenhor</option>
+                <option value="home/curralinhos-e-povoados.php">Curralinhos e povoados</option>
+              </select>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </nav><!-- End Header/Navbar -->
@@ -242,3 +273,38 @@
     </div>
   </div>
 </div>
+<script>
+  var select = document.querySelector(".select-city");
+  var selectOption = select.options[select.selectedIndex];
+  var lastSelected = localStorage.getItem('select');
+
+  if (lastSelected) {
+    select.value = lastSelected;
+  }
+
+  select.onchange = function() {
+    lastSelected = select.options[select.selectedIndex].value;
+    localStorage.setItem('select', lastSelected);
+
+    if (lastSelected == 'home/teresina.php') {
+      location.href = 'teresina.php';
+      document.getElementById("demo").innerHTML = "Teresina";
+    }
+    if (lastSelected == 'home/demerval.php') {
+      location.href = '../home/demerval.php';
+      document.getElementById("demo").innerHTML = "Demerval";
+    }
+    if (lastSelected == 'home/lagoa-pi.php') {
+      location.href = '../home/lagoa-pi.php';
+      document.getElementById("demo").innerHTML = "Lagoa";
+    }
+    if (lastSelected == 'home/monsenhor.php') {
+      location.href = '../home/monsenhor.php';
+      document.getElementById("demo").innerHTML = "Monsenhor";
+    }
+    if (lastSelected == 'home/curralinhos-e-povoados.php') {
+      location.href = '../home/curralinhos-e-povoados.php';
+      document.getElementById("demo").innerHTML = "Curralinhos";
+    }
+  }
+</script>
