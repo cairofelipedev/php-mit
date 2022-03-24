@@ -57,11 +57,16 @@
 
 .card-body-c {
   background-color: #f2f2f2;
+  height: 150px;
 }
 
 .card-body-c i {
-  font-size: 28px;
+  font-size: 40px;
   color    : #135c91;
+}
+
+.card-body-c .container {
+  padding-top:20px;
 }
 
 .card-body-f {
@@ -254,7 +259,7 @@
 }
 
 .card-body-services .content-services img {
-  width: 40%;
+  width: 30%;
 }
 
 .card-body-services h5 {
@@ -284,7 +289,7 @@
   }
 
   .title-a {
-    font-size: 2.6rem;
+    font-size: 2.0rem;
   }
 
   .title-wrap {
