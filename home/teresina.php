@@ -136,11 +136,11 @@ include "../admin/insert_form.php";
         <div class="row">
           <div class="col-md-12 pt-4">
             <div class="d-md-flex align-items-center justify-content-center">
-              <center><img src="../assets/img/igbi.jpg" width="150"></center>
+              <center><img src="../assets/img/mit-igbi.jpeg" class="img-fluid"></center>
             </div>
           </div>
         </div>
-        <div class="row">
+        <!-- <div class="row">
           <div class="col-md-3 igbi-img text-center">
             <img src="../assets/img/enviar-receber.svg">
           </div>
@@ -150,7 +150,7 @@ include "../admin/insert_form.php";
               <button class="btn btn-igbi">Saiba mais</button>
             </a>
           </div>
-        </div>
+        </div> -->
       </div>
     </section>
     <!-- ======= FAQ Section ======= -->
@@ -231,7 +231,29 @@ include "../admin/insert_form.php";
         </div>
       </div>
     </section><!-- End FAQ Section -->
-    <section class="section-property section-t4">
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 pt-4">
+            <div class="d-md-flex align-items-center justify-content-center">
+              <center><img src="../assets/img/autoatendimentomit.jpeg" class="img-fluid"></center>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 pt-4">
+            <div class="d-md-flex align-items-center justify-content-center">
+              <center><img src="../assets/img/mitpix.jpeg" class="img-fluid"></center>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- <section class="section-property section-t4">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
@@ -285,7 +307,7 @@ include "../admin/insert_form.php";
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
     <!-- ======= Latest News Section ======= -->
     <section class="section-news section-t4">
       <div class="container">
