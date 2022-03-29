@@ -159,8 +159,8 @@
           <div class="dropdown-menu">
             <div class="row">
               <div class="col-md-3">
-                <a class="dropdown-item title" href="#">HISTÓRIA</a>
-                <a class="dropdown-item">Início de tudo</a>
+                <a class="dropdown-item title" href="quem-somos.php">HISTÓRIA</a>
+                <a class="dropdown-item" href="quem-somos.php">Início de tudo</a>
               </div>
               <div class="col-md-3">
                 <a class="dropdown-item title" href="#">INFRAESTRUTURA</a>
@@ -188,7 +188,7 @@
         </li>
       </ul>
     </div>
-    <a href="../admin/login.php"><button type="button" class="btn d-none d-md-block navbar-toggle-box navbar-toggle-box-collapse" data-toggle="modal">
+    <a href="../admin/login.php"><button type="button" class="btn d-none d-md-block">
         <i class="bi bi-person"></i>Login
       </button>
     </a>

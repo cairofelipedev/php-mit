@@ -40,7 +40,7 @@
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top ">
     <div class="container d-flex align-items-center justify-content-between">
-      <a href="index.html" class="logo"><img src="assets/img/igbi-branca.png" alt="" class="img-fluid"></a>
+      <a href="igbi.php" class="logo"><img src="assets/img/igbi-branca.png" alt="" class="img-fluid"></a>
 
       <nav id="navbar" class="navbar">
         <ul>
@@ -66,7 +66,7 @@
           <div><a href="#about" class="btn-get-started scrollto">Saiba mais</a></div>
         </div>
         <div class="col-xl-4 col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="150">
-          <img src="assets/img/celemaquinaapp.png" class="img-fluid animated" alt="">
+          <img src="assets/img/maquinacartao.png" class="img-fluid animated" alt="">
         </div>
       </div>
     </div>

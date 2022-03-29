@@ -135,9 +135,11 @@ include "../admin/insert_form.php";
       <div class="container">
         <div class="row">
           <div class="col-md-12 pt-4">
-            <div class="d-md-flex align-items-center justify-content-center">
-              <center><img src="../assets/img/mit-igbi.jpeg" class="img-fluid"></center>
-            </div>
+            <a href="../igbi.php">
+              <div class="d-md-flex align-items-center justify-content-center">
+                <center><img src="../assets/img/mit-igbi.jpeg" class="img-fluid"></center>
+              </div>
+            </a>
           </div>
         </div>
         <!-- <div class="row">
