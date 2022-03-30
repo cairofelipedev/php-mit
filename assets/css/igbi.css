@@ -1418,3 +1418,10 @@ section {
   color: #fff;
   text-decoration: none;
 }
+
+.btn-igbi {
+  background-color: #8B0EFE;
+  color:white;
+  font-weight: 700;
+  border-radius:30px;
+}

@@ -15,7 +15,7 @@ include "../admin/insert_form.php";
   <meta name="description" content="MIT Internet que transforma!💙💚" />
   <meta property="og:title" content="MIT Internet" />
   <meta property="og:url" content="https://mitinternet.com.br" />
-  <meta property="og:image" content="https://mit-internet.vercel.app/assets/img/logo-mit.png" />
+  <meta property="og:image" content="https://mitinternet.com.br/assets/img/logo-mit.png" />
   <!-- Favicons -->
   <link href="../assets/img/logo-mit.png" rel="icon">
   <link href="../assets/img/logo-mit.png" rel="apple-touch-icon">
@@ -144,7 +144,7 @@ include "../admin/insert_form.php";
         </div>
         <div class="row justify-content-center mt-2">
           <div class="col-md-2">
-            <a href="https://useigbi.com.br">
+            <a href="https://igbipay.com.br">
               <button class="btn btn-igbi">Saiba mais</button>
             </a>
           </div>
