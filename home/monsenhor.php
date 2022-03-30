@@ -1,5 +1,6 @@
 <?php
 require_once '../admin/dbconfig.php';
+include "../admin/insert_form.php";
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -8,12 +9,12 @@ require_once '../admin/dbconfig.php';
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>MIT Internet</title>
+  <title>MIT Internet - Monsenhor Gil</title>
   <meta content="MIT Internet que transforma!💙💚" name="description">
   <meta content="MIT, internet, fibra otica, banda larga, ultravelocidade" name="keywords">
   <meta name="description" content="MIT Internet que transforma!💙💚" />
   <meta property="og:title" content="MIT Internet" />
-  <meta property="og:url" content="https://mit-internet.vercel.app" />
+  <meta property="og:url" content="https://mitinternet.com.br" />
   <meta property="og:image" content="https://mit-internet.vercel.app/assets/img/logo-mit.png" />
   <!-- Favicons -->
   <link href="../assets/img/logo-mit.png" rel="icon">
@@ -31,14 +32,6 @@ require_once '../admin/dbconfig.php';
   <!-- Template Main CSS File -->
   <link href="../assets/css/main.css" rel="stylesheet">
   <link href="../assets/css/style.css" rel="stylesheet">
-  <style>
-    .Div2,
-    .Div3,
-    .Div4,
-    .Div5 {
-      display: none;
-    }
-  </style>
 </head>
 
 <body>
@@ -68,53 +61,90 @@ require_once '../admin/dbconfig.php';
   </div><!-- End Intro Section -->
 
   <main id="main">
-    <section class="section-property section-t4">
+    <section class="section-property section-t4 p-4">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
-            <div class="title-wrap">
-              <div class="title-box">
-                <h2 class="title-a">O que mais a MIT oferece para você</h2>
+            <div class="title-box">
+              <h2 class="title-a">Conexão completa com nossos serviços</h2>
+            </div>
+          </div>
+        </div>
+        <div class="row pt-4">
+          <div class="col-md-3 pb-2">
+            <div class="card-body-services pt-4 pb-2 shadow">
+              <div class="container">
+                <h5>INTERNET</h5>
+                <p class="lead">Internet mais rápida da região</p>
+                <div class="content-services d-flex justify-content-between">
+                  <a href="combos-internet-streaming.php">
+                    <p class="pt-4">Conheça os planos <i class="bi bi-arrow-right"></i></p>
+                  </a>
+                  <img class="img-fluid" src="../assets/img/icon-internet.png">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 pb-2">
+            <div class="card-body-services pt-4 pb-2 shadow">
+              <div class="container">
+                <h5>TV</h5>
+                <p class="lead">Programação completa em Full HD.</p>
+                <div class="content-services d-flex align-items-center justify-content-between">
+                  <a href="combos-internet-tv.php">
+                    <p>Conheça os planos <i class="bi bi-arrow-right"></i></p>
+                  </a>
+                  <img class="img-fluid" src="../assets/img/icon-tv.png">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 pb-2">
+            <div class="card-body-services pt-4 pb-2 shadow">
+              <div class="container">
+                <h5>TELEFONIA</h5>
+                <p class="lead"> Serviços de telefonia fixa, ilimitado.</p>
+                <div class="content-services d-flex align-items-center justify-content-between">
+                  <a href="casa-fixo.php">
+                    <p>Conheça os planos</p>
+                  </a>
+                  <img class="img-fluid" src="../assets/img/icon-telefonia.png">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 pb-2">
+            <div class="card-body-services pt-4 pb-2 shadow">
+              <div class="container">
+                <h5>COMBOS</h5>
+                <p class="lead">Internet + Streaming + tv + telefonia</p>
+                <div class="content-services d-flex justify-content-between">
+                  <a href="combos-internet-telefonia-tv.php">
+                    <p class="pt-4">Conheça os planos</p>
+                  </a>
+                  <img class="img-fluid" src="../assets/img/icon-combos.png">
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <div id="oferece-carousel" class="swiper">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <img class="img-fluid" src="../assets/img/2.png">
-            </div>
-            <div class="swiper-slide">
-              <img class="img-fluid" src="../assets/img/3.png">
-            </div>
-            <div class="swiper-slide">
-              <img class="img-fluid" src="../assets/img/4.png">
-            </div>
-            <div class="swiper-slide">
-              <img class="img-fluid" src="../assets/img/5.png">
-            </div>
-          </div>
-          <div class="oferece-carousel-pagination carousel-pagination-oferece"></div>
-        </div>
+      </div>
+    </section>
     </section><!-- End Oferece Section -->
     <section id="home-igbi">
       <div class="container">
         <div class="row">
-          <div class="col-md-12">
-            <div class="d-md-flex align-items-center justify-content-center">
-              <center><img src="../assets/img/igbi.jpg" width="150"></center>
-              <h2 class="title-a text-center">Parceiro oficial</h2>
-              <center><img src="../assets/img/logo-mit.png" class="img-fluid"></center>
-            </div>
+          <div class="col-md-12 pt-4">
+            <a href="../igbi.php">
+              <div class="d-md-flex align-items-center justify-content-center">
+                <center><img src="../assets/img/mit-igbi.jpeg" class="img-fluid"></center>
+              </div>
+            </a>
           </div>
         </div>
-        <div class="row">
-         <div class="col-md-3 igbi-img text-center">
-            <img src="../assets/img/enviar-receber.svg">
-          </div>
-          <div class="col-md-6">
-            <h2 class="title-a">Uma plataforma completa que vai transformar o seu negócio através de uma nova forma de comprar: O Cashback!</h2>
-            <a href="../igbi.php">
+        <div class="row justify-content-center mt-2">
+          <div class="col-md-2">
+            <a href="https://useigbi.com.br">
               <button class="btn btn-igbi">Saiba mais</button>
             </a>
           </div>
@@ -129,11 +159,6 @@ require_once '../admin/dbconfig.php';
             <div class="title-wrap">
               <div class="title-box">
                 <h2 class="title-a">Tire suas dúvidas</h2>
-              </div>
-              <div class="title-link">
-                <a href="#">Veja todas
-                  <span class="bi bi-chevron-right"></span>
-                </a>
               </div>
             </div>
           </div>
@@ -199,8 +224,87 @@ require_once '../admin/dbconfig.php';
         </div>
       </div>
     </section><!-- End FAQ Section -->
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 pt-4">
+            <div class="d-md-flex align-items-center justify-content-center">
+              <a href="https://mitfibra.com.br/central_assinante_web/login">
+                <center><img src="../assets/img/autoatendimentomit.jpeg" class="img-fluid"></center>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 pt-4">
+            <div class="d-md-flex align-items-center justify-content-center">
+              <center><img src="../assets/img/mitpix.jpeg" class="img-fluid"></center>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- <section class="section-property section-t4">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="title-wrap">
+              <div class="title-box">
+                <h2 class="title-a">Autoatendimento para Clientes</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-3 mb-2">
+            <div class="card-body-c pt-2 pb-2 rounded">
+              <div class="container">
+                <p class="content-c">
+                  <i class="bi bi-file-earmark-text-fill"></i>
+                </p>
+                <p class="text-black">2º Via de conta móvel</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 mb-2">
+            <div class="card-body-c pt-2 pb-2 rounded">
+              <div class="container">
+                <p class="content-c">
+                  <i class="bi bi-cash-coin"></i>
+                </p>
+                <p class="text-black">Consulta de saldo</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 mb-2">
+            <div class="card-body-c pt-2 pb-2 rounded">
+              <div class="container">
+                <p class="content-c">
+                  <i class="bi bi-phone-fill"></i>
+                </p>
+                <p class="text-black">App Mit</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 mb-2">
+            <div class="card-body-c pt-2 pb-2 rounded">
+              <div class="container">
+                <p class="content-c">
+                  <i class="bi bi-credit-card-2-back-fill"></i>
+                </p>
+                <p class="text-black">Pague a conta com o cartão</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
     <!-- ======= Latest News Section ======= -->
-    <section class="section-news section-t4">
+    <!-- <section class="section-news section-t4">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
@@ -219,112 +323,49 @@ require_once '../admin/dbconfig.php';
 
         <div id="news-carousel" class="swiper">
           <div class="swiper-wrapper">
-
-            <div class="carousel-item-c swiper-slide">
-              <div class="card-box-b card-shadow news-box">
-                <div class="img-box-b">
-                  <img src="../assets/img/azul.jpg" alt="" class="img-b img-fluid">
-                </div>
-                <div class="card-overlay">
-                  <div class="card-header-b">
-                    <div class="card-category-b">
-                      <a href="#" class="category-b">Saúde</a>
+            <?php
+            // $stmt = $DB_con->prepare('SELECT id, title, img, category FROM posts ORDER BY id DESC');
+            // $stmt->execute();
+            // if ($stmt->rowCount() > 0) {
+            //   while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+            //     extract($row);
+            ?>
+                <div class="carousel-item-c swiper-slide">
+                  <div class="card-box-b card-shadow news-box">
+                    <div class="img-box-b">
+                      <img src="../admin/uploads/blog/<?php // echo $row['img']; ?>" alt="" class="img-b img-fluid">
                     </div>
-                    <div class="card-title-b">
-                      <h2 class="title-2">
-                        <a href="#">É melhor prevenir do que remediar
-                          <br>concordam? 🤔</a>
-                      </h2>
-                    </div>
-                    <div class="card-date">
-                      <span class="date-b">1 Nov. 2021</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="carousel-item-c swiper-slide">
-              <div class="card-box-b card-shadow news-box">
-                <div class="img-box-b">
-                  <img src="../assets/img/games.jpg" alt="" class="img-b img-fluid">
-                </div>
-                <div class="card-overlay">
-                  <div class="card-header-b">
-                    <div class="card-category-b">
-                      <a href="#" class="category-b">Diversão</a>
-                    </div>
-                    <div class="card-title-b">
-                      <h2 class="title-2">
-                        <a href="#">03 dicas de jogos para manter esse espírito de adrenalina</a>
-                      </h2>
-                    </div>
-                    <div class="card-date">
-                      <span class="date-b">27 Out. 2021</span>
+                    <div class="card-overlay">
+                      <div class="card-header-b">
+                        <div class="card-category-b">
+                          <a href="post.php?title=<?php // echo $title; ?>" class="category-b"><?php //echo $category; ?></a>
+                        </div>
+                        <div class="card-title-b">
+                          <h2 class="title-2">
+                            <a href="post.php?title=<?php // echo $title; ?>"><?php // echo $title; ?></a>
+                          </h2>
+                        </div>
+                        <div class="card-date">
+                          <span class="date-b">1 Nov. 2021</span>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
-
-            <div class="carousel-item-c swiper-slide">
-              <div class="card-box-b card-shadow news-box">
-                <div class="img-box-b">
-                  <img src="../assets/img/rosa.jpg" alt="" class="img-b img-fluid">
-                </div>
-                <div class="card-overlay">
-                  <div class="card-header-b">
-                    <div class="card-category-b">
-                      <a href="#" class="category-b">Saúde</a>
-                    </div>
-                    <div class="card-title-b">
-                      <h2 class="title-2">
-                        <a href="#">É hora de se tocar, não deixe sua saúde para depois.</a>
-                      </h2>
-                    </div>
-                    <div class="card-date">
-                      <span class="date-b">1 Out. 2021</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="carousel-item-c swiper-slide">
-              <div class="card-box-b card-shadow news-box">
-                <div class="img-box-b">
-                  <img src="../assets/img/diversao.jpg" alt="" class="img-b img-fluid">
-                </div>
-                <div class="card-overlay">
-                  <div class="card-header-b">
-                    <div class="card-category-b">
-                      <a href="#" class="category-b">Diversão</a>
-                    </div>
-                    <div class="card-title-b">
-                      <h2 class="title-2">
-                        <a href="#">Fim de semana com diversão tem que ter Mit</a>
-                      </h2>
-                    </div>
-                    <div class="card-date">
-                      <span class="date-b">17 Set. 2021</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
+            <?php
+            //   }
+            // }
+            ?>
           </div>
         </div>
 
         <div class="news-carousel-pagination carousel-pagination"></div>
       </div>
-    </section>
+    </section> -->
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
   <?php include "../components/footer.php"; ?>
-  <!-- <div id="preloader"></div> -->
-
   <!-- Vendor JS Files -->
   <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>

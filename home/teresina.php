@@ -9,12 +9,12 @@ include "../admin/insert_form.php";
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>MIT Internet</title>
+  <title>MIT Internet - Teresina</title>
   <meta content="MIT Internet que transforma!💙💚" name="description">
   <meta content="MIT, internet, fibra otica, banda larga, ultravelocidade" name="keywords">
   <meta name="description" content="MIT Internet que transforma!💙💚" />
   <meta property="og:title" content="MIT Internet" />
-  <meta property="og:url" content="https://mit-internet.vercel.app" />
+  <meta property="og:url" content="https://mitinternet.com.br" />
   <meta property="og:image" content="https://mit-internet.vercel.app/assets/img/logo-mit.png" />
   <!-- Favicons -->
   <link href="../assets/img/logo-mit.png" rel="icon">
@@ -142,17 +142,13 @@ include "../admin/insert_form.php";
             </a>
           </div>
         </div>
-        <!-- <div class="row">
-          <div class="col-md-3 igbi-img text-center">
-            <img src="../assets/img/enviar-receber.svg">
-          </div>
-          <div class="col-md-8">
-            <h4 class="title-a">Cliente MIT tem mais vantagens: Além da melhor conexão, somos a única empresa que oferece Cashback direto no app.</h4>
-            <a href="../igbi.php">
+        <div class="row justify-content-center mt-2">
+          <div class="col-md-2">
+            <a href="https://useigbi.com.br">
               <button class="btn btn-igbi">Saiba mais</button>
             </a>
           </div>
-        </div> -->
+        </div>
       </div>
     </section>
     <!-- ======= FAQ Section ======= -->
@@ -163,11 +159,6 @@ include "../admin/insert_form.php";
             <div class="title-wrap">
               <div class="title-box">
                 <h2 class="title-a">Tire suas dúvidas</h2>
-              </div>
-              <div class="title-link">
-                <a href="#">Veja todas
-                  <span class="bi bi-chevron-right"></span>
-                </a>
               </div>
             </div>
           </div>
@@ -238,7 +229,9 @@ include "../admin/insert_form.php";
         <div class="row">
           <div class="col-md-12 pt-4">
             <div class="d-md-flex align-items-center justify-content-center">
-              <center><img src="../assets/img/autoatendimentomit.jpeg" class="img-fluid"></center>
+              <a href="https://mitfibra.com.br/central_assinante_web/login">
+                <center><img src="../assets/img/autoatendimentomit.jpeg" class="img-fluid"></center>
+              </a>
             </div>
           </div>
         </div>
@@ -311,7 +304,7 @@ include "../admin/insert_form.php";
       </div>
     </section> -->
     <!-- ======= Latest News Section ======= -->
-    <section class="section-news section-t4">
+    <!-- <section class="section-news section-t4">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
@@ -331,25 +324,25 @@ include "../admin/insert_form.php";
         <div id="news-carousel" class="swiper">
           <div class="swiper-wrapper">
             <?php
-            $stmt = $DB_con->prepare('SELECT id, title, img, category FROM posts ORDER BY id DESC');
-            $stmt->execute();
-            if ($stmt->rowCount() > 0) {
-              while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-                extract($row);
+            // $stmt = $DB_con->prepare('SELECT id, title, img, category FROM posts ORDER BY id DESC');
+            // $stmt->execute();
+            // if ($stmt->rowCount() > 0) {
+            //   while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+            //     extract($row);
             ?>
                 <div class="carousel-item-c swiper-slide">
                   <div class="card-box-b card-shadow news-box">
                     <div class="img-box-b">
-                      <img src="../admin/uploads/blog/<?php echo $row['img']; ?>" alt="" class="img-b img-fluid">
+                      <img src="../admin/uploads/blog/<?php // echo $row['img']; ?>" alt="" class="img-b img-fluid">
                     </div>
                     <div class="card-overlay">
                       <div class="card-header-b">
                         <div class="card-category-b">
-                          <a href="post.php?title=<?php echo $title; ?>" class="category-b"><?php echo $category; ?></a>
+                          <a href="post.php?title=<?php // echo $title; ?>" class="category-b"><?php //echo $category; ?></a>
                         </div>
                         <div class="card-title-b">
                           <h2 class="title-2">
-                            <a href="post.php?title=<?php echo $title; ?>"><?php echo $title; ?></a>
+                            <a href="post.php?title=<?php // echo $title; ?>"><?php // echo $title; ?></a>
                           </h2>
                         </div>
                         <div class="card-date">
@@ -360,15 +353,15 @@ include "../admin/insert_form.php";
                   </div>
                 </div>
             <?php
-              }
-            }
+            //   }
+            // }
             ?>
           </div>
         </div>
 
         <div class="news-carousel-pagination carousel-pagination"></div>
       </div>
-    </section>
+    </section> -->
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->

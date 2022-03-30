@@ -82,31 +82,6 @@
         <i data-bs-toggle="modal" data-bs-target="#exampleModal" class="bi bi-geo-alt-fill"></i>
       </div>
     </div>
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel"> <i class="bi bi-geo-alt-fill"></i> Localização</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <form class="d-md-block d-none" id="loc" action="#">
-              <select class="form-control select-city selectoptions">
-                <option value="home/teresina.php">Teresina</option>
-                <option value="home/demerval.php">Demerval</option>
-                <option value="home/lagoa-pi.php">Lagoa PI</option>
-                <option value="home/monsenhor.php">Monsenhor</option>
-                <option value="home/curralinhos-e-povoados.php">Curralinhos e povoados</option>
-              </select>
-            </form>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-          </div>
-        </div>
-      </div>
-    </div>
   </div>
 </nav><!-- End Header/Navbar -->
 <nav class="navbar navbar-default navbar-trans navbar-expand-lg nav2">
@@ -162,7 +137,7 @@
                 <a class="dropdown-item title" href="quem-somos.php">HISTÓRIA</a>
                 <a class="dropdown-item" href="quem-somos.php">Início de tudo</a>
               </div>
-              <div class="col-md-3">
+              <!-- <div class="col-md-3">
                 <a class="dropdown-item title" href="#">INFRAESTRUTURA</a>
                 <a class="dropdown-item " href="#">Equipamentos</a>
                 <a class="dropdown-item " href="#">Rede</a>
@@ -179,7 +154,7 @@
                 <a class="dropdown-item title" href="#">Protagonismo</a>
                 <a class="dropdown-item " href="#">Feiras</a>
                 <a class="dropdown-item " href="#">Ações Social</a>
-              </div>
+              </div> -->
             </div>
           </div>
         </li>
@@ -199,7 +174,9 @@
   <div class="container">
     <div class="d-flex justify-content-center contents">
       <div class="col-md-2 pt-2">
-        Fala com um consultor
+        <a href="https://api.whatsapp.com/send?phone=558632202386&text=Oi%20MIT%20Internet%20Site">
+          Fala com um consultor
+        </a>
       </div>
       <div class="col-md-2">
         <div class="d-grid">
@@ -212,7 +189,9 @@
       </div>
       <div class="col-md-2">
         <div class="d-grid">
-          <button class="btn btn-footer btn-lg" type="button">Ligue agora</button>
+          <a href="https://api.whatsapp.com/send?phone=558632202386&text=Oi%20MIT%20Internet%20Site">
+            <button class="btn btn-footer btn-lg" type="button">Ligue agora</button>
+          </a>
         </div>
       </div>
     </div>
