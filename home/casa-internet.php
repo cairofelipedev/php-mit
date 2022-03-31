@@ -136,7 +136,7 @@ include "../admin/insert_form.php";
                             <i class="bi bi-wifi"></i> Internet 200 mega
                           </p>
                           <p class="text-black">Dowload até 200 Mpbs</p>
-                          <p class="content-c" style="height:300px;">
+                          <p class="content-c">
                             <i class="bi bi-tv-fill"></i>Planos com Disney+
                           </p>
                           <p class="text-black">Assista a produções Disney, Pixar, Marvel, Star Wars e muito mais</p>

@@ -23,6 +23,7 @@ include "insert_form.php";
   <meta property="og:title" content="IGBI CashBack" />
   <meta property="og:url" content="https://igbipay.com.br/" />
   <meta property="og:image" content="https://igbipay.com.br/assets/img/igbi-branca.png" />
+  <meta name="facebook-domain-verification" content="8w7l80lrnbigea6qgcdu3whk90m3tw" />
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
@@ -97,7 +98,7 @@ include "insert_form.php";
               <li><i class="bi bi-check-circle"></i>Acesso a potenciais clientes novos todos os dias</li>
               <li><i class="bi bi-check-circle"></i>Sua empresa sai à frente da concorrência</li>
               <li><i class="bi bi-check-circle"></i>Exclusividade no seu nicho</li>
-              <li><i class="bi bi-check-circle"></i>Fidelização de clientes através do cashbackFIDELIZAÇÃO DE CLIENTES ATRAVÉS DO CASHBACK</li>
+              <li><i class="bi bi-check-circle"></i>Fidelização de clientes através do cashback</li>
               <li><i class="bi bi-check-circle"></i>Experiência de compra diferenciada</li>
               <li><i class="bi bi-check-circle"></i>Aumento nas vendas e lucro da sua empresa</li>
             </ul>
@@ -252,7 +253,7 @@ include "insert_form.php";
       <div class="copyright-wrap d-md-flex py-4">
         <div class="me-md-auto text-center text-md-start">
           <div class="copyright">
-            &copy; Copyright <strong><span>IGBI CASH BACK</span></strong>. Todos os direitos reservados
+            &copy; Copyright <strong><span>IGBI CASHBACK</span></strong>. Todos os direitos reservados
           </div>
           <div class="credits">
             Desenvolvimento <a href="https://instagram.com/cairoofelipe">Cairo Felipe</a>
