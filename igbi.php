@@ -9,7 +9,7 @@ include "insert_form.php";
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Igbi Cash Back</title>
+  <title>Igbi CashBack</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -37,13 +37,6 @@ include "insert_form.php";
 
   <!-- Template Main CSS File -->
   <link href="assets/css/igbi.css" rel="stylesheet">
-
-  <!-- =======================================================
-  * Template Name: Techie - v4.7.0
-  * Template URL: https://bootstrapmade.com/techie-free-skin-bootstrap-3/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
 <body>
@@ -100,13 +93,13 @@ include "insert_form.php";
               É UM PROGRAMA DE RECOMPENSAS FORA DA CURVA
             </p>
             <ul>
-              <li><i class="bi bi-check-circle"></i>EXPANSÃO DA SUA MARCA ATRAVÉS DE UM MARKETPLACE INTEGRADO</li>
-              <li><i class="bi bi-check-circle"></i>ACESSO A POTENCIAIS CLIENTES NOVOS TODOS OS DIAS</li>
-              <li><i class="bi bi-check-circle"></i>SUA EMPRESA SAI À FRENTE DA CONCORRÊNCIA</li>
-              <li><i class="bi bi-check-circle"></i>EXCLUSIVIDADE NO SEU NICHO</li>
-              <li><i class="bi bi-check-circle"></i>FIDELIZAÇÃO DE CLIENTES ATRAVÉS DO CASHBACK</li>
-              <li><i class="bi bi-check-circle"></i>EXPERIÊNCIA DE COMPRA DIFERENCIADA</li>
-              <li><i class="bi bi-check-circle"></i>AUMENTO NAS VENDAS E LUCRO DA SUA EMPRESA.</li>
+              <li><i class="bi bi-check-circle"></i>Expansão da sua marca através de um marketplace integrado</li>
+              <li><i class="bi bi-check-circle"></i>Acesso a potenciais clientes novos todos os dias</li>
+              <li><i class="bi bi-check-circle"></i>Sua empresa sai à frente da concorrência</li>
+              <li><i class="bi bi-check-circle"></i>Exclusividade no seu nicho</li>
+              <li><i class="bi bi-check-circle"></i>Fidelização de clientes através do cashbackFIDELIZAÇÃO DE CLIENTES ATRAVÉS DO CASHBACK</li>
+              <li><i class="bi bi-check-circle"></i>Experiência de compra diferenciada</li>
+              <li><i class="bi bi-check-circle"></i>Aumento nas vendas e lucro da sua empresa</li>
             </ul>
             <a href="#" class="read-more">Baixe agora <i class="bi bi-long-arrow-right"></i></a>
           </div>

@@ -77,7 +77,6 @@ include "../admin/insert_form.php";
                           <p class="content-c">
                             <i class="bi bi-wifi"></i> Internet Fibra 200 mega com Wi-fi grátis
                           </p>
-                          <p class="text-black">Dowload até 200 Mpbs</p>
                         </div>
                       </div>
                     </div>
@@ -93,9 +92,8 @@ include "../admin/insert_form.php";
                       <div class="card-body-c pt-2 pb-2">
                         <div class="container">
                           <p class="content-c">
-                            <i class="bi bi-wifi"></i> Internet Fibra 300 mega com Wi-fi grátis
+                            <i class="bi bi-wifi"></i>Internet Fibra 300 mega com Wi-fi grátis
                           </p>
-                          <p class="text-black">Dowload até 300 Mpbs</p>
                         </div>
                       </div>
                     </div>
@@ -111,9 +109,8 @@ include "../admin/insert_form.php";
                       <div class="card-body-c pt-2 pb-2">
                         <div class="container">
                           <p class="content-c">
-                            <i class="bi bi-wifi"></i> Internet Fibra 600 mega com Wi-fi grátis
+                            <i class="bi bi-wifi"></i>Internet Fibra 400 mega com Wi-fi grátis
                           </p>
-                          <p class="text-black">Dowload até 600 Mpbs</p>
                         </div>
                       </div>
                     </div>
@@ -139,7 +136,7 @@ include "../admin/insert_form.php";
                             <i class="bi bi-wifi"></i> Internet 200 mega
                           </p>
                           <p class="text-black">Dowload até 200 Mpbs</p>
-                          <p class="content-c">
+                          <p class="content-c" style="height:300px;">
                             <i class="bi bi-tv-fill"></i>Planos com Disney+
                           </p>
                           <p class="text-black">Assista a produções Disney, Pixar, Marvel, Star Wars e muito mais</p>
@@ -159,9 +156,8 @@ include "../admin/insert_form.php";
                       <div class="card-body-c pt-2 pb-2">
                         <div class="container">
                           <p class="content-c">
-                            <i class="bi bi-wifi"></i> Internet 400 mega
+                            <i class="bi bi-wifi"></i>Download de até 400 Mpbs
                           </p>
-                          <p class="text-black">Dowload até 400 Mpbs</p>
                           <p class="content-c">
                             <i class="bi bi-tv-fill"></i>Planos com Disney+
                           </p>
@@ -182,9 +178,8 @@ include "../admin/insert_form.php";
                       <div class="card-body-c pt-2 pb-2">
                         <div class="container">
                           <p class="content-c">
-                            <i class="bi bi-wifi"></i> Internet 600 mega
+                            <i class="bi bi-wifi"></i> Download de até 600 Mpbs
                           </p>
-                          <p class="text-black">Dowload até 600 Mpbs</p>
                           <p class="content-c">
                             <i class="bi bi-tv-fill"></i>Planos com Disney+
                           </p>
@@ -210,9 +205,8 @@ include "../admin/insert_form.php";
                       <div class="card-body-c pt-2 pb-2">
                         <div class="container">
                           <p class="content-c">
-                            <i class="bi bi-wifi"></i> Internet 200 mega
+                            <i class="bi bi-wifi"></i> Download de até 200 Mpbs
                           </p>
-                          <p class="text-black">Dowload até 200 Mpbs</p>
                           <p class="content-c">
                             <i class="bi bi-tv-fill"></i>Planos com Netflix
                           </p>
@@ -233,9 +227,8 @@ include "../admin/insert_form.php";
                       <div class="card-body-c pt-2 pb-2">
                         <div class="container">
                           <p class="content-c">
-                            <i class="bi bi-wifi"></i> Internet 400 mega
+                            <i class="bi bi-wifi"></i>Download de até 400 Mpbs
                           </p>
-                          <p class="text-black">Dowload até 400 Mpbs</p>
                           <p class="content-c">
                             <i class="bi bi-tv-fill"></i>Planos com Netflix
                           </p>
@@ -256,9 +249,8 @@ include "../admin/insert_form.php";
                       <div class="card-body-c pt-2 pb-2">
                         <div class="container">
                           <p class="content-c">
-                            <i class="bi bi-wifi"></i> Internet 600 mega
+                            <i class="bi bi-wifi"></i> Download de até 600 Mpbs
                           </p>
-                          <p class="text-black">Dowload até 600 Mpbs</p>
                           <p class="content-c">
                             <i class="bi bi-tv-fill"></i>Planos com Netflix
                           </p>
