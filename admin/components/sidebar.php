@@ -27,31 +27,31 @@
           <span>Banners</span>
         </a>
       </li>
-      <li class="nav-item">
+      <!-- <li class="nav-item">
         <a class="nav-link collapsed" href="painel-blog.php">
           <i class="fas fa-newspaper"></i>
           <span>Blog</span>
         </a>
-      </li>
+      </li>-->
       <li class="nav-item">
         <a class="nav-link collapsed" href="painel-users.php">
           <i class="fas fa-user"></i>
           <span>Usuários</span>
         </a>
       </li>
-      <li class="nav-item">
+      <!--  <li class="nav-item">
         <a class="nav-link collapsed" href="#">
           <i class="bi bi-briefcase-fill"></i>
           <span>Serviços</span>
         </a>
       </li>
-      <!-- <li class="nav-heading">Pages</li> -->
       <li class="nav-item">
         <a class="nav-link collapsed" href="#">
           <i class="fas fa-question"></i>
           <span>F.A.Q</span>
         </a>
       </li>
+      -->
       <li class="nav-item">
         <a class="nav-link collapsed" href="logout.php">
           <i class="fas fa-sign-out-alt"></i>
