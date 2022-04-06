@@ -55,8 +55,8 @@ include "../admin/insert_form.php";
           <div class="col-lg-12">
             <!-- Tabs -->
             <ul class="nav nav-pills mb-3">
-              <li><a class="nav-link active" data-bs-toggle="pill" href="#tab1">200 Mega</a></li>
-              <li><a class="nav-link" data-bs-toggle="pill" href="#tab2">300 Mega</a></li>
+              <li><a class="nav-link active" data-bs-toggle="pill" href="#tab1">300 Mega</a></li>
+              <li><a class="nav-link" data-bs-toggle="pill" href="#tab2">400 Mega</a></li>
             </ul><!-- End Tabs -->
 
             <!-- Tab Content -->
@@ -66,8 +66,9 @@ include "../admin/insert_form.php";
                   <div class="col-md-4">
                     <div class="card-box-c">
                       <div class="container">
-                        <h2 class="title-c pt-2">200 MEGAS</h2>
-                        <p class="pl-4 lead text-black">+ DIGITAL HD</p>
+                        <h2 class="title-c pt-2">300 MEGAS</h2>
+                        <h3 class="text-center">R$ 134,99</h3>
+                        <p class="pl-4 lead text-black">+ DIGITAL HD </p>
                       </div>
                       <div class="d-grid gap-2 container">
                         <button class="btn btn-plan" type="button">FALE COM UM CONSULTOR</button>
@@ -75,10 +76,10 @@ include "../admin/insert_form.php";
                       <div class="card-body-c pt-2 pb-2">
                         <div class="container">
                           <p class="content-c">
-                            <i class="bi bi-wifi"></i> Internet 200 mega
+                            <i class="bi bi-wifi"></i> Internet 300 mega
                           </p>
                           <p class="content-c">
-                            <i class="bi bi-tv-fill"></i> Digital HD
+                            <i class="bi bi-tv-fill"></i> Digital HD com 155 Canais
                           </p>
                         </div>
                       </div>
@@ -87,8 +88,9 @@ include "../admin/insert_form.php";
                   <div class="col-md-4">
                     <div class="card-box-c">
                       <div class="container">
-                        <h2 class="title-c pt-2">200 MEGAS</h2>
-                        <p class="pl-4 lead text-black">+ TOP HD</p>
+                        <h2 class="title-c pt-2">300 MEGAS</h2>
+                        <h3 class="text-center">R$ 159,99</h3>
+                        <p class="pl-4 lead text-black">+ TOP HD </p>
                       </div>
                       <div class="d-grid gap-2 container">
                         <button class="btn btn-plan" type="button">FALE COM UM CONSULTOR</button>
@@ -96,10 +98,10 @@ include "../admin/insert_form.php";
                       <div class="card-body-c pt-2 pb-2">
                         <div class="container">
                           <p class="content-c">
-                            <i class="bi bi-wifi"></i> Internet 200 mega
+                            <i class="bi bi-wifi"></i> Internet 300 mega
                           </p>
                           <p class="content-c">
-                            <i class="bi bi-tv-fill"></i> TOP HD
+                            <i class="bi bi-tv-fill"></i> TOP HD com 181 Canais
                           </p>
                         </div>
                       </div>
@@ -111,11 +113,12 @@ include "../admin/insert_form.php";
               <div class="tab-pane fade show" id="tab2">
 
                 <div class="row">
-                  <div class="col-md-4">
+                <div class="col-md-4">
                     <div class="card-box-c">
                       <div class="container">
-                        <h2 class="title-c pt-2">300 MEGAS</h2>
-                        <p class="pl-4 lead text-black">+ PREMIUM HD</p>
+                        <h2 class="title-c pt-2">400 MEGAS</h2>
+                        <h3 class="text-center">R$ 189,99</h3>
+                        <p class="pl-4 lead text-black">+ PREMIUM HD </p>
                       </div>
                       <div class="d-grid gap-2 container">
                         <button class="btn btn-plan" type="button">FALE COM UM CONSULTOR</button>
@@ -123,10 +126,10 @@ include "../admin/insert_form.php";
                       <div class="card-body-c pt-2 pb-2">
                         <div class="container">
                           <p class="content-c">
-                            <i class="bi bi-wifi"></i> Internet 300 mega
+                            <i class="bi bi-wifi"></i> Internet 400 mega
                           </p>
                           <p class="content-c">
-                            <i class="bi bi-tv-fill"></i> Premium HD
+                            <i class="bi bi-tv-fill"></i> Digital HD com 217 Canais
                           </p>
                         </div>
                       </div>

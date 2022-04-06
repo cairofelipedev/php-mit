@@ -4,52 +4,7 @@
     text-align: right;
   }
 </style>
-<!-- ======= Search Section ======= -->
-<div class="click-closed"></div>
-<!--/ Form Search Star /-->
-<div class="box-collapse">
-  <div class="title-box-d">
-    <h3 class="title-d">Busque aqui</h3>
-  </div>
-  <span class="close-box-collapse right-boxed bi bi-x"></span>
-  <div class="box-collapse-wrap form">
-    <form class="form-a">
-      <div class="row">
-        <div class="col-md-12 mb-2">
-          <div class="form-group">
-            <label class="pb-2" for="Type"></label>
-            <input type="text" class="form-control form-control-lg form-control-a" placeholder="Seu plano ou serviço">
-          </div>
-        </div>
-        <!-- <div class="col-md-6 mb-2">
-          <div class="form-group mt-3">
-            <label class="pb-2" for="Type">Tipo</label>
-            <select class="form-control form-select form-control-a" id="Type">
-              <option>Plano</option>
-              <option>Serviços</option>
-            </select>
-          </div>
-        </div>
-        <div class="col-md-6 mb-2">
-          <div class="form-group mt-3">
-            <label class="pb-2" for="city">Cidade</label>
-            <select class="form-control form-select form-control-a" id="city">
-              <option>Todas</option>
-              <option>Teresina</option>
-              <option>Curralinhos</option>
-              <option>Monsenhor Gil</option>
-              <option>Lagoa do Piauí</option>
-              <option>Demerval Lobão</option>
-            </select>
-          </div>
-        </div> -->
-        <div class="col-md-12">
-          <button type="submit" class="btn btn-b">Buscar no sistema</button>
-        </div>
-      </div>
-    </form>
-  </div>
-</div><!-- End Search Section -->
+
 
 <!-- ======= Header/Navbar ======= -->
 <nav class="navbar navbar-default navbar-trans navbar-expand-lg pt-2">

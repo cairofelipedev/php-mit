@@ -32,14 +32,6 @@ include "../admin/insert_form.php";
   <!-- Template Main CSS File -->
   <link href="../assets/css/main.css" rel="stylesheet">
   <link href="../assets/css/style.css" rel="stylesheet">
-  <style>
-    .Div2,
-    .Div3,
-    .Div4,
-    .Div5 {
-      display: none;
-    }
-  </style>
 </head>
 
 <body>
@@ -67,7 +59,8 @@ include "../admin/insert_form.php";
                   <div class="col-md-4">
                     <div class="card-box-c">
                       <div class="container">
-                        <h2 class="title-c pt-2">200 MEGAS</h2>
+                        <h2 class="title-c pt-2">600 MEGAS</h2>
+                        <h3 class="text-center">R$ 129,99 COM CASHBACK 5%</h3>
                       </div>
                       <div class="d-grid gap-2 container">
                         <button class="btn btn-plan" type="button">FALE COM UM CONSULTOR</button>
@@ -84,7 +77,8 @@ include "../admin/insert_form.php";
                   <div class="col-md-4">
                     <div class="card-box-c">
                       <div class="container">
-                        <h2 class="title-c pt-2">400 MEGAS</h2>
+                        <h2 class="title-c pt-2">500 MEGAS</h2>
+                        <h3 class="text-center">R$ 104,99 COM CASHBACK 5%</h3>
                       </div>
                       <div class="d-grid gap-2 container">
                         <button class="btn btn-plan" type="button">FALE COM UM CONSULTOR</button>
@@ -101,7 +95,8 @@ include "../admin/insert_form.php";
                   <div class="col-md-4">
                     <div class="card-box-c">
                       <div class="container">
-                        <h2 class="title-c pt-2">600 MEGAS</h2>
+                        <h2 class="title-c pt-2">200 MEGAS</h2>
+                        <h3 class="text-center">R$ 99,99 COM CASHBACK 2,5%</h3>
                       </div>
                       <div class="d-grid gap-2 container">
                         <button class="btn btn-plan" type="button">FALE COM UM CONSULTOR</button>
