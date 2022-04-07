@@ -32,18 +32,10 @@ include "../admin/insert_form.php";
   <!-- Template Main CSS File -->
   <link href="../assets/css/main.css" rel="stylesheet">
   <link href="../assets/css/style.css" rel="stylesheet">
-  <style>
-    .Div2,
-    .Div3,
-    .Div4,
-    .Div5 {
-      display: none;
-    }
-  </style>
 </head>
 
 <body>
-  <?php include "../components/navbar.php"; ?>
+  <?php include "navbar.php"; ?>
   <main id="main">
     <section id="about" class="about pt-4">
       <div class="container" data-aos="fade-up">
@@ -66,7 +58,7 @@ include "../admin/insert_form.php";
                   <div class="col-md-4">
                     <div class="card-box-c">
                       <div class="container">
-                        <h2 class="title-c pt-2">300 MEGAS</h2>
+                        <h2 class="title-c pt-2">300 MEGA</h2>
                         <h3 class="text-center">R$ 134,99</h3>
                         <p class="pl-4 lead text-black">+ DIGITAL HD </p>
                       </div>
@@ -88,7 +80,7 @@ include "../admin/insert_form.php";
                   <div class="col-md-4">
                     <div class="card-box-c">
                       <div class="container">
-                        <h2 class="title-c pt-2">300 MEGAS</h2>
+                        <h2 class="title-c pt-2">300 MEGA</h2>
                         <h3 class="text-center">R$ 159,99</h3>
                         <p class="pl-4 lead text-black">+ TOP HD </p>
                       </div>
@@ -116,7 +108,7 @@ include "../admin/insert_form.php";
                 <div class="col-md-4">
                     <div class="card-box-c">
                       <div class="container">
-                        <h2 class="title-c pt-2">400 MEGAS</h2>
+                        <h2 class="title-c pt-2">400 MEGA</h2>
                         <h3 class="text-center">R$ 189,99</h3>
                         <p class="pl-4 lead text-black">+ PREMIUM HD </p>
                       </div>

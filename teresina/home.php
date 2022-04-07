@@ -375,20 +375,6 @@ include "../admin/insert_form.php";
   <script src="../assets/js/main.js"></script>
   <script src="../assets/js/jquery-1.10.2.js" type="text/javascript"></script>
   <script src="../assets/js/login-register.js" type="text/javascript"></script>
-  <script>
-    $(document).ready(function() {
-      //Select para mostrar e esconder divs
-      $('#SelectOptions').on('change', function() {
-        var SelectValue = '.' + $(this).val();
-        $('.DivPai .Div1').hide();
-        $('.DivPai .Div2').hide();
-        $('.DivPai .Div3').hide();
-        $('.DivPai .Div4').hide();
-        $('.DivPai .Div5').hide();
-        $(SelectValue).toggle();
-      });
-    });
-  </script>
 </body>
 
 </html>

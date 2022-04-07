@@ -35,7 +35,7 @@ include "../admin/insert_form.php";
 </head>
 
 <body>
-  <?php include "../components/navbar.php"; ?>
+  <?php include "navbar.php"; ?>
   <main id="main">
     <section id="about" class="about pt-4">
       <div class="container" data-aos="fade-up">
@@ -48,8 +48,10 @@ include "../admin/insert_form.php";
             <!-- Tabs -->
             <ul class="nav nav-pills mb-3">
               <li><a class="nav-link active" data-bs-toggle="pill" href="#tab1">Internet</a></li>
+              <!--
               <li><a class="nav-link" data-bs-toggle="pill" href="#tab2">+ Disney</a></li>
               <li><a class="nav-link" data-bs-toggle="pill" href="#tab3">+ Netflix</a></li>
+              -->
             </ul><!-- End Tabs -->
 
             <!-- Tab Content -->
@@ -59,7 +61,7 @@ include "../admin/insert_form.php";
                   <div class="col-md-4">
                     <div class="card-box-c">
                       <div class="container">
-                        <h2 class="title-c pt-2">600 MEGAS</h2>
+                        <h2 class="title-c pt-2">600 MEGA</h2>
                         <h3 class="text-center">R$ 129,99 COM CASHBACK 5%</h3>
                       </div>
                       <div class="d-grid gap-2 container">
@@ -77,7 +79,7 @@ include "../admin/insert_form.php";
                   <div class="col-md-4">
                     <div class="card-box-c">
                       <div class="container">
-                        <h2 class="title-c pt-2">500 MEGAS</h2>
+                        <h2 class="title-c pt-2">500 MEGA</h2>
                         <h3 class="text-center">R$ 104,99 COM CASHBACK 5%</h3>
                       </div>
                       <div class="d-grid gap-2 container">
@@ -95,7 +97,7 @@ include "../admin/insert_form.php";
                   <div class="col-md-4">
                     <div class="card-box-c">
                       <div class="container">
-                        <h2 class="title-c pt-2">200 MEGAS</h2>
+                        <h2 class="title-c pt-2">200 MEGA</h2>
                         <h3 class="text-center">R$ 99,99 COM CASHBACK 2,5%</h3>
                       </div>
                       <div class="d-grid gap-2 container">
@@ -119,7 +121,7 @@ include "../admin/insert_form.php";
                   <div class="col-md-4">
                     <div class="card-box-c">
                       <div class="container">
-                        <h2 class="title-c pt-2">200 MEGAS</h2>
+                        <h2 class="title-c pt-2">200 MEGA</h2>
                         <p class="pl-4 lead text-black">+ DISNEY</p>
                       </div>
                       <div class="d-grid gap-2 container">
@@ -142,7 +144,7 @@ include "../admin/insert_form.php";
                   <div class="col-md-4">
                     <div class="card-box-c">
                       <div class="container">
-                        <h2 class="title-c pt-2">400 MEGAS</h2>
+                        <h2 class="title-c pt-2">400 MEGA</h2>
                         <p class="pl-4 lead text-black">+ DISNEY</p>
                       </div>
                       <div class="d-grid gap-2 container">
@@ -164,7 +166,7 @@ include "../admin/insert_form.php";
                   <div class="col-md-4">
                     <div class="card-box-c">
                       <div class="container">
-                        <h2 class="title-c pt-2">600 MEGAS</h2>
+                        <h2 class="title-c pt-2">600 MEGA</h2>
                         <p class="pl-4 lead text-black">+ DISNEY</p>
                       </div>
                       <div class="d-grid gap-2 container">
@@ -191,7 +193,7 @@ include "../admin/insert_form.php";
                   <div class="col-md-4">
                     <div class="card-box-c">
                       <div class="container">
-                        <h2 class="title-c pt-2">200 MEGAS</h2>
+                        <h2 class="title-c pt-2">200 MEGA</h2>
                         <p class="pl-4 lead text-black">+ NETFLIX</p>
                       </div>
                       <div class="d-grid gap-2 container">
@@ -213,7 +215,7 @@ include "../admin/insert_form.php";
                   <div class="col-md-4">
                     <div class="card-box-c">
                       <div class="container">
-                        <h2 class="title-c pt-2">400 MEGAS</h2>
+                        <h2 class="title-c pt-2">400 MEGA</h2>
                         <p class="pl-4 lead text-black">+ NETFLIX</p>
                       </div>
                       <div class="d-grid gap-2 container">
@@ -235,7 +237,7 @@ include "../admin/insert_form.php";
                   <div class="col-md-4">
                     <div class="card-box-c">
                       <div class="container">
-                        <h2 class="title-c pt-2">600 MEGAS</h2>
+                        <h2 class="title-c pt-2">600 MEGA</h2>
                         <p class="pl-4 lead text-black">+ NETFLIX</p>
                       </div>
                       <div class="d-grid gap-2 container">

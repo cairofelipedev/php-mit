@@ -36,7 +36,7 @@ $post = $_GET['title'];
 </head>
 
 <body>
-  <?php include "../components/navbar.php"; ?>
+  <?php include "navbar.php"; ?>
   <main id="main">
     <?php
     $stmt = $DB_con->prepare("SELECT id, title, category, text_1, text_2, img FROM posts where title='$post'");

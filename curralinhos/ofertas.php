@@ -32,18 +32,10 @@ include "../admin/insert_form.php";
   <!-- Template Main CSS File -->
   <link href="../assets/css/main.css" rel="stylesheet">
   <link href="../assets/css/style.css" rel="stylesheet">
-  <style>
-    .Div2,
-    .Div3,
-    .Div4,
-    .Div5 {
-      display: none;
-    }
-  </style>
 </head>
 
 <body>
-  <?php include "../components/navbar.php"; ?>
+  <?php include "navbar.php"; ?>
   <main id="main">
     <section id="about" class="about pt-4">
       <div class="container" data-aos="fade-up">

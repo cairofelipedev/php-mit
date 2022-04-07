@@ -43,7 +43,7 @@ include "../admin/insert_form.php";
 </head>
 
 <body>
-  <?php include "../components/navbar.php"; ?>
+  <?php include "navbar.php"; ?>
   <main id="main">
     <section id="about" class="about pt-4">
       <div class="container" data-aos="fade-up">
@@ -60,7 +60,7 @@ include "../admin/insert_form.php";
               <div class="col-md-4">
                 <div class="card-box-c">
                   <div class="container">
-                    <h2 class="title-c pt-2">200 MEGAS</h2>
+                    <h2 class="title-c pt-2">200 MEGA</h2>
                     <p class="pl-4 lead text-black">+ Digital HD</p>
                     <p class="pl-4 lead text-black">+ Telefone Fixo</p>
                   </div>
@@ -85,7 +85,7 @@ include "../admin/insert_form.php";
               <div class="col-md-4">
                 <div class="card-box-c">
                   <div class="container">
-                    <h2 class="title-c pt-2">300 MEGAS</h2>
+                    <h2 class="title-c pt-2">300 MEGA</h2>
                     <p class="pl-4 lead text-black">+ Digital HD</p>
                     <p class="pl-4 lead text-black">+ Telefone Fixo</p>
                   </div>
@@ -110,7 +110,7 @@ include "../admin/insert_form.php";
               <div class="col-md-4">
                 <div class="card-box-c">
                   <div class="container">
-                    <h2 class="title-c pt-2">400 MEGAS</h2>
+                    <h2 class="title-c pt-2">400 MEGA</h2>
                     <p class="pl-4 lead text-black">+ Digital HD</p>
                     <p class="pl-4 lead text-black">+ Telefone Fixo</p>
                   </div>

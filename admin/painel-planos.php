@@ -87,7 +87,7 @@ if (isset($_GET['delete_id'])) {
             <div class="col-lg-2">
               <div class="card">
                 <div class="card-body">
-                  <h5 class="card-title text-center">PLANO <?php echo $speed; ?> MEGAS</h5>
+                  <h5 class="card-title text-center">PLANO <?php echo $speed; ?> MEGA</h5>
                   <div class="d-flex justify-content-center">
                     <div>
                       <a href="editar-plano.php?edit_id=<?php echo $row['id']; ?>">
@@ -129,7 +129,7 @@ if (isset($_GET['delete_id'])) {
             <div class="col-lg-2">
               <div class="card">
                 <div class="card-body">
-                  <h5 class="card-title text-center">PLANO <?php echo $speed; ?> MEGAS</h5>
+                  <h5 class="card-title text-center">PLANO <?php echo $speed; ?> MEGA</h5>
                   <div class="d-flex justify-content-center">
                     <div>
                       <a href="editar-plano.php?edit_id=<?php echo $row['id']; ?>">
@@ -171,7 +171,7 @@ if (isset($_GET['delete_id'])) {
             <div class="col-lg-2">
               <div class="card">
                 <div class="card-body">
-                  <h5 class="card-title text-center">PLANO <?php echo $speed; ?> MEGAS</h5>
+                  <h5 class="card-title text-center">PLANO <?php echo $speed; ?> MEGA</h5>
                   <div class="d-flex justify-content-center">
                     <div>
                       <a href="editar-plano.php?edit_id=<?php echo $row['id']; ?>">
@@ -213,7 +213,7 @@ if (isset($_GET['delete_id'])) {
             <div class="col-lg-2">
               <div class="card">
                 <div class="card-body">
-                  <h5 class="card-title text-center">PLANO <?php echo $speed; ?> MEGAS</h5>
+                  <h5 class="card-title text-center">PLANO <?php echo $speed; ?> MEGA</h5>
                   <div class="d-flex justify-content-center">
                     <div>
                       <a href="editar-plano.php?edit_id=<?php echo $row['id']; ?>">
@@ -255,7 +255,7 @@ if (isset($_GET['delete_id'])) {
             <div class="col-lg-2">
               <div class="card">
                 <div class="card-body">
-                  <h5 class="card-title text-center">PLANO <?php echo $speed; ?> MEGAS</h5>
+                  <h5 class="card-title text-center">PLANO <?php echo $speed; ?> MEGA</h5>
                   <div class="d-flex justify-content-center">
                     <div>
                       <a href="editar-plano.php?edit_id=<?php echo $row['id']; ?>">
