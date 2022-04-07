@@ -9,7 +9,7 @@ include "../admin/insert_form.php";
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>MIT Internet - Demerval Lobão</title>
+  <title>MIT Internet - Teresina</title>
   <meta content="MIT Internet que transforma!💙💚" name="description">
   <meta content="MIT, internet, fibra otica, banda larga, ultravelocidade" name="keywords">
   <meta name="description" content="MIT Internet que transforma!💙💚" />
@@ -35,7 +35,7 @@ include "../admin/insert_form.php";
 </head>
 
 <body>
-  <?php include "../components/navbar.php"; ?>
+  <?php include "navbar.php"; ?>
   <!-- ======= Intro Section ======= -->
   <div class="intro intro-carousel swiper position-relative">
     <div class="swiper-wrapper">

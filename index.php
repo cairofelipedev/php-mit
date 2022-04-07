@@ -61,20 +61,20 @@ require_once './admin/dbconfig.php';
   </div>
   <script>
     var lastSelected = localStorage.getItem('select');
-    if (lastSelected == 'home/teresina.php') {
-      location.href = 'home/teresina.php';
+    if (lastSelected == 'teresina/home.php') {
+      location.href = 'teresina/home.php';
     }
-    if (lastSelected == 'home/demerval.php') {
-      location.href = 'home/demerval.php';
+    if (lastSelected == 'demerval/home.php') {
+      location.href = 'demerval/home.php';
     }
-    if (lastSelected == 'home/lagoa-pi.php') {
-      location.href = 'home/lagoa-pi.php';
+    if (lastSelected == 'lagoa-pi/home.php') {
+      location.href = 'lagoa-pi/home.php';
     }
-    if (lastSelected == 'home/monsenhor.php') {
-      location.href = 'home/home/monsenhor.php';
+    if (lastSelected == 'monsenhor/home.php') {
+      location.href = 'monsenhor/home.php';
     }
-    if (lastSelected == 'home/curralinhos-e-povoados.php') {
-      location.href = 'home/curralinhos-e-povoados.php';
+    if (lastSelected == 'curralinhos/home.php') {
+      location.href = 'curralinhos/home.php';
     }
     if (lastSelected == '') {
       location.href = 'index.php';

@@ -47,11 +47,11 @@ require_once './admin/dbconfig.php';
           </p>
           <select class="form-control select-city">
             <option> Escolha sua localização</option>
-            <option value="home/teresina.php">Teresina</option>
-            <option value="home/demerval.php">Demerval</option>
-            <option value="home/lagoa-pi.php">Lagoa PI</option>
-            <option value="home/monsenhor.php">Monsenhor</option>
-            <option value="home/curralinhos-e-povoados.php">Curralinhos e povoados</option>
+            <option value="teresina/home.php">Teresina</option>
+            <option value="demerval/home.php">Demerval</option>
+            <option value="lagoa-pi/home.php">Lagoa PI</option>
+            <option value="monsenhor/home.php">Monsenhor</option>
+            <option value="curralinhos/home.php">Curralinhos e povoados</option>
           </select>
         </div>
       </div>
@@ -70,19 +70,19 @@ require_once './admin/dbconfig.php';
       lastSelected = select.options[select.selectedIndex].value;
       localStorage.setItem('select', lastSelected);
 
-      if (lastSelected == 'home/teresina.php') {
+      if (lastSelected == 'teresina/home.php') {
         location.href = this.value;
       }
-      if (lastSelected == 'home/demerval.php') {
+      if (lastSelected == 'demerval/home.php') {
         location.href = this.value;
       }
-      if (lastSelected == 'home/lagoa-pi.php') {
+      if (lastSelected == 'lagoa-pi/home.php') {
         location.href = this.value;
       }
-      if (lastSelected == 'home/monsenhor.php') {
+      if (lastSelected == 'monsenhor/home.php') {
         location.href = this.value;
       }
-      if (lastSelected == 'home/curralinhos-e-povoados.php') {
+      if (lastSelected == 'curralinhos/home.php') {
         location.href = this.value;
       }
     }
