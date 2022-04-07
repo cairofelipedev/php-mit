@@ -26,7 +26,7 @@
     <div class="title-link text-center pb-2">
       <div class="d-flex ">
         <form id="loc" action="#">
-          <select class="form-control select-city selectoptions">
+          <select class="form-control select-city selectoptions"  name="SelectOptions" id="SelectOptions" required>
             <option value="home/teresina.php">Teresina</option>
             <option value="home/demerval.php">Demerval</option>
             <option value="home/lagoa-pi.php">Lagoa PI</option>
