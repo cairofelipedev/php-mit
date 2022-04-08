@@ -41,57 +41,50 @@ include "../admin/insert_form.php";
       <div class="container" data-aos="fade-up">
 
         <div class="section-header">
-          <h2>Internet para você e toda sua casa</h2>
+          <h2>Combos de Internet e Telefone Fixo</h2>
+          <p>
+            Internet banda larga com serviços digitais e Wi-fi grátis + telefone fixo.
+          </p>
         </div>
-        <div class="row g-4 g-lg-5" data-aos="fade-up" data-aos-delay="200">
+        <div class="row g-4 g-lg-5 pt-4" data-aos="fade-up" data-aos-delay="200">
           <div class="col-lg-12">
-            <!-- Tabs -->
-            <ul class="nav nav-pills mb-3">
-              <li><a class="nav-link active" data-bs-toggle="pill" href="#tab1">Internet</a></li>
-              <!--
-              <li><a class="nav-link" data-bs-toggle="pill" href="#tab2">+ Disney</a></li>
-              <li><a class="nav-link" data-bs-toggle="pill" href="#tab3">+ Netflix</a></li>
-              -->
-            </ul><!-- End Tabs -->
-
-            <!-- Tab Content -->
-            <div class="tab-content">
-              <div class="tab-pane fade show active" id="tab1">
-                <div class="row">
-                  <?php
-                  $stmt = $DB_con->prepare('SELECT id,speed,tv,price FROM plans where city="teresina" and type="1" ORDER BY id DESC');
-                  $stmt->execute();
-                  if ($stmt->rowCount() > 0) {
-                    while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-                      extract($row);
-                  ?>
-                      <div class="col-md-4">
-                        <div class="card-box-c">
-                          <div class="container">
-                            <h2 class="title-c pt-2"><?php echo $speed; ?> MEGA</h2>
-                            <h3 class="text-center">R$ <?php echo $price; ?> COM CASHBACK 5%</h3>
-                          </div>
-                          <div class="d-grid gap-2 container">
-                            <button class="btn btn-plan" type="button">FALE COM UM CONSULTOR</button>
-                          </div>
-                          <div class="card-body-c pt-2 pb-2">
-                            <div class="container">
-                              <p class="content-c">
-                                <i class="bi bi-wifi"></i> Internet Fibra <?php echo $speed; ?> mega com Wi-fi grátis
-                              </p>
-                            </div>
-                          </div>
+            <div class="row">
+              <?php
+              $stmt = $DB_con->prepare('SELECT * FROM plans where city="teresina" and type="3" ORDER BY id DESC');
+              $stmt->execute();
+              if ($stmt->rowCount() > 0) {
+                while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+                  extract($row);
+              ?>
+                  <div class="col-md-4">
+                    <div class="card-box-c">
+                      <div class="container">
+                        <h2 class="title-c pt-2"><?php echo $speed; ?> MEGA</h2>
+                        <p class="pl-4 lead text-black">+ Telefone Fixo</p>
+                      </div>
+                      <div class="d-grid gap-2 container">
+                        <button class="btn btn-plan" type="button">FALE COM UM CONSULTOR</button>
+                      </div>
+                      <div class="card-body-c pt-2 pb-2">
+                        <div class="container">
+                          <p class="content-c">
+                            <i class="bi bi-wifi"></i> Internet <?php echo $speed; ?> mega
+                          </p>
+                          <p class="content-c">
+                            <i class="bi bi-telephone-fill"></i> Fixo Ilimitado
+                          </p>
                         </div>
                       </div>
-                  <?php
-                    }
-                  }
-                  ?>
-                </div>
-              </div><!-- End Tab 1 Content -->
-            </div>
+                    </div>
+                  </div>
+              <?php
+                }
+              }
+              ?>
+            </div><!-- End Tab 1 Content -->
           </div>
         </div>
+      </div>
       </div>
     </section>
   </main><!-- End #main -->
@@ -109,6 +102,7 @@ include "../admin/insert_form.php";
   <script src="../assets/js/main.js"></script>
   <script src="../assets/js/jquery-1.10.2.js" type="text/javascript"></script>
   <script src="../assets/js/login-register.js" type="text/javascript"></script>
+
 </body>
 
 </html>

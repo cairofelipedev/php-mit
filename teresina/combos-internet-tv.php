@@ -56,7 +56,7 @@ include "../admin/insert_form.php";
               <div class="tab-pane fade show active" id="tab1">
                 <div class="row">
                   <?php
-                  $stmt = $DB_con->prepare('SELECT id,speed,tv,price FROM plans where city="teresina" and type="2" and speed="300" ORDER BY id DESC');
+                  $stmt = $DB_con->prepare('SELECT * FROM plans where city="teresina" and type="2" and speed="300" ORDER BY id DESC');
                   $stmt->execute();
                   if ($stmt->rowCount() > 0) {
                     while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
@@ -78,7 +78,7 @@ include "../admin/insert_form.php";
                                 <i class="bi bi-wifi"></i> Internet <?php echo $speed; ?> mega
                               </p>
                               <p class="content-c">
-                                <i class="bi bi-tv-fill"></i> Digital HD com 155 Canais
+                                <i class="bi bi-tv-fill"></i> Digital HD com <?php echo $channels; ?> Canais
                               </p>
                             </div>
                           </div>
@@ -94,35 +94,35 @@ include "../admin/insert_form.php";
               <div class="tab-pane fade show" id="tab2">
 
                 <div class="row">
-                <?php
-                  $stmt = $DB_con->prepare('SELECT id,speed,tv,price FROM plans where city="teresina" and type="2" and speed="400" ORDER BY id DESC');
+                  <?php
+                  $stmt = $DB_con->prepare('SELECT * FROM plans where city="teresina" and type="2" and speed="400" ORDER BY id DESC');
                   $stmt->execute();
                   if ($stmt->rowCount() > 0) {
                     while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
                       extract($row);
                   ?>
-                  <div class="col-md-4">
-                    <div class="card-box-c">
-                      <div class="container">
-                        <h2 class="title-c pt-2">400 MEGA</h2>
-                        <h3 class="text-center">R$ 189,99</h3>
-                        <p class="pl-4 lead text-black">+ PREMIUM HD </p>
-                      </div>
-                      <div class="d-grid gap-2 container">
-                        <button class="btn btn-plan" type="button">FALE COM UM CONSULTOR</button>
-                      </div>
-                      <div class="card-body-c pt-2 pb-2">
-                        <div class="container">
-                          <p class="content-c">
-                            <i class="bi bi-wifi"></i> Internet 400 mega
-                          </p>
-                          <p class="content-c">
-                            <i class="bi bi-tv-fill"></i> Digital HD com 217 Canais
-                          </p>
+                      <div class="col-md-4">
+                        <div class="card-box-c">
+                          <div class="container">
+                            <h2 class="title-c pt-2"><?php echo $speed; ?> MEGA</h2>
+                            <h3 class="text-center">R$ <?php echo $price; ?></h3>
+                            <p class="pl-4 lead text-black">+ <?php echo $tv; ?> </p>
+                          </div>
+                          <div class="d-grid gap-2 container">
+                            <button class="btn btn-plan" type="button">FALE COM UM CONSULTOR</button>
+                          </div>
+                          <div class="card-body-c pt-2 pb-2">
+                            <div class="container">
+                              <p class="content-c">
+                                <i class="bi bi-wifi"></i> Internet <?php echo $speed; ?> mega
+                              </p>
+                              <p class="content-c">
+                                <i class="bi bi-tv-fill"></i> Digital HD com <?php echo $channels; ?> Canais
+                              </p>
+                            </div>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  </div>
                   <?php
                     }
                   }

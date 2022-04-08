@@ -42,13 +42,13 @@ include "../admin/insert_form.php";
     <section id="plans" class="section-services pt-md-3">
       <div class="container">
         <div class="row">
-          <?php
-          $stmt = $DB_con->prepare('SELECT id, speed FROM plans where city="curralinhos" ORDER BY id DESC');
-          $stmt->execute();
-          if ($stmt->rowCount() > 0) {
-            while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-              extract($row);
-          ?>
+        <?php
+              $stmt = $DB_con->prepare('SELECT * FROM plans where city="curralinhos" and type="4" ORDER BY id DESC');
+              $stmt->execute();
+              if ($stmt->rowCount() > 0) {
+                while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+                  extract($row);
+              ?>
               <div class="col-md-4">
                 <div class="card-box-c">
                   <h2 class="title-c pt-2"><?php echo $speed; ?> MEGA</h2>
@@ -70,13 +70,16 @@ include "../admin/insert_form.php";
                     <button class="btn btn-plan" type="button">FALE COM UM CONSULTOR</button>
                   </div>
                   <div class="card-body-c pt-2 pb-2">
-                    <?php if ($speed == '400') { ?>
+                    <?php if ($speed == '600') { ?>
                       <div class="container">
                         <p class="content-c">
-                          Assinatura Netflix
+                          Assinatura Netflix ou +Disney
                         </p>
                         <p class="content-c2">Séries originais e exclusivas, filmes, novelas e programas.</p>
                         <div class="row pb-3 align-items-center justify-content-center">
+                          <div class="col-2">
+                            <img class="img-fluid" src="../assets/img/icon-11778.png">
+                          </div>
                           <div class="col-2">
                             <img class="img-fluid" src="../assets/img/app-netflix-252x252.png">
                           </div>
@@ -121,20 +124,6 @@ include "../admin/insert_form.php";
   <script src="../assets/js/main.js"></script>
   <script src="../assets/js/jquery-1.10.2.js" type="text/javascript"></script>
   <script src="../assets/js/login-register.js" type="text/javascript"></script>
-  <script>
-    $(document).ready(function() {
-      //Select para mostrar e esconder divs
-      $('#SelectOptions').on('change', function() {
-        var SelectValue = '.' + $(this).val();
-        $('.DivPai .Div1').hide();
-        $('.DivPai .Div2').hide();
-        $('.DivPai .Div3').hide();
-        $('.DivPai .Div4').hide();
-        $('.DivPai .Div5').hide();
-        $(SelectValue).toggle();
-      });
-    });
-  </script>
 </body>
 
 </html>

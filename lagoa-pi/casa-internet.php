@@ -48,214 +48,47 @@ include "../admin/insert_form.php";
             <!-- Tabs -->
             <ul class="nav nav-pills mb-3">
               <li><a class="nav-link active" data-bs-toggle="pill" href="#tab1">Internet</a></li>
+              <!--
               <li><a class="nav-link" data-bs-toggle="pill" href="#tab2">+ Disney</a></li>
               <li><a class="nav-link" data-bs-toggle="pill" href="#tab3">+ Netflix</a></li>
+              -->
             </ul><!-- End Tabs -->
 
             <!-- Tab Content -->
             <div class="tab-content">
               <div class="tab-pane fade show active" id="tab1">
                 <div class="row">
-                  <div class="col-md-4">
-                    <div class="card-box-c">
-                      <div class="container">
-                        <h2 class="title-c pt-2">600 MEGA</h2>
-                        <h3 class="text-center">R$ 129,99 COM CASHBACK 5%</h3>
-                      </div>
-                      <div class="d-grid gap-2 container">
-                        <button class="btn btn-plan" type="button">FALE COM UM CONSULTOR</button>
-                      </div>
-                      <div class="card-body-c pt-2 pb-2">
-                        <div class="container">
-                          <p class="content-c">
-                            <i class="bi bi-wifi"></i> Internet Fibra 200 mega com Wi-fi grátis
-                          </p>
+                  <?php
+                  $stmt = $DB_con->prepare('SELECT id,speed,tv,price FROM plans where city="lagoa" and type="1" ORDER BY id DESC');
+                  $stmt->execute();
+                  if ($stmt->rowCount() > 0) {
+                    while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+                      extract($row);
+                  ?>
+                      <div class="col-md-4">
+                        <div class="card-box-c">
+                          <div class="container">
+                            <h2 class="title-c pt-2"><?php echo $speed; ?> MEGA</h2>
+                            <h3 class="text-center">R$ <?php echo $price; ?> COM CASHBACK 5%</h3>
+                          </div>
+                          <div class="d-grid gap-2 container">
+                            <button class="btn btn-plan" type="button">FALE COM UM CONSULTOR</button>
+                          </div>
+                          <div class="card-body-c pt-2 pb-2">
+                            <div class="container">
+                              <p class="content-c">
+                                <i class="bi bi-wifi"></i> Internet Fibra <?php echo $speed; ?> mega com Wi-fi grátis
+                              </p>
+                            </div>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="card-box-c">
-                      <div class="container">
-                        <h2 class="title-c pt-2">500 MEGA</h2>
-                        <h3 class="text-center">R$ 104,99 COM CASHBACK 5%</h3>
-                      </div>
-                      <div class="d-grid gap-2 container">
-                        <button class="btn btn-plan" type="button">FALE COM UM CONSULTOR</button>
-                      </div>
-                      <div class="card-body-c pt-2 pb-2">
-                        <div class="container">
-                          <p class="content-c">
-                            <i class="bi bi-wifi"></i>Internet Fibra 300 mega com Wi-fi grátis
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="card-box-c">
-                      <div class="container">
-                        <h2 class="title-c pt-2">200 MEGA</h2>
-                        <h3 class="text-center">R$ 99,99 COM CASHBACK 2,5%</h3>
-                      </div>
-                      <div class="d-grid gap-2 container">
-                        <button class="btn btn-plan" type="button">FALE COM UM CONSULTOR</button>
-                      </div>
-                      <div class="card-body-c pt-2 pb-2">
-                        <div class="container">
-                          <p class="content-c">
-                            <i class="bi bi-wifi"></i>Internet Fibra 400 mega com Wi-fi grátis
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                  <?php
+                    }
+                  }
+                  ?>
                 </div>
               </div><!-- End Tab 1 Content -->
-
-              <div class="tab-pane fade show" id="tab2">
-
-                <div class="row">
-                  <div class="col-md-4">
-                    <div class="card-box-c">
-                      <div class="container">
-                        <h2 class="title-c pt-2">200 MEGA</h2>
-                        <p class="pl-4 lead text-black">+ DISNEY</p>
-                      </div>
-                      <div class="d-grid gap-2 container">
-                        <button class="btn btn-plan" type="button">FALE COM UM CONSULTOR</button>
-                      </div>
-                      <div class="card-body-c pt-2 pb-2">
-                        <div class="container">
-                          <p class="content-c">
-                            <i class="bi bi-wifi"></i> Internet 200 mega
-                          </p>
-                          <p class="text-black">Dowload até 200 Mpbs</p>
-                          <p class="content-c">
-                            <i class="bi bi-tv-fill"></i>Planos com Disney+
-                          </p>
-                          <p class="text-black">Assista a produções Disney, Pixar, Marvel, Star Wars e muito mais</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="card-box-c">
-                      <div class="container">
-                        <h2 class="title-c pt-2">400 MEGA</h2>
-                        <p class="pl-4 lead text-black">+ DISNEY</p>
-                      </div>
-                      <div class="d-grid gap-2 container">
-                        <button class="btn btn-plan" type="button">FALE COM UM CONSULTOR</button>
-                      </div>
-                      <div class="card-body-c pt-2 pb-2">
-                        <div class="container">
-                          <p class="content-c">
-                            <i class="bi bi-wifi"></i>Download de até 400 Mpbs
-                          </p>
-                          <p class="content-c">
-                            <i class="bi bi-tv-fill"></i>Planos com Disney+
-                          </p>
-                          <p class="text-black">Assista a produções Disney, Pixar, Marvel, Star Wars e muito mais</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="card-box-c">
-                      <div class="container">
-                        <h2 class="title-c pt-2">600 MEGA</h2>
-                        <p class="pl-4 lead text-black">+ DISNEY</p>
-                      </div>
-                      <div class="d-grid gap-2 container">
-                        <button class="btn btn-plan" type="button">FALE COM UM CONSULTOR</button>
-                      </div>
-                      <div class="card-body-c pt-2 pb-2">
-                        <div class="container">
-                          <p class="content-c">
-                            <i class="bi bi-wifi"></i> Download de até 600 Mpbs
-                          </p>
-                          <p class="content-c">
-                            <i class="bi bi-tv-fill"></i>Planos com Disney+
-                          </p>
-                          <p class="text-black">Assista a produções Disney, Pixar, Marvel, Star Wars e muito mais</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="tab-pane fade show" id="tab3">
-
-                <div class="row">
-                  <div class="col-md-4">
-                    <div class="card-box-c">
-                      <div class="container">
-                        <h2 class="title-c pt-2">200 MEGA</h2>
-                        <p class="pl-4 lead text-black">+ NETFLIX</p>
-                      </div>
-                      <div class="d-grid gap-2 container">
-                        <button class="btn btn-plan" type="button">FALE COM UM CONSULTOR</button>
-                      </div>
-                      <div class="card-body-c pt-2 pb-2">
-                        <div class="container">
-                          <p class="content-c">
-                            <i class="bi bi-wifi"></i> Download de até 200 Mpbs
-                          </p>
-                          <p class="content-c">
-                            <i class="bi bi-tv-fill"></i>Planos com Netflix
-                          </p>
-                          <p class="text-black">Assista a filmes e séries, quando e onde quiser, sem comerciais</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="card-box-c">
-                      <div class="container">
-                        <h2 class="title-c pt-2">400 MEGA</h2>
-                        <p class="pl-4 lead text-black">+ NETFLIX</p>
-                      </div>
-                      <div class="d-grid gap-2 container">
-                        <button class="btn btn-plan" type="button">FALE COM UM CONSULTOR</button>
-                      </div>
-                      <div class="card-body-c pt-2 pb-2">
-                        <div class="container">
-                          <p class="content-c">
-                            <i class="bi bi-wifi"></i>Download de até 400 Mpbs
-                          </p>
-                          <p class="content-c">
-                            <i class="bi bi-tv-fill"></i>Planos com Netflix
-                          </p>
-                          <p class="text-black">Assista a filmes e séries, quando e onde quiser, sem comerciais</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="card-box-c">
-                      <div class="container">
-                        <h2 class="title-c pt-2">600 MEGA</h2>
-                        <p class="pl-4 lead text-black">+ NETFLIX</p>
-                      </div>
-                      <div class="d-grid gap-2 container">
-                        <button class="btn btn-plan" type="button">FALE COM UM CONSULTOR</button>
-                      </div>
-                      <div class="card-body-c pt-2 pb-2">
-                        <div class="container">
-                          <p class="content-c">
-                            <i class="bi bi-wifi"></i> Download de até 600 Mpbs
-                          </p>
-                          <p class="content-c">
-                            <i class="bi bi-tv-fill"></i>Planos com Netflix
-                          </p>
-                          <p class="text-black">Assista a filmes e séries, quando e onde quiser, sem comerciais</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -276,20 +109,6 @@ include "../admin/insert_form.php";
   <script src="../assets/js/main.js"></script>
   <script src="../assets/js/jquery-1.10.2.js" type="text/javascript"></script>
   <script src="../assets/js/login-register.js" type="text/javascript"></script>
-  <script>
-    $(document).ready(function() {
-      //Select para mostrar e esconder divs
-      $('#SelectOptions').on('change', function() {
-        var SelectValue = '.' + $(this).val();
-        $('.DivPai .Div1').hide();
-        $('.DivPai .Div2').hide();
-        $('.DivPai .Div3').hide();
-        $('.DivPai .Div4').hide();
-        $('.DivPai .Div5').hide();
-        $(SelectValue).toggle();
-      });
-    });
-  </script>
 </body>
 
 </html>
