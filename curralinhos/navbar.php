@@ -113,9 +113,10 @@
             </div>
           </div>
         </li>
-        <li class="nav-item">
+        
+        <!-- <li class="nav-item">
           <a class="nav-link " href="ofertas.php">Melhor oferta</a>
-        </li>
+        </li>-->
       </ul>
     </div>
     <a href="../admin/login.php"><button type="button" class="btn d-none d-md-block">

@@ -60,6 +60,7 @@ include "../admin/insert_form.php";
                     <div class="card-box-c">
                       <div class="container">
                         <h2 class="title-c pt-2"><?php echo $speed; ?> MEGA</h2>
+                        <h3 class="text-center">R$ <?php echo $price; ?></h3>
                         <p class="pl-4 lead text-black">+ Telefone Fixo</p>
                       </div>
                       <div class="d-grid gap-2 container">

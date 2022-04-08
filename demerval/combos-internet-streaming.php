@@ -52,6 +52,7 @@ include "../admin/insert_form.php";
               <div class="col-md-4">
                 <div class="card-box-c">
                   <h2 class="title-c pt-2"><?php echo $speed; ?> MEGA</h2>
+                  <h3 class="text-center">R$ <?php echo $price; ?></h3>
                   <div class="row justify-content-center">
                     <div class="col-6">
                       <i class="bi bi-wifi"></i> Conexão Estável
