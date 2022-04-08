@@ -62,19 +62,19 @@
           <div class="w-body-a">
             <ul class="list-unstyled">
               <li class="item-list-a">
-                <i class="bi bi-chevron-right"></i> <a href="https://mitinternet.com.br/home/teresina.php">Teresina</a>
+                <i class="bi bi-chevron-right"></i> <a href="https://mitinternet.com.br/teresina/home.php">Teresina</a>
               </li>
               <li class="item-list-a">
-                <i class="bi bi-chevron-right"></i> <a href="https://mitinternet.com.br/home/curralinhos.php">Curralinhos</a>
+                <i class="bi bi-chevron-right"></i> <a href="https://mitinternet.com.br/curralinhos/home.php">Curralinhos</a>
               </li>
               <li class="item-list-a">
-                <i class="bi bi-chevron-right"></i> <a href="https://mitinternet.com.br/home/monsenhor.php">Monsenhor Gil</a>
+                <i class="bi bi-chevron-right"></i> <a href="https://mitinternet.com.br/monsenhor/home.php">Monsenhor Gil</a>
               </li>
               <li class="item-list-a">
-                <i class="bi bi-chevron-right"></i> <a href="https://mitinternet.com.br/home/lagoa-pi.php">Lagoa do Piauí</a>
+                <i class="bi bi-chevron-right"></i> <a href="https://mitinternet.com.br/lagoa/home.php">Lagoa do Piauí</a>
               </li>
               <li class="item-list-a">
-                <i class="bi bi-chevron-right"></i> <a href="https://mitinternet.com.br/home/demerval.php">Demerval Lobão</a>
+                <i class="bi bi-chevron-right"></i> <a href="https://mitinternet.com.br/demerval/home.php">Demerval Lobão</a>
               </li>
             </ul>
           </div>

@@ -41,19 +41,27 @@ include "../admin/insert_form.php";
     <!-- ======= Services Section ======= -->
     <section id="plans" class="section-services pt-md-3">
       <div class="container">
+        <div class="title-wrap d-md-flex justify-content-between">
+          <div class="title-box">
+            <h2 class="title-a">Confira nossos planos de Internet + Streaming</h2>
+            <p>
+              Soluções para sua casa ou empresa com o melhor custo benefício e vantagens exclusivas.
+            </p>
+          </div>
+        </div>
         <div class="row">
-        <?php
-              $stmt = $DB_con->prepare('SELECT * FROM plans where city="demerval" and type="4" ORDER BY id DESC');
-              $stmt->execute();
-              if ($stmt->rowCount() > 0) {
-                while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-                  extract($row);
-              ?>
+          <?php
+          $stmt = $DB_con->prepare('SELECT * FROM plans where city="demerval" and type="4" ORDER BY id DESC');
+          $stmt->execute();
+          if ($stmt->rowCount() > 0) {
+            while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+              extract($row);
+          ?>
               <div class="col-md-4">
                 <div class="card-box-c">
                   <h2 class="title-c pt-2"><?php echo $speed; ?> MEGA</h2>
                   <h3 class="text-center">R$ <?php echo $price; ?></h3>
-                  <div class="row justify-content-center">
+                  <div class="row justify-content-center container">
                     <div class="col-6">
                       <i class="bi bi-wifi"></i> Conexão Estável
                     </div>
