@@ -55,7 +55,7 @@ include "../admin/insert_form.php";
         </div>
         <div class="row">
           <?php
-          $stmt = $DB_con->prepare('SELECT id, speed FROM plans where city="teresina" ORDER BY id DESC');
+          $stmt = $DB_con->prepare('SELECT id, speed FROM plans where city="teresina" and type="1" ORDER BY id DESC');
           $stmt->execute();
           if ($stmt->rowCount() > 0) {
             while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
@@ -90,7 +90,7 @@ include "../admin/insert_form.php";
                         <p class="content-c2">Muita música ou Séries originais e exclusivas, filmes, novelas e programas.</p>
                         <div class="row pb-3 align-items-center">
                           <div class="col-2">
-                            <img class="img-fluid" src="../assets/img/dezzer.jpg">
+                            <img class="img-fluid" src="../assets/img/icon-11778.png">
                           </div>
                           <div class="col-1">
                             ou
