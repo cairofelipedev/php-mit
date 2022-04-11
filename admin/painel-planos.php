@@ -75,9 +75,130 @@ if (isset($_GET['delete_id'])) {
 
     <section class="section">
       <h1>Teresina</h1>
-      <div class="row">
+      <div class="row pt-4 ">
+      <h4>Internet</h4>
         <?php
-        $stmt = $DB_con->prepare('SELECT id, speed FROM plans where city="teresina" ORDER BY id DESC');
+        $stmt = $DB_con->prepare('SELECT id, speed FROM plans where city="teresina" and type="1" ORDER BY id DESC');
+        $stmt->execute();
+        if ($stmt->rowCount() > 0) {
+          while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+            extract($row);
+        ?>
+
+            <div class="col-lg-2">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title text-center">PLANO <?php echo $speed; ?> MEGA</h5>
+                  <div class="d-flex justify-content-center">
+                    <div>
+                      <a href="editar-plano.php?edit_id=<?php echo $row['id']; ?>">
+                        <button type="button" class="btn btn-success">Editar</button>
+                      </a>
+                      <a href="?delete_id=<?php echo $row['id']; ?>">
+                        <button type="button" class="btn btn-danger">Excluir</button>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          <?php
+          }
+        } else {
+          ?>
+          <div class="bg-yellow-500 px-4 py-4 rounded">
+            <div>
+              <p class="text-blueGray-600 font-bold">Sem plano cadastrado ...</p>
+            </div>
+          </div>
+        <?php
+        }
+        ?>
+      </div>
+      <div class="row pt-4 ">
+      <h4>Internet + TV</h4>
+        <?php
+        $stmt = $DB_con->prepare('SELECT id, speed FROM plans where city="teresina" and type="2" ORDER BY id DESC');
+        $stmt->execute();
+        if ($stmt->rowCount() > 0) {
+          while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+            extract($row);
+        ?>
+
+            <div class="col-lg-2">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title text-center">PLANO <?php echo $speed; ?> MEGA</h5>
+                  <div class="d-flex justify-content-center">
+                    <div>
+                      <a href="editar-plano.php?edit_id=<?php echo $row['id']; ?>">
+                        <button type="button" class="btn btn-success">Editar</button>
+                      </a>
+                      <a href="?delete_id=<?php echo $row['id']; ?>">
+                        <button type="button" class="btn btn-danger">Excluir</button>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          <?php
+          }
+        } else {
+          ?>
+          <div class="bg-yellow-500 px-4 py-4 rounded">
+            <div>
+              <p class="text-blueGray-600 font-bold">Sem plano cadastrado ...</p>
+            </div>
+          </div>
+        <?php
+        }
+        ?>
+      </div>
+      <div class="row pt-4 ">
+      <h4>Internet + Telefonia</h4>
+        <?php
+        $stmt = $DB_con->prepare('SELECT id, speed FROM plans where city="teresina" and type="3" ORDER BY id DESC');
+        $stmt->execute();
+        if ($stmt->rowCount() > 0) {
+          while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+            extract($row);
+        ?>
+
+            <div class="col-lg-2">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title text-center">PLANO <?php echo $speed; ?> MEGA</h5>
+                  <div class="d-flex justify-content-center">
+                    <div>
+                      <a href="editar-plano.php?edit_id=<?php echo $row['id']; ?>">
+                        <button type="button" class="btn btn-success">Editar</button>
+                      </a>
+                      <a href="?delete_id=<?php echo $row['id']; ?>">
+                        <button type="button" class="btn btn-danger">Excluir</button>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          <?php
+          }
+        } else {
+          ?>
+          <div class="bg-yellow-500 px-4 py-4 rounded">
+            <div>
+              <p class="text-blueGray-600 font-bold">Sem plano cadastrado ...</p>
+            </div>
+          </div>
+        <?php
+        }
+        ?>
+      </div>
+      <div class="row pt-4 ">
+      <h4>Internet + Streaming</h4>
+        <?php
+        $stmt = $DB_con->prepare('SELECT id, speed FROM plans where city="teresina" and type="4" ORDER BY id DESC');
         $stmt->execute();
         if ($stmt->rowCount() > 0) {
           while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {

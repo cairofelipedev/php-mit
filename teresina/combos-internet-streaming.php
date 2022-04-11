@@ -118,6 +118,61 @@ include "../admin/insert_form.php";
         </div>
       </div>
     </section>
+    <section id="about" class="about pt-4">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <h2>Internet para você e toda sua casa</h2>
+        </div>
+        <div class="row g-4 g-lg-5" data-aos="fade-up" data-aos-delay="200">
+          <div class="col-lg-12">
+            <!-- Tabs -->
+            <ul class="nav nav-pills mb-3">
+              <li><a class="nav-link active" data-bs-toggle="pill" href="#tab1">Netflix</a></li>
+              <li><a class="nav-link" data-bs-toggle="pill" href="#tab2">+ Disney</a></li>
+              <li><a class="nav-link" data-bs-toggle="pill" href="#tab3">Amazon</a></li>
+            </ul><!-- End Tabs -->
+
+            <!-- Tab Content -->
+            <div class="tab-content">
+              <div class="tab-pane fade show active" id="tab1">
+                <div class="row">
+                  <?php
+                  $stmt = $DB_con->prepare('SELECT id,speed,tv,price FROM plans where city="demerval" and type="1" ORDER BY id DESC');
+                  $stmt->execute();
+                  if ($stmt->rowCount() > 0) {
+                    while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+                      extract($row);
+                  ?>
+                      <div class="col-md-4">
+                        <div class="card-box-c">
+                          <div class="container">
+                            <h2 class="title-c pt-2"><?php echo $speed; ?> MEGA</h2>
+                            <h3 class="text-center">R$ <?php echo $price; ?> COM CASHBACK 5%</h3>
+                          </div>
+                          <div class="d-grid gap-2 container">
+                            <button class="btn btn-plan" type="button">FALE COM UM CONSULTOR</button>
+                          </div>
+                          <div class="card-body-c pt-2 pb-2">
+                            <div class="container">
+                              <p class="content-c">
+                                <i class="bi bi-wifi"></i> Internet Fibra <?php echo $speed; ?> mega com Wi-fi grátis
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                  <?php
+                    }
+                  }
+                  ?>
+                </div>
+              </div><!-- End Tab 1 Content -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
