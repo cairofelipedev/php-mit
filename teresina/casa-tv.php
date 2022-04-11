@@ -49,35 +49,60 @@ include "../admin/insert_form.php";
         <div class="row g-4 g-lg-5 pt-4" data-aos="fade-up" data-aos-delay="200">
           <div class="col-lg-12">
             <div class="row">
-              <?php
-              $stmt = $DB_con->prepare('SELECT * FROM plans where city="teresina" and type="5" ORDER BY id DESC');
-              $stmt->execute();
-              if ($stmt->rowCount() > 0) {
-                while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-                  extract($row);
-              ?>
-                  <div class="col-md-4">
-                    <div class="card-box-c">
-                      <div class="container">
-                        <h2 class="title-c pt-2">+ Digital HD</h2>
-                        <p class="pl-4 lead text-black">48 Canais</p>
-                      </div>
-                      <div class="d-grid gap-2 container">
-                        <button class="btn btn-plan" type="button">FALE COM UM CONSULTOR</button>
-                      </div>
-                      <div class="card-body-c pt-2 pb-2">
-                        <div class="container">
-                          <p class="content-c">
-                            Pacote com todos os canais do grupo Glogo e muito programação infantil
-                          </p>
-                        </div>
-                      </div>
+              <div class="col-md-4">
+                <div class="card-box-c">
+                  <div class="container">
+                    <h2 class="title-c pt-2">+ Digital HD</h2>
+                    <p class="pl-4 lead text-black">155 Canais</p>
+                  </div>
+                  <div class="d-grid gap-2 container">
+                    <button class="btn btn-plan" type="button">FALE COM UM CONSULTOR</button>
+                  </div>
+                  <div class="card-body-c pt-2 pb-2">
+                    <div class="container">
+                      <p class="content-c">
+                        Pacote com todos os canais do grupo Glogo e muito programação infantil
+                      </p>
                     </div>
                   </div>
-              <?php
-                }
-              }
-              ?>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card-box-c">
+                  <div class="container">
+                    <h2 class="title-c pt-2">+ TOP HD</h2>
+                    <p class="pl-4 lead text-black">181 Canais</p>
+                  </div>
+                  <div class="d-grid gap-2 container">
+                    <button class="btn btn-plan" type="button">FALE COM UM CONSULTOR</button>
+                  </div>
+                  <div class="card-body-c pt-2 pb-2">
+                    <div class="container">
+                      <p class="content-c">
+                        Pacote com todos os canais do grupo Glogo e muito programação infantil
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card-box-c">
+                  <div class="container">
+                    <h2 class="title-c pt-2">+ PREMIUM HD</h2>
+                    <p class="pl-4 lead text-black">217 Canais</p>
+                  </div>
+                  <div class="d-grid gap-2 container">
+                    <button class="btn btn-plan" type="button">FALE COM UM CONSULTOR</button>
+                  </div>
+                  <div class="card-body-c pt-2 pb-2">
+                    <div class="container">
+                      <p class="content-c">
+                        Pacote com todos os canais do grupo Glogo e muito programação infantil
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div><!-- End Tab 1 Content -->
           </div>
         </div>

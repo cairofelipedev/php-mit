@@ -32,14 +32,6 @@ include "../admin/insert_form.php";
   <!-- Template Main CSS File -->
   <link href="../assets/css/main.css" rel="stylesheet">
   <link href="../assets/css/style.css" rel="stylesheet">
-  <style>
-    .Div2,
-    .Div3,
-    .Div4,
-    .Div5 {
-      display: none;
-    }
-  </style>
 </head>
 
 <body>
@@ -61,7 +53,7 @@ include "../admin/insert_form.php";
                 <div class="card-box-c">
                   <div class="container">
                     <h2 class="title-c pt-2">+ Digital HD</h2>
-                    <p class="pl-4 lead text-black">48 Canais</p>
+                    <p class="pl-4 lead text-black">155 Canais</p>
                   </div>
                   <div class="d-grid gap-2 container">
                     <button class="btn btn-plan" type="button">FALE COM UM CONSULTOR</button>
@@ -79,7 +71,7 @@ include "../admin/insert_form.php";
                 <div class="card-box-c">
                   <div class="container">
                     <h2 class="title-c pt-2">+ TOP HD</h2>
-                    <p class="pl-4 lead text-black">68 Canais</p>
+                    <p class="pl-4 lead text-black">181 Canais</p>
                   </div>
                   <div class="d-grid gap-2 container">
                     <button class="btn btn-plan" type="button">FALE COM UM CONSULTOR</button>
@@ -96,8 +88,8 @@ include "../admin/insert_form.php";
               <div class="col-md-4">
                 <div class="card-box-c">
                   <div class="container">
-                    <h2 class="title-c pt-2">+ Premium HD</h2>
-                    <p class="pl-4 lead text-black">81 Canais</p>
+                    <h2 class="title-c pt-2">+ PREMIUM HD</h2>
+                    <p class="pl-4 lead text-black">217 Canais</p>
                   </div>
                   <div class="d-grid gap-2 container">
                     <button class="btn btn-plan" type="button">FALE COM UM CONSULTOR</button>
@@ -111,9 +103,9 @@ include "../admin/insert_form.php";
                   </div>
                 </div>
               </div>
-          </div><!-- End Tab 1 Content -->
+            </div><!-- End Tab 1 Content -->
+          </div>
         </div>
-      </div>
       </div>
       </div>
     </section>
