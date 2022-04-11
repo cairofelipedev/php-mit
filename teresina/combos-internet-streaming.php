@@ -122,7 +122,7 @@ include "../admin/insert_form.php";
       <div class="container" data-aos="fade-up">
 
         <div class="section-header">
-          <h2>Internet para você e toda sua casa</h2>
+          <h2>COMBO: TV + INTERNET</h2>
         </div>
         <div class="row g-4 g-lg-5" data-aos="fade-up" data-aos-delay="200">
           <div class="col-lg-12">
@@ -130,7 +130,7 @@ include "../admin/insert_form.php";
             <ul class="nav nav-pills mb-3">
               <li><a class="nav-link active" data-bs-toggle="pill" href="#tab1">Netflix</a></li>
               <li><a class="nav-link" data-bs-toggle="pill" href="#tab2">+ Disney</a></li>
-              <li><a class="nav-link" data-bs-toggle="pill" href="#tab3">Amazon</a></li>
+              <li><a class="nav-link" data-bs-toggle="pill" href="#tab2">Amazon</a></li>
             </ul><!-- End Tabs -->
 
             <!-- Tab Content -->
@@ -138,7 +138,7 @@ include "../admin/insert_form.php";
               <div class="tab-pane fade show active" id="tab1">
                 <div class="row">
                   <?php
-                  $stmt = $DB_con->prepare('SELECT id,speed,tv,price FROM plans where city="demerval" and type="1" ORDER BY id DESC');
+                  $stmt = $DB_con->prepare('SELECT * FROM plans where city="teresina" and type="2" and speed="300" ORDER BY id DESC');
                   $stmt->execute();
                   if ($stmt->rowCount() > 0) {
                     while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
@@ -148,7 +148,8 @@ include "../admin/insert_form.php";
                         <div class="card-box-c">
                           <div class="container">
                             <h2 class="title-c pt-2"><?php echo $speed; ?> MEGA</h2>
-                            <h3 class="text-center">R$ <?php echo $price; ?> COM CASHBACK 5%</h3>
+                            <h3 class="text-center">R$ <?php echo $price; ?></h3>
+                            <p class="pl-4 lead text-black">+ <?php echo $tv; ?> </p>
                           </div>
                           <div class="d-grid gap-2 container">
                             <button class="btn btn-plan" type="button">FALE COM UM CONSULTOR</button>
@@ -156,8 +157,22 @@ include "../admin/insert_form.php";
                           <div class="card-body-c pt-2 pb-2">
                             <div class="container">
                               <p class="content-c">
-                                <i class="bi bi-wifi"></i> Internet Fibra <?php echo $speed; ?> mega com Wi-fi grátis
+                                <i class="bi bi-wifi"></i> Internet <?php echo $speed; ?> mega
                               </p>
+                              <p class="content-c">
+                                <i class="bi bi-tv-fill"></i> Digital HD com <?php echo $channels; ?> Canais
+                              </p>
+                              <p class="text-center">1 tela</p>
+                              <p class="text-center">
+                                <a  data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                  + telas valores
+                                </a>
+                              </p>
+                              <div class="collapse" id="collapseExample">
+                                <div class="card card-body">
+                                 2 telas, com adicional de <?php echo $price_display; ?> reais na mensalidade
+                                </div>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -168,6 +183,56 @@ include "../admin/insert_form.php";
                   ?>
                 </div>
               </div><!-- End Tab 1 Content -->
+
+              <div class="tab-pane fade show" id="tab2">
+
+                <div class="row">
+                  <?php
+                  $stmt = $DB_con->prepare('SELECT * FROM plans where city="teresina" and type="2" and speed="400" ORDER BY id DESC');
+                  $stmt->execute();
+                  if ($stmt->rowCount() > 0) {
+                    while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+                      extract($row);
+                  ?>
+                      <div class="col-md-4">
+                        <div class="card-box-c">
+                          <div class="container">
+                            <h2 class="title-c pt-2"><?php echo $speed; ?> MEGA</h2>
+                            <h3 class="text-center">R$ <?php echo $price; ?></h3>
+                            <p class="pl-4 lead text-black">+ <?php echo $tv; ?> </p>
+                          </div>
+                          <div class="d-grid gap-2 container">
+                            <button class="btn btn-plan" type="button">FALE COM UM CONSULTOR</button>
+                          </div>
+                          <div class="card-body-c pt-2 pb-2">
+                            <div class="container">
+                              <p class="content-c">
+                                <i class="bi bi-wifi"></i> Internet <?php echo $speed; ?> mega
+                              </p>
+                              <p class="content-c">
+                                <i class="bi bi-tv-fill"></i> Digital HD com <?php echo $channels; ?> Canais
+                              </p>
+                              <p class="text-center">1 tela</p>
+                              <p class="text-center">
+                                <a  data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                  + telas valores
+                                </a>
+                              </p>
+                              <div class="collapse" id="collapseExample">
+                                <div class="card card-body">
+                                 2 telas, com adicional de <?php echo $price_display; ?> reais na mensalidade
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                  <?php
+                    }
+                  }
+                  ?>
+                </div>
+              </div><!-- End Tab 2 Content -->
             </div>
           </div>
         </div>
