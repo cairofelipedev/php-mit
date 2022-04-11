@@ -80,6 +80,17 @@ include "../admin/insert_form.php";
                               <p class="content-c">
                                 <i class="bi bi-tv-fill"></i> Digital HD com <?php echo $channels; ?> Canais
                               </p>
+                              <p class="text-center">1 tela</p>
+                              <p class="text-center">
+                                <a  data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                  + telas valores
+                                </a>
+                              </p>
+                              <div class="collapse" id="collapseExample">
+                                <div class="card card-body">
+                                 2 telas, com adicional de <?php echo $price_display; ?> reais na mensalidade
+                                </div>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -119,6 +130,17 @@ include "../admin/insert_form.php";
                               <p class="content-c">
                                 <i class="bi bi-tv-fill"></i> Digital HD com <?php echo $channels; ?> Canais
                               </p>
+                              <p class="text-center">1 tela</p>
+                              <p class="text-center">
+                                <a  data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                  + telas valores
+                                </a>
+                              </p>
+                              <div class="collapse" id="collapseExample">
+                                <div class="card card-body">
+                                 2 telas, com adicional de <?php echo $price_display; ?> reais na mensalidade
+                                </div>
+                              </div>
                             </div>
                           </div>
                         </div>

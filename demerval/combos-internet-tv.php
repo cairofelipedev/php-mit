@@ -56,7 +56,7 @@ include "../admin/insert_form.php";
               <div class="tab-pane fade show active" id="tab1">
                 <div class="row">
                   <?php
-                  $stmt = $DB_con->prepare('SELECT * FROM plans where city="demerval" and type="2" and speed="300" ORDER BY id DESC');
+                  $stmt = $DB_con->prepare('SELECT * FROM plans where city="teresina" and type="2" and speed="300" ORDER BY id DESC');
                   $stmt->execute();
                   if ($stmt->rowCount() > 0) {
                     while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
@@ -78,8 +78,19 @@ include "../admin/insert_form.php";
                                 <i class="bi bi-wifi"></i> Internet <?php echo $speed; ?> mega
                               </p>
                               <p class="content-c">
-                                <i class="bi bi-tv-fill"></i> Digital HD com <?php echo $channels; ?>  Canais
+                                <i class="bi bi-tv-fill"></i> Digital HD com <?php echo $channels; ?> Canais
                               </p>
+                              <p class="text-center">1 tela</p>
+                              <p class="text-center">
+                                <a  data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                  + telas valores
+                                </a>
+                              </p>
+                              <div class="collapse" id="collapseExample">
+                                <div class="card card-body">
+                                 2 telas, com adicional de <?php echo $price_display; ?> reais na mensalidade
+                                </div>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -94,14 +105,14 @@ include "../admin/insert_form.php";
               <div class="tab-pane fade show" id="tab2">
 
                 <div class="row">
-                <?php
-                  $stmt = $DB_con->prepare('SELECT * FROM plans where city="demerval" and type="2" and speed="400" ORDER BY id DESC');
+                  <?php
+                  $stmt = $DB_con->prepare('SELECT * FROM plans where city="teresina" and type="2" and speed="400" ORDER BY id DESC');
                   $stmt->execute();
                   if ($stmt->rowCount() > 0) {
                     while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
                       extract($row);
                   ?>
-                    <div class="col-md-4">
+                      <div class="col-md-4">
                         <div class="card-box-c">
                           <div class="container">
                             <h2 class="title-c pt-2"><?php echo $speed; ?> MEGA</h2>
@@ -117,8 +128,19 @@ include "../admin/insert_form.php";
                                 <i class="bi bi-wifi"></i> Internet <?php echo $speed; ?> mega
                               </p>
                               <p class="content-c">
-                                <i class="bi bi-tv-fill"></i> Digital HD com <?php echo $channels; ?>  Canais
+                                <i class="bi bi-tv-fill"></i> Digital HD com <?php echo $channels; ?> Canais
                               </p>
+                              <p class="text-center">1 tela</p>
+                              <p class="text-center">
+                                <a  data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                  + telas valores
+                                </a>
+                              </p>
+                              <div class="collapse" id="collapseExample">
+                                <div class="card card-body">
+                                 2 telas, com adicional de <?php echo $price_display; ?> reais na mensalidade
+                                </div>
+                              </div>
                             </div>
                           </div>
                         </div>

@@ -50,7 +50,7 @@ include "../admin/insert_form.php";
           <div class="col-lg-12">
             <div class="row">
               <?php
-              $stmt = $DB_con->prepare('SELECT id,speed,tv,price FROM plans where city="teresina" and type="1" ORDER BY id DESC');
+              $stmt = $DB_con->prepare('SELECT * FROM plans where city="teresina" and type="5" ORDER BY id DESC');
               $stmt->execute();
               if ($stmt->rowCount() > 0) {
                 while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
