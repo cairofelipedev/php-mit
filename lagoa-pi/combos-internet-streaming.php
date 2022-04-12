@@ -57,64 +57,146 @@ include "../admin/insert_form.php";
             while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
               extract($row);
           ?>
-              <div class="col-md-4">
-                <div class="card-box-c">
-                  <h2 class="title-c pt-2"><?php echo $speed; ?> MEGA</h2>
-                  <h3 class="text-center">R$ <?php echo $price; ?></h3>
-                  <div class="row justify-content-center container">
-                    <div class="col-6">
-                      <i class="bi bi-wifi"></i> Conexão Estável
-                    </div>
-                    <div class="col-6">
-                      <i class="bi bi-bank2"></i> MIT Star
-                    </div>
-                    <div class="col-6">
-                      <i class="bi bi-cash-coin"></i> CashBack
-                    </div>
-                    <div class="col-6">
-                      <i class="bi bi-phone-fill"></i> App Minha MIT
-                    </div>
-                  </div>
-                  <div class="d-grid gap-2 container">
-                    <button class="btn btn-plan" type="button">FALE COM UM CONSULTOR</button>
-                  </div>
-                  <div class="card-body-c pt-2 pb-2">
-                    <?php if ($speed == '600') { ?>
-                      <div class="container">
-                        <p class="content-c">
-                          Assinatura Netflix ou +Disney
-                        </p>
-                        <p class="content-c2">Séries originais e exclusivas, filmes, novelas e programas.</p>
-                        <div class="row pb-3 align-items-center justify-content-center">
-                          <div class="col-2">
-                            <img class="img-fluid" src="../assets/img/icon-11778.png">
-                          </div>
-                          <div class="col-2">
-                            <img class="img-fluid" src="../assets/img/app-netflix-252x252.png">
-                          </div>
-                        </div>
 
-                      </div>
-                    <?php } else { ?>
-                      <div class="container">
-                        <p class="content-c">
-                          Internet de qualidade e super veloz
-                        </p>
-                        <p class="content-c2">Acesse seus sites e seus aplicativos sem travar e sem lentidão</p>
-                        <div class="row pb-3 align-items-center justify-content-center">
-                          <div class="col-2">
-
-                          </div>
-                        </div>
-                      </div>
-                    <?php } ?>
-                  </div>
-                </div>
-              </div>
           <?php
             }
           }
           ?>
+        </div>
+      </div>
+    </section>
+    <section id="about" class="about pt-4">
+      <div class="container" data-aos="fade-up">
+        <div class="row g-4 g-lg-5" data-aos="fade-up" data-aos-delay="200">
+          <div class="col-lg-12">
+            <!-- Tabs -->
+            <ul class="nav nav-pills mb-3">
+              <li><a class="nav-link active" data-bs-toggle="pill" href="#tab1">Netflix</a></li>
+              <li><a class="nav-link" data-bs-toggle="pill" href="#tab2">+ Disney</a></li>
+              <li><a class="nav-link" data-bs-toggle="pill" href="#tab3">Amazon</a></li>
+            </ul><!-- End Tabs -->
+
+            <!-- Tab Content -->
+            <div class="tab-content">
+              <div class="tab-pane fade show active" id="tab1">
+                <div class="row">
+                  <?php
+                  $stmt = $DB_con->prepare('SELECT * FROM plans where city="lagoa" and channels="netflix" and type="4" ORDER BY id DESC');
+                  $stmt->execute();
+                  if ($stmt->rowCount() > 0) {
+                    while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+                      extract($row);
+                  ?>
+                      <div class="col-md-4 pb-2">
+                        <div class="card-box-c">
+                          <h2 class="title-c pt-2"><?php echo $speed; ?> MEGA</h2>
+                          <h3 class="text-center">R$ <?php echo $price; ?></h3>
+                          <p class="text-center"><?php echo $price_display; ?> telas</p>
+                          <div class="d-grid gap-2 container">
+                            <button class="btn btn-plan" type="button">FALE COM UM CONSULTOR</button>
+                          </div>
+                          <div class="card-body-c pt-2 pb-2">
+                            <div class="container">
+                              <p class="content-c">
+                                Assinatura Netflix
+                              </p>
+                              <p class="content-c2 text-black">Séries originais e exclusivas, filmes, novelas e programas.</p>
+                              <div class="row pb-3 align-items-center justify-content-center">
+                                <div class="col-2">
+                                  <img class="img-fluid" src="../assets/img/app-netflix-252x252.png">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                  <?php
+                    }
+                  }
+                  ?>
+                </div>
+              </div><!-- End Tab 1 Content -->
+
+              <div class="tab-pane fade show" id="tab2">
+
+                <div class="row">
+                  <?php
+                  $stmt = $DB_con->prepare('SELECT * FROM plans where city="lagoa" and channels="disney" and type="4" ORDER BY id DESC');
+                  $stmt->execute();
+                  if ($stmt->rowCount() > 0) {
+                    while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+                      extract($row);
+                  ?>
+                      <div class="col-md-4 pb-2">
+                        <div class="card-box-c">
+                          <h2 class="title-c pt-2"><?php echo $speed; ?> MEGA</h2>
+                          <h3 class="text-center">R$ <?php echo $price; ?></h3>
+                          <p class="text-center"><?php echo $price_display; ?> telas</p>
+                          <div class="d-grid gap-2 container">
+                            <button class="btn btn-plan" type="button">FALE COM UM CONSULTOR</button>
+                          </div>
+                          <div class="card-body-c pt-2 pb-2">
+                            <div class="container">
+                              <p class="content-c">
+                                Assinatura Disney
+                              </p>
+                              <p class="content-c2 text-black">Séries originais e exclusivas, filmes, novelas e programas.</p>
+                              <div class="row pb-3 align-items-center justify-content-center">
+                                <div class="col-2">
+                                  <img class="img-fluid" src="../assets/img/icon-11778.png">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                  <?php
+                    }
+                  }
+                  ?>
+                </div>
+              </div><!-- End Tab 2 Content -->
+              <div class="tab-pane fade show" id="tab3">
+
+                <div class="row">
+                  <?php
+                  $stmt = $DB_con->prepare('SELECT * FROM plans where city="lagoa" and channels="amazon" and type="4" ORDER BY id DESC');
+                  $stmt->execute();
+                  if ($stmt->rowCount() > 0) {
+                    while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+                      extract($row);
+                  ?>
+                      <div class="col-md-4 pb-2">
+                        <div class="card-box-c">
+                          <h2 class="title-c pt-2"><?php echo $speed; ?> MEGA</h2>
+                          <h3 class="text-center">R$ <?php echo $price; ?></h3>
+                          <p class="text-center"><?php echo $price_display; ?> telas</p>
+                          <div class="d-grid gap-2 container">
+                            <button class="btn btn-plan" type="button">FALE COM UM CONSULTOR</button>
+                          </div>
+                          <div class="card-body-c pt-2 pb-2">
+                            <div class="container">
+                              <p class="content-c">
+                                Assinatura Amazon
+                              </p>
+                              <p class="content-c2 text-black">Séries originais e exclusivas, filmes, novelas e programas.</p>
+                              <div class="row pb-3 align-items-center justify-content-center">
+                                <div class="col-2">
+                                  <img class="img-fluid" src="../assets/img/amazon.png">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                  <?php
+                    }
+                  }
+                  ?>
+                </div>
+              </div><!-- End Tab 2 Content -->
+            </div>
+          </div>
         </div>
       </div>
     </section>
