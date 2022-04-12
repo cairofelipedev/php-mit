@@ -67,7 +67,7 @@ if (isset($_GET['delete_id'])) {
             <li class="breadcrumb-item active">Usuários</li>
           </ol>
         </nav>
-        <a href="add-banner.php">
+        <a href="add-usuario.php">
           <button type="submit" name="btnsave" class="btn btn-primary"><i class="bi bi-plus-circle-fill"></i> Adicionar Usuário</button>
         </a>
       </div>

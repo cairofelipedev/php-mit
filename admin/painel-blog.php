@@ -105,7 +105,7 @@ if (isset($_GET['delete_id'])) {
           ?>
           <div>
             <div>
-              <p  class="alert alert-warning">Sem banner cadastrado ...</p>
+              <p  class="alert alert-warning">Sem Post cadastrado ...</p>
             </div>
           </div>
         <?php

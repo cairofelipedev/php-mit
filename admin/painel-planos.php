@@ -21,7 +21,6 @@ if (isset($_GET['delete_id'])) {
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -78,7 +77,7 @@ if (isset($_GET['delete_id'])) {
       <div class="row pt-4 ">
       <h4>Internet</h4>
         <?php
-        $stmt = $DB_con->prepare('SELECT id, speed FROM plans where city="teresina" and type="1" ORDER BY id DESC');
+        $stmt = $DB_con->prepare('SELECT * FROM plans where city="teresina" and type="1" ORDER BY id DESC');
         $stmt->execute();
         if ($stmt->rowCount() > 0) {
           while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
@@ -91,7 +90,7 @@ if (isset($_GET['delete_id'])) {
                   <h5 class="card-title text-center">PLANO <?php echo $speed; ?> MEGA</h5>
                   <div class="d-flex justify-content-center">
                     <div>
-                      <a href="editar-plano.php?edit_id=<?php echo $row['id']; ?>">
+                      <a href="editar-plano.php?edit_id=<?php echo $row['id']; ?>&type=<?php echo $type; ?>">
                         <button type="button" class="btn btn-success">Editar</button>
                       </a>
                       <a href="?delete_id=<?php echo $row['id']; ?>">
@@ -118,7 +117,7 @@ if (isset($_GET['delete_id'])) {
       <div class="row pt-4 ">
       <h4>Internet + TV</h4>
         <?php
-        $stmt = $DB_con->prepare('SELECT id, speed FROM plans where city="teresina" and type="2" ORDER BY id DESC');
+        $stmt = $DB_con->prepare('SELECT * FROM plans where city="teresina" and type="2" ORDER BY id DESC');
         $stmt->execute();
         if ($stmt->rowCount() > 0) {
           while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
@@ -129,9 +128,10 @@ if (isset($_GET['delete_id'])) {
               <div class="card">
                 <div class="card-body">
                   <h5 class="card-title text-center">PLANO <?php echo $speed; ?> MEGA</h5>
+                  <p class="text-center"><?php echo $channels; ?> Canais</p>
                   <div class="d-flex justify-content-center">
                     <div>
-                      <a href="editar-plano.php?edit_id=<?php echo $row['id']; ?>">
+                      <a href="editar-plano.php?edit_id=<?php echo $row['id']; ?>&type=<?php echo $type; ?>">
                         <button type="button" class="btn btn-success">Editar</button>
                       </a>
                       <a href="?delete_id=<?php echo $row['id']; ?>">
@@ -158,7 +158,7 @@ if (isset($_GET['delete_id'])) {
       <div class="row pt-4 ">
       <h4>Internet + Telefonia</h4>
         <?php
-        $stmt = $DB_con->prepare('SELECT id, speed FROM plans where city="teresina" and type="3" ORDER BY id DESC');
+        $stmt = $DB_con->prepare('SELECT * FROM plans where city="teresina" and type="3" ORDER BY id DESC');
         $stmt->execute();
         if ($stmt->rowCount() > 0) {
           while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
@@ -171,7 +171,7 @@ if (isset($_GET['delete_id'])) {
                   <h5 class="card-title text-center">PLANO <?php echo $speed; ?> MEGA</h5>
                   <div class="d-flex justify-content-center">
                     <div>
-                      <a href="editar-plano.php?edit_id=<?php echo $row['id']; ?>">
+                      <a href="editar-plano.php?edit_id=<?php echo $row['id']; ?>&type=<?php echo $type; ?>">
                         <button type="button" class="btn btn-success">Editar</button>
                       </a>
                       <a href="?delete_id=<?php echo $row['id']; ?>">
@@ -198,7 +198,7 @@ if (isset($_GET['delete_id'])) {
       <div class="row pt-4 ">
       <h4>Internet + Streaming</h4>
         <?php
-        $stmt = $DB_con->prepare('SELECT id, speed FROM plans where city="teresina" and type="4" ORDER BY id DESC');
+        $stmt = $DB_con->prepare('SELECT * FROM plans where city="teresina" and type="4" ORDER BY id DESC');
         $stmt->execute();
         if ($stmt->rowCount() > 0) {
           while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
@@ -211,7 +211,7 @@ if (isset($_GET['delete_id'])) {
                   <h5 class="card-title text-center">PLANO <?php echo $speed; ?> MEGA</h5>
                   <div class="d-flex justify-content-center">
                     <div>
-                      <a href="editar-plano.php?edit_id=<?php echo $row['id']; ?>">
+                      <a href="editar-plano.php?edit_id=<?php echo $row['id']; ?>&type=<?php echo $type; ?>">
                         <button type="button" class="btn btn-success">Editar</button>
                       </a>
                       <a href="?delete_id=<?php echo $row['id']; ?>">

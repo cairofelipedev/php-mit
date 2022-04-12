@@ -110,6 +110,41 @@ if (isset($_POST['btnsave'])) {
                     <option value="curralinhos">CURRALINHOS</option>
                   </select>
                 </div>
+                <div class="col-12">
+                  <label class="form-label">Tipo do Plano</label>
+                  <select name="city" class="form-select">
+                    <option value="teresina">Internet</option>
+                    <option value="demerval">Internet + TV</option>
+                    <option value="lagoa">Internet + Streaming</option>
+                    <option value="monsenhor">Internet + Telefonia</option>
+                  </select>
+                </div>
+                <div class="col-12">
+                  <label class="form-label">TV</label>
+                  <select name="city" class="form-select">
+                  <option value="teresina">Selecione um tv (opcional)</option>
+                    <option value="teresina">DIGITAL HD</option>
+                    <option value="demerval">TOP HD</option>
+                    <option value="lagoa">PREMIUM HD</option>
+                  </select>
+                </div>
+                <div class="col-12">
+                  <label class="form-label">Streaming</label>
+                  <select name="city" class="form-select">
+                  <option value="teresina">Selecione uma streaming (opcional)</option>
+                    <option value="teresina">DIGITAL HD</option>
+                    <option value="demerval">TOP HD</option>
+                    <option value="lagoa">PREMIUM HD</option>
+                  </select>
+                </div>
+                <div class="col-12">
+                  <label class="form-label">Quantidade de canais</label>
+                  <input value="<?php echo $price; ?>" name="price" type="text" placeholder="Quantidade de Canais" class="form-control">
+                </div>
+                <div class="col-12">
+                  <label class="form-label">Quantidade de telas</label>
+                  <input value="<?php echo $price; ?>" name="price" type="text" placeholder="Quantidade de telas" class="form-control">
+                </div>
                 <div class="text-center">
                   <button type="submit" name="btnsave" class="btn btn-primary">Adicionar</button>
                   <button type="reset" class="btn btn-secondary">Resetar</button>

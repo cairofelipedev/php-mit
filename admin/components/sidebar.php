@@ -27,12 +27,12 @@
           <span>Banners</span>
         </a>
       </li>
-      <!-- <li class="nav-item">
+      <li class="nav-item">
         <a class="nav-link collapsed" href="painel-blog.php">
           <i class="fas fa-newspaper"></i>
           <span>Blog</span>
         </a>
-      </li>-->
+      </li>
       <li class="nav-item">
         <a class="nav-link collapsed" href="painel-users.php">
           <i class="fas fa-user"></i>

@@ -43,6 +43,7 @@ if (isset($_POST['btnsave'])) {
     }
   }
 }
+$type_plan = $_GET['type'];
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -124,6 +125,30 @@ if (isset($_POST['btnsave'])) {
                     <option value="curralinhos">CURRALINHOS</option>
                   </select>
                 </div>
+                <?php if ($type_plan == 2) { ?>
+                  <div class="col-12">
+                    <label class="form-label">TV</label>
+                    <input value="<?php echo $tv; ?>" name="tv" type="text" placeholder="TV" class="form-control">
+                  </div>
+                  <div class="col-12">
+                    <label class="form-label">Quantidade de Canais</label>
+                    <input value="<?php echo $channels; ?>" name="channels" type="text" placeholder="Quantidade de canais" class="form-control">
+                  </div>
+                  <div class="col-12">
+                    <label class="form-label">Preço tela adicional</label>
+                    <input value="<?php echo $display_price; ?>" name="display_price" type="text" placeholder="Preço tela adicional" class="form-control">
+                  </div>
+                <?php } ?>
+                <?php if ($type_plan == 4) { ?>
+                  <div class="col-12">
+                    <label class="form-label">Streaming</label>
+                    <input value="<?php echo $channels; ?>" name="channels" type="text" placeholder="Streaming" class="form-control">
+                  </div>
+                  <div class="col-12">
+                    <label class="form-label">Quantidade de Telas</label>
+                    <input value="<?php echo $display_price; ?>" name="display_price" type="text" placeholder="Quantidade de telas" class="form-control">
+                  </div>
+                <?php } ?>
                 <div class="text-center">
                   <button type="submit" name="btnsave" class="btn btn-primary">Editar</button>
                 </div>

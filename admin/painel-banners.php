@@ -90,7 +90,9 @@ if (isset($_GET['delete_id'])) {
                   <h5 class="card-title text-center"><?php echo $nome; ?></h5>
                   <div class="d-flex justify-content-center">
                     <div>
-                      <button type="button" class="btn btn-success">Editar</button>
+                      <a href="editar-banner.php?edit_id=<?php echo $row['id']; ?>">
+                        <button type="button" class="btn btn-success">Editar</button>
+                      </a>
                       <a href="?delete_id=<?php echo $row['id']; ?>">
                         <button type="button" class="btn btn-danger">Excluir</button>
                       </a>
@@ -105,7 +107,7 @@ if (isset($_GET['delete_id'])) {
           ?>
           <div>
             <div>
-              <p  class="alert alert-warning">Sem banner cadastrado ...</p>
+              <p class="alert alert-warning">Sem banner cadastrado ...</p>
             </div>
           </div>
         <?php
