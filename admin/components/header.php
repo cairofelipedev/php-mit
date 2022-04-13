@@ -32,12 +32,12 @@
       </a><!-- End Profile Iamge Icon -->
 
       <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
-        <li>
+        <!-- <li>
           <a class="dropdown-item d-flex align-items-center" href="edit-profile.php?edit_id=<?php echo $_SESSION['id']; ?>">
             <i class="bi bi-person"></i>
             <span>Perfil</span>
           </a>
-        </li>
+        </li> -->
         <li>
           <hr class="dropdown-divider">
         </li>

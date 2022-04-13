@@ -119,7 +119,7 @@ include "../admin/insert_form.php";
                 <h5>COMBOS</h5>
                 <p class="lead">Internet + Streaming + tv + telefonia</p>
                 <div class="content-services d-flex justify-content-between">
-                  <a href="combos-internet-telefonia-tv.php">
+                  <a href="combos-internet-streaming.php">
                     <p class="pt-4">Conheça os planos</p>
                   </a>
                   <img class="img-fluid" src="../assets/img/icon-combos.png">

@@ -84,7 +84,7 @@ if (isset($_GET['delete_id'])) {
             extract($row);
         ?>
 
-            <div class="col-lg-2">
+            <div class="col-lg-3">
               <div class="card">
                 <div class="card-body">
                   <h5 class="card-title text-center">PLANO <?php echo $speed; ?> MEGA</h5>
@@ -124,7 +124,7 @@ if (isset($_GET['delete_id'])) {
             extract($row);
         ?>
 
-            <div class="col-lg-2">
+            <div class="col-lg-3">
               <div class="card">
                 <div class="card-body">
                   <h5 class="card-title text-center">PLANO <?php echo $speed; ?> MEGA</h5>
@@ -165,7 +165,7 @@ if (isset($_GET['delete_id'])) {
             extract($row);
         ?>
 
-            <div class="col-lg-2">
+            <div class="col-lg-3">
               <div class="card">
                 <div class="card-body">
                   <h5 class="card-title text-center">PLANO <?php echo $speed; ?> MEGA</h5>
@@ -205,7 +205,7 @@ if (isset($_GET['delete_id'])) {
             extract($row);
         ?>
 
-            <div class="col-lg-2">
+            <div class="col-lg-3">
               <div class="card">
                 <div class="card-body">
                   <h5 class="card-title text-center">PLANO <?php echo $speed; ?> MEGA</h5>
@@ -247,7 +247,7 @@ if (isset($_GET['delete_id'])) {
             extract($row);
         ?>
 
-            <div class="col-lg-2">
+            <div class="col-lg-3">
               <div class="card">
                 <div class="card-body">
                   <h5 class="card-title text-center">PLANO <?php echo $speed; ?> MEGA</h5>
@@ -289,7 +289,7 @@ if (isset($_GET['delete_id'])) {
             extract($row);
         ?>
 
-            <div class="col-lg-2">
+            <div class="col-lg-3">
               <div class="card">
                 <div class="card-body">
                   <h5 class="card-title text-center">PLANO <?php echo $speed; ?> MEGA</h5>
@@ -331,7 +331,7 @@ if (isset($_GET['delete_id'])) {
             extract($row);
         ?>
 
-            <div class="col-lg-2">
+            <div class="col-lg-3">
               <div class="card">
                 <div class="card-body">
                   <h5 class="card-title text-center">PLANO <?php echo $speed; ?> MEGA</h5>
@@ -373,7 +373,7 @@ if (isset($_GET['delete_id'])) {
             extract($row);
         ?>
 
-            <div class="col-lg-2">
+            <div class="col-lg-3">
               <div class="card">
                 <div class="card-body">
                   <h5 class="card-title text-center">PLANO <?php echo $speed; ?> MEGA</h5>
