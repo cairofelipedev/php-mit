@@ -65,7 +65,7 @@ include "../admin/insert_form.php";
         </div>
       </div>
     </section>
-    <section id="about" class="about pt-4">
+    <section id="plans-internet" class="plans-internet pt-4">
       <div class="container" data-aos="fade-up">
         <div class="row g-4 g-lg-5" data-aos="fade-up" data-aos-delay="200">
           <div class="col-lg-12">

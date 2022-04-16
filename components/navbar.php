@@ -67,7 +67,6 @@
             <div class="row">
               <div class="col-md-4">
                 <a class="dropdown-item title" href="#">COMBOS</a>
-                <a class="dropdown-item " href="combos-internet-streaming.php">Internet + Streaming</a>
                 <a class="dropdown-item " href="combos-internet-tv.php">Internet + TV</a>
                 <a class="dropdown-item " href="combos-internet-telefonia-tv.php">Internet + Telefonia + TV</a>
               </div>
