@@ -60,19 +60,42 @@ include "../admin/insert_form.php";
                     while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
                       extract($row);
                   ?>
-                      <div class="col-md-4">
+                      <div class="col-md-3">
                         <div class="card-box-c">
                           <div class="container">
-                            <h2 class="title-c pt-2"><?php echo $speed; ?> MEGA</h2>
-                            <h3 class="text-center">R$ <?php echo $price." ".$description;?> </h3>
+                            <h2 class="title-c pt-2"><?php echo $speed; ?> Mega</h2>
+                            <h3>R$ <?php echo $price; ?> </h3>
+                            <p class="text-black"><?php echo $description; ?></p>
                           </div>
                           <div class="d-grid gap-2 container">
-                            <button class="btn btn-plan" type="button">FALE COM UM CONSULTOR</button>
+                            <a href="<?php echo $link; ?>">
+                              <button class="btn btn-plan" type="button">FALE COM UM CONSULTOR</button>
+                            </a>
                           </div>
                           <div class="card-body-c pt-2 pb-2">
                             <div class="container">
                               <p class="content-c">
-                                <i class="bi bi-wifi"></i> Internet Fibra <?php echo $speed; ?> mega com Wi-fi grátis
+                                <?php echo $footer_text1; ?> 
+                              </p>
+                              <p class="text-black" style="font-size:14px;">
+                                <?php echo $footer_text2; ?> 
+                              </p>
+                              <div class="row">
+                                <div class="col-2">
+                                  <img class="img-fluid" src="../admin/uploads/icons/<?php echo $row['footer_icon1']; ?>">
+                                </div>
+                                <div class="col-2">
+                                  <img class="img-fluid" src="../admin/uploads/icons/<?php echo $row['footer_icon2']; ?>">
+                                </div>
+                                <div class="col-2">
+                                  <img class="img-fluid" src="../admin/uploads/icons/<?php echo $row['footer_icon3']; ?>">
+                                </div>
+                              </div>
+                              <p class="content-c pt-2">
+                                <?php echo $footer_text3; ?> 
+                              </p>
+                              <p class="text-black" style="font-size:14px;">
+                                <?php echo $footer_text4; ?> 
                               </p>
                             </div>
                           </div>
@@ -93,25 +116,43 @@ include "../admin/insert_form.php";
                     while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
                       extract($row);
                   ?>
-                      <div class="col-md-4 pb-2">
+                      <div class="col-md-3 pb-2">
                         <div class="card-box-c">
-                          <h2 class="title-c pt-2"><?php echo $speed; ?> MEGA</h2>
-                          <h3 class="text-center">R$ <?php echo $price; ?></h3>
-                          <p class="text-center"><?php echo $price_display; ?> telas</p>
+                          <div class="container">
+                            <h2 class="title-c pt-2"><?php echo $speed; ?> Mega</h2>
+                            <h3>R$ <?php echo $price; ?> </h3>
+                            <p class="text-black"><?php echo $description; ?></p>
+                          </div>
                           <div class="d-grid gap-2 container">
-                            <button class="btn btn-plan" type="button">FALE COM UM CONSULTOR</button>
+                            <a href="<?php echo $link; ?>">
+                              <button class="btn btn-plan" type="button">FALE COM UM CONSULTOR</button>
+                            </a>
                           </div>
                           <div class="card-body-c pt-2 pb-2">
                             <div class="container">
                               <p class="content-c">
-                                Assinatura Netflix
+                                <?php echo $footer_text1; ?> 
                               </p>
-                              <p class="content-c2 text-black">Séries originais e exclusivas, filmes, novelas e programas.</p>
-                              <div class="row pb-3 align-items-center justify-content-center">
+                              <p class="text-black" style="font-size:14px;">
+                                <?php echo $footer_text2; ?> 
+                              </p>
+                              <div class="row">
                                 <div class="col-2">
-                                  <img class="img-fluid" src="../assets/img/app-netflix-252x252.png">
+                                  <img class="img-fluid" src="../admin/uploads/icons/<?php echo $row['footer_icon1']; ?>">
+                                </div>
+                                <div class="col-2">
+                                  <img class="img-fluid" src="../admin/uploads/icons/<?php echo $row['footer_icon2']; ?>">
+                                </div>
+                                <div class="col-2">
+                                  <img class="img-fluid" src="../admin/uploads/icons/<?php echo $row['footer_icon3']; ?>">
                                 </div>
                               </div>
+                              <p class="content-c pt-2">
+                                <?php echo $footer_text3; ?> 
+                              </p>
+                              <p class="text-black" style="font-size:14px;">
+                                <?php echo $footer_text4; ?> 
+                              </p>
                             </div>
                           </div>
                         </div>

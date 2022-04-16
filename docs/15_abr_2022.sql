@@ -119,21 +119,21 @@ CREATE TABLE `plans` (
   `tv` varchar(100) DEFAULT NULL,
   `channels` varchar(100) DEFAULT NULL,
   `price_display` varchar(100) DEFAULT NULL,
-  `footer-text1` varchar(500) DEFAULT NULL,
-  `footer-text2` varchar(500) DEFAULT NULL,
-  `footer-icon1` varchar(200) DEFAULT NULL,
-  `footer-icon2` varchar(200) DEFAULT NULL,
-  `footer-icon3` varchar(200) DEFAULT NULL,
-  `footer-icon4` varchar(200) DEFAULT NULL,
-  `footer-icon5` varchar(200) DEFAULT NULL,
-  `footer-text3` varchar(500) DEFAULT NULL,
-  `footer-text4` varchar(500) DEFAULT NULL,
+  `footer_text1` varchar(500) DEFAULT NULL,
+  `footer_text2` varchar(500) DEFAULT NULL,
+  `footer_icon1` varchar(200) DEFAULT NULL,
+  `footer_icon2` varchar(200) DEFAULT NULL,
+  `footer_icon3` varchar(200) DEFAULT NULL,
+  `footer_icon4` varchar(200) DEFAULT NULL,
+  `footer_icon5` varchar(200) DEFAULT NULL,
+  `footer_text3` varchar(500) DEFAULT NULL,
+  `footer_text4` varchar(500) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=178 DEFAULT CHARSET=utf8mb4;
 
 /*Data for the table `plans` */
 
-insert  into `plans`(`id`,`data_create`,`description`,`speed`,`link`,`price`,`city`,`type`,`tv`,`channels`,`price_display`,`footer-text1`,`footer-text2`,`footer-icon1`,`footer-icon2`,`footer-icon3`,`footer-icon4`,`footer-icon5`,`footer-text3`,`footer-text4`) values 
+insert  into `plans`(`id`,`data_create`,`description`,`speed`,`link`,`price`,`city`,`type`,`tv`,`channels`,`price_display`,`footer_text1`,`footer_text2`,`footer_icon1`,`footer_icon2`,`footer_icon3`,`footer_icon4`,`footer_icon5`,`footer_text3`,`footer_text4`) values 
 (71,'2022-04-08 09:09:53','COM CASHBACK 5%','600	',NULL,'129,99','teresina','1',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
 (72,'2022-04-08 09:09:53','COM CASHBACK 5%','600	',NULL,'129,99','demerval','1',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
 (73,'2022-04-08 09:09:53','COM CASHBACK 5%','600	',NULL,'129,99','lagoa','1',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
