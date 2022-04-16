@@ -33,6 +33,22 @@ include "../admin/insert_form.php";
   <link href="../assets/css/main.css" rel="stylesheet">
   <link href="../assets/css/style.css" rel="stylesheet">
 </head>
+<style>
+  #box {
+    display: none;
+    background-color: blueviolet;
+    color: white;
+    width: 100px;
+    height: 100px;
+  }
+
+  #box2 {
+    background-color: blue;
+    color: white;
+    width: 100px;
+    height: 100px;
+  }
+</style>
 
 <body>
   <?php include "navbar.php"; ?>
@@ -63,7 +79,7 @@ include "../admin/insert_form.php";
                       <div class="col-md-3">
                         <div class="card-box-c">
                           <div class="container">
-                            <h2 class="title-c pt-2"><?php echo $speed; ?> Mega</h2>
+                            <h2 class="title-c pt-2" style="padding-bottom:50px;"><?php echo $speed; ?> Mega</h2>
                             <h3>R$ <?php echo $price; ?> </h3>
                             <p class="text-black"><?php echo $description; ?></p>
                           </div>
@@ -75,27 +91,27 @@ include "../admin/insert_form.php";
                           <div class="card-body-c pt-2 pb-2">
                             <div class="container">
                               <p class="content-c">
-                                <?php echo $footer_text1; ?> 
+                                <?php echo $footer_text1; ?>
                               </p>
                               <p class="text-black" style="font-size:14px;">
-                                <?php echo $footer_text2; ?> 
+                                <?php echo $footer_text2; ?>
                               </p>
-                              <div class="row">
-                                <div class="col-2">
+                              <div class="d-flex">
+                                <div class="col-2 p-2">
                                   <img class="img-fluid" src="../admin/uploads/icons/<?php echo $row['footer_icon1']; ?>">
                                 </div>
-                                <div class="col-2">
+                                <div class="col-2 p-2">
                                   <img class="img-fluid" src="../admin/uploads/icons/<?php echo $row['footer_icon2']; ?>">
                                 </div>
-                                <div class="col-2">
+                                <div class="col-2 p-2">
                                   <img class="img-fluid" src="../admin/uploads/icons/<?php echo $row['footer_icon3']; ?>">
                                 </div>
                               </div>
                               <p class="content-c pt-2">
-                                <?php echo $footer_text3; ?> 
+                                <?php echo $footer_text3; ?>
                               </p>
                               <p class="text-black" style="font-size:14px;">
-                                <?php echo $footer_text4; ?> 
+                                <?php echo $footer_text4; ?>
                               </p>
                             </div>
                           </div>
@@ -120,7 +136,22 @@ include "../admin/insert_form.php";
                         <div class="card-box-c">
                           <div class="container">
                             <h2 class="title-c pt-2"><?php echo $speed; ?> Mega</h2>
-                            <h3>R$ <?php echo $price; ?> </h3>
+                            <div>
+                              <input type="radio" id="hide<?php echo $id; ?>" name="<?php echo $id; ?>" value="hide<?php echo $id; ?>" checked />
+                              <label for="hide" class="text-black" style="font-size:14px;">Netflix Padrão</label>
+                              <p style="font-size:14px;color:#3f3f3f;">incluso 2 telas simultâneas HD</p>
+                            </div>
+                            <div>
+                              <input type="radio" id="show<?php echo $id; ?>" name="<?php echo $id; ?>" value="show<?php echo $id; ?>" />
+                              <label for="show" class="text-black" style="font-size:14px;">Netflix Premium</label>
+                              <p style="font-size:14px;color:#3f3f3f;">incluso 4 telas simultâneas HD</p>
+                            </div>
+                            <div id="box<?php echo $id; ?>" style="display:none;">
+                              <h3>R$ <?php echo $price; ?></h3>
+                            </div>
+                            <div id="box2<?php echo $id; ?>">
+                              <h3>R$ <?php echo $price_display; ?></h3>
+                            </div>
                             <p class="text-black"><?php echo $description; ?></p>
                           </div>
                           <div class="d-grid gap-2 container">
@@ -131,10 +162,10 @@ include "../admin/insert_form.php";
                           <div class="card-body-c pt-2 pb-2">
                             <div class="container">
                               <p class="content-c">
-                                <?php echo $footer_text1; ?> 
+                                <?php echo $footer_text1; ?>
                               </p>
                               <p class="text-black" style="font-size:14px;">
-                                <?php echo $footer_text2; ?> 
+                                <?php echo $footer_text2; ?>
                               </p>
                               <div class="row">
                                 <div class="col-2">
@@ -148,15 +179,33 @@ include "../admin/insert_form.php";
                                 </div>
                               </div>
                               <p class="content-c pt-2">
-                                <?php echo $footer_text3; ?> 
+                                <?php echo $footer_text3; ?>
                               </p>
                               <p class="text-black" style="font-size:14px;">
-                                <?php echo $footer_text4; ?> 
+                                <?php echo $footer_text4; ?>
                               </p>
                             </div>
                           </div>
                         </div>
                       </div>
+                      <script>
+                        const box<?php echo $id; ?> = document.getElementById('box<?php echo $id; ?>');
+
+                        function handleRadioClick<?php echo $id; ?>() {
+                          if (document.getElementById('show<?php echo $id; ?>').checked) {
+                            box<?php echo $id; ?>.style.display = 'block';
+                            box2<?php echo $id; ?>.style.display = 'none';
+                          } else {
+                            box<?php echo $id; ?>.style.display = 'none';
+                            box2<?php echo $id; ?>.style.display = 'block';
+                          }
+                        }
+
+                        const radioButtons<?php echo $id; ?> = document.querySelectorAll('input[name="<?php echo $id; ?>"]');
+                        radioButtons<?php echo $id; ?>.forEach(radio => {
+                          radio.addEventListener('click', handleRadioClick<?php echo $id; ?>);
+                        });
+                      </script>
                   <?php
                     }
                   }
@@ -262,6 +311,24 @@ include "../admin/insert_form.php";
   <script src="../assets/js/main.js"></script>
   <script src="../assets/js/jquery-1.10.2.js" type="text/javascript"></script>
   <script src="../assets/js/login-register.js" type="text/javascript"></script>
+  <script>
+    const box = document.getElementById('box');
+
+    function handleRadioClick() {
+      if (document.getElementById('show').checked) {
+        box.style.display = 'block';
+        box2.style.display = 'none';
+      } else {
+        box.style.display = 'none';
+        box2.style.display = 'block';
+      }
+    }
+
+    const radioButtons = document.querySelectorAll('input[name="example"]');
+    radioButtons.forEach(radio => {
+      radio.addEventListener('click', handleRadioClick);
+    });
+  </script>
 </body>
 
 </html>
