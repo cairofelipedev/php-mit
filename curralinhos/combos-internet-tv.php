@@ -37,7 +37,7 @@ include "../admin/insert_form.php";
 <body>
   <?php include "navbar.php"; ?>
   <main id="main">
-    <section id="about" class="about pt-4">
+    <section id="plans-internet" class="plans-internet pt-4">
       <div class="container" data-aos="fade-up">
 
         <div class="section-header">
@@ -56,7 +56,7 @@ include "../admin/insert_form.php";
               <div class="tab-pane fade show active" id="tab1">
                 <div class="row">
                   <?php
-                  $stmt = $DB_con->prepare('SELECT * FROM plans where city="teresina" and type="2" and speed="300" ORDER BY id DESC');
+                  $stmt = $DB_con->prepare('SELECT * FROM plans where city="curralinhos" and type="2" and speed="300" ORDER BY id DESC');
                   $stmt->execute();
                   if ($stmt->rowCount() > 0) {
                     while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
@@ -106,7 +106,7 @@ include "../admin/insert_form.php";
 
                 <div class="row">
                   <?php
-                  $stmt = $DB_con->prepare('SELECT * FROM plans where city="teresina" and type="2" and speed="400" ORDER BY id DESC');
+                  $stmt = $DB_con->prepare('SELECT * FROM plans where city="curralinhos" and type="2" and speed="400" ORDER BY id DESC');
                   $stmt->execute();
                   if ($stmt->rowCount() > 0) {
                     while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {

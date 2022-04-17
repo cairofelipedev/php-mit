@@ -106,6 +106,7 @@ include "../admin/insert_form.php";
                                 <div class="col-2 p-2">
                                   <img class="img-fluid" src="../admin/uploads/icons/<?php echo $row['footer_icon3']; ?>">
                                 </div>
+
                               </div>
                               <p class="content-c pt-2">
                                 <?php echo $footer_text3; ?>
@@ -136,23 +137,25 @@ include "../admin/insert_form.php";
                         <div class="card-box-c">
                           <div class="container">
                             <h2 class="title-c pt-2"><?php echo $speed; ?> Mega</h2>
-                            <div>
-                              <input type="radio" id="hide<?php echo $id; ?>" name="<?php echo $id; ?>" value="hide<?php echo $id; ?>" checked />
-                              <label for="hide" class="text-black" style="font-size:14px;">Netflix Padrão</label>
-                              <p style="font-size:14px;color:#3f3f3f;">incluso 2 telas simultâneas HD</p>
-                            </div>
-                            <div>
-                              <input type="radio" id="show<?php echo $id; ?>" name="<?php echo $id; ?>" value="show<?php echo $id; ?>" />
-                              <label for="show" class="text-black" style="font-size:14px;">Netflix Premium</label>
-                              <p style="font-size:14px;color:#3f3f3f;">incluso 4 telas simultâneas HD</p>
+                            <p class="text-black"><?php echo $description; ?></p>
+                            <div style="padding-bottom:50px;">
+                              <div>
+                                <input type="radio" id="hide<?php echo $id; ?>" name="<?php echo $id; ?>" value="hide<?php echo $id; ?>" checked />
+                                <label for="hide" class="text-black" style="font-size:14px;">Netflix Padrão</label>
+                                <p style="font-size:14px;color:#3f3f3f;">incluso 2 telas simultâneas HD</p>
+                              </div>
+                              <div>
+                                <input type="radio" id="show<?php echo $id; ?>" name="<?php echo $id; ?>" value="show<?php echo $id; ?>" />
+                                <label for="show" class="text-black" style="font-size:14px;">Netflix Premium</label>
+                                <p style="font-size:14px;color:#3f3f3f;">incluso 4 telas simultâneas HD</p>
+                              </div>
                             </div>
                             <div id="box<?php echo $id; ?>" style="display:none;">
-                              <h3>R$ <?php echo $price; ?></h3>
-                            </div>
-                            <div id="box2<?php echo $id; ?>">
                               <h3>R$ <?php echo $price_display; ?></h3>
                             </div>
-                            <p class="text-black"><?php echo $description; ?></p>
+                            <div id="box2<?php echo $id; ?>">
+                              <h3>R$ <?php echo $price; ?></h3>
+                            </div>
                           </div>
                           <div class="d-grid gap-2 container">
                             <a href="<?php echo $link; ?>">
@@ -167,15 +170,18 @@ include "../admin/insert_form.php";
                               <p class="text-black" style="font-size:14px;">
                                 <?php echo $footer_text2; ?>
                               </p>
-                              <div class="row">
-                                <div class="col-2">
+                              <div class="d-flex">
+                                <div class="col-2 p-2">
                                   <img class="img-fluid" src="../admin/uploads/icons/<?php echo $row['footer_icon1']; ?>">
                                 </div>
-                                <div class="col-2">
+                                <div class="col-2 p-2">
                                   <img class="img-fluid" src="../admin/uploads/icons/<?php echo $row['footer_icon2']; ?>">
                                 </div>
-                                <div class="col-2">
+                                <div class="col-2 p-2">
                                   <img class="img-fluid" src="../admin/uploads/icons/<?php echo $row['footer_icon3']; ?>">
+                                </div>
+                                <div class="col-2 p-2">
+                                  <img class="img-fluid" src="../admin/uploads/icons/<?php echo $row['footer_icon4']; ?>">
                                 </div>
                               </div>
                               <p class="content-c pt-2">
@@ -223,25 +229,46 @@ include "../admin/insert_form.php";
                     while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
                       extract($row);
                   ?>
-                      <div class="col-md-4 pb-2">
+                      <div class="col-md-3">
                         <div class="card-box-c">
-                          <h2 class="title-c pt-2"><?php echo $speed; ?> MEGA</h2>
-                          <h3 class="text-center">R$ <?php echo $price; ?></h3>
-                          <p class="text-center"><?php echo $price_display; ?> telas</p>
+                          <div class="container">
+                            <h2 class="title-c pt-2"><?php echo $speed; ?> Mega</h2>
+                            <p class="text-black" style="padding-bottom:50px;"><?php echo $description; ?></p>
+                            <h3>R$ <?php echo $price; ?> </h3>
+                          </div>
                           <div class="d-grid gap-2 container">
-                            <button class="btn btn-plan" type="button">FALE COM UM CONSULTOR</button>
+                            <a href="<?php echo $link; ?>">
+                              <button class="btn btn-plan" type="button">FALE COM UM CONSULTOR</button>
+                            </a>
                           </div>
                           <div class="card-body-c pt-2 pb-2">
                             <div class="container">
                               <p class="content-c">
-                                Assinatura Disney
+                                <?php echo $footer_text1; ?>
                               </p>
-                              <p class="content-c2 text-black">Séries originais e exclusivas, filmes, novelas e programas.</p>
-                              <div class="row pb-3 align-items-center justify-content-center">
-                                <div class="col-2">
-                                  <img class="img-fluid" src="../assets/img/icon-11778.png">
+                              <p class="text-black" style="font-size:14px;">
+                                <?php echo $footer_text2; ?>
+                              </p>
+                              <div class="d-flex">
+                                <div class="col-2 p-2">
+                                  <img class="img-fluid" src="../admin/uploads/icons/<?php echo $row['footer_icon1']; ?>">
+                                </div>
+                                <div class="col-2 p-2">
+                                  <img class="img-fluid" src="../admin/uploads/icons/<?php echo $row['footer_icon2']; ?>">
+                                </div>
+                                <div class="col-2 p-2">
+                                  <img class="img-fluid" src="../admin/uploads/icons/<?php echo $row['footer_icon3']; ?>">
+                                </div>
+                                <div class="col-2 p-2">
+                                  <img class="img-fluid" src="../admin/uploads/icons/<?php echo $row['footer_icon4']; ?>">
                                 </div>
                               </div>
+                              <p class="content-c pt-2">
+                                <?php echo $footer_text3; ?>
+                              </p>
+                              <p class="text-black" style="font-size:14px;">
+                                <?php echo $footer_text4; ?>
+                              </p>
                             </div>
                           </div>
                         </div>
@@ -262,25 +289,46 @@ include "../admin/insert_form.php";
                     while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
                       extract($row);
                   ?>
-                      <div class="col-md-4 pb-2">
+                      <div class="col-md-3">
                         <div class="card-box-c">
-                          <h2 class="title-c pt-2"><?php echo $speed; ?> MEGA</h2>
-                          <h3 class="text-center">R$ <?php echo $price; ?></h3>
-                          <p class="text-center"><?php echo $price_display; ?> telas</p>
+                          <div class="container">
+                            <h2 class="title-c pt-2"><?php echo $speed; ?> Mega</h2>
+                            <p class="text-black" style="padding-bottom:50px;"><?php echo $description; ?></p>
+                            <h3>R$ <?php echo $price; ?> </h3>
+                          </div>
                           <div class="d-grid gap-2 container">
-                            <button class="btn btn-plan" type="button">FALE COM UM CONSULTOR</button>
+                            <a href="<?php echo $link; ?>">
+                              <button class="btn btn-plan" type="button">FALE COM UM CONSULTOR</button>
+                            </a>
                           </div>
                           <div class="card-body-c pt-2 pb-2">
                             <div class="container">
                               <p class="content-c">
-                                Assinatura Amazon
+                                <?php echo $footer_text1; ?>
                               </p>
-                              <p class="content-c2 text-black">Séries originais e exclusivas, filmes, novelas e programas.</p>
-                              <div class="row pb-3 align-items-center justify-content-center">
-                                <div class="col-2">
-                                  <img class="img-fluid" src="../assets/img/amazon.png">
+                              <p class="text-black" style="font-size:14px;">
+                                <?php echo $footer_text2; ?>
+                              </p>
+                              <div class="d-flex">
+                                <div class="col-2 p-2">
+                                  <img class="img-fluid" src="../admin/uploads/icons/<?php echo $row['footer_icon1']; ?>">
+                                </div>
+                                <div class="col-2 p-2">
+                                  <img class="img-fluid" src="../admin/uploads/icons/<?php echo $row['footer_icon2']; ?>">
+                                </div>
+                                <div class="col-2 p-2">
+                                  <img class="img-fluid" src="../admin/uploads/icons/<?php echo $row['footer_icon3']; ?>">
+                                </div>
+                                <div class="col-2 p-2">
+                                  <img class="img-fluid" src="../admin/uploads/icons/<?php echo $row['footer_icon4']; ?>">
                                 </div>
                               </div>
+                              <p class="content-c pt-2">
+                                <?php echo $footer_text3; ?>
+                              </p>
+                              <p class="text-black" style="font-size:14px;">
+                                <?php echo $footer_text4; ?>
+                              </p>
                             </div>
                           </div>
                         </div>

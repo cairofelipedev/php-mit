@@ -37,7 +37,7 @@ include "../admin/insert_form.php";
 <body>
   <?php include "navbar.php"; ?>
   <main id="main">
-    <section id="about" class="about pt-4">
+    <section id="lagoa" class="lagoa pt-4">
       <div class="container" data-aos="fade-up">
 
         <div class="section-header">
