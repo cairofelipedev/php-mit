@@ -31,9 +31,9 @@ if (isset($_POST['btnsave'])) {
         $upload_dir = 'uploads/banners/'; // upload directory	
         $imgExt = strtolower(pathinfo($imgFile, PATHINFO_EXTENSION)); // get image extension
         $valid_extensions = array('jpeg', 'jpg', 'png', 'gif'); // valid extensions
-        $name2 = preg_replace("/\s+/", "", $name);
-        $name3 = substr($name2, 0, -1);
-        $userpic = $name3 . "edit" . "." . $imgExt;
+        $nome2 = preg_replace("/\s+/", "", $nome);
+        $nome3 = substr($nome2, 0, -1);
+        $userpic = $nome3 . "edit" . "." . $imgExt;
         if (in_array($imgExt, $valid_extensions)) {
             if ($imgSize < 5000000) {
                 unlink($upload_dir . $edit_row['img']);
@@ -111,7 +111,7 @@ if (isset($_POST['btnsave'])) {
     <main id="main" class="main">
 
         <div class="pagetitle">
-            <h1>Adicionar Banner</h1>
+            <h1>Editar Banner</h1>
             <nav>
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="painel-controle.php">Home</a></li>
@@ -136,16 +136,14 @@ if (isset($_POST['btnsave'])) {
                             ?>
                             <!-- Vertical Form -->
                             <form method="POST" enctype="multipart/form-data" class="row">
-                                <div class="col-md-6">
+                                <div class="col-md-4">
                                     <h5 class="card-title">Informações</h5>
                                     <div class="row">
-                                        <div class="col-md-6 pb-3">
-                                            <div class="form-floating">
+                                        <div class="pb-3">
+                                            <div class="form-floating pb-3">
                                                 <input type="text" class="form-control" value="<?php echo $nome; ?>" name="nome" placeholder="Nome do Banner">
                                                 <label for="">Nome do Banner</label>
                                             </div>
-                                        </div>
-                                        <div class="col-md-6 pb-3">
                                             <div class="form-floating">
                                                 <input type="text" class="form-control" value="<?php echo $link; ?>" name="link" placeholder="Link do banner">
                                                 <label for="">Link</label>
@@ -153,13 +151,13 @@ if (isset($_POST['btnsave'])) {
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md-8">
                                     <h5 class="card-title">Imagens</h5>
                                     <div class="row">
-                                        <div class="col-md-4">
+                                        <div class="col-md-6">
                                             <img src="./uploads/banners/<?php echo $img; ?>" onerror="this.src='./assets/img/semperfil.png'" class="img-fluid rounded">
                                         </div>
-                                        <div class="col-md-8">
+                                        <div class="col-md-6">
                                             <div class="file-loading">
                                                 <input id="curriculo" class="file" data-theme="fas" type="file" name="user_image" accept="image/*">
                                             </div>

@@ -13,18 +13,103 @@ if (isset($_POST['btnsave'])) {
   $speed = strtolower($_POST['speed']);
   $price = $_POST['price'];
   $city = $_POST['city'];
+  $type = $_POST['type'];
+  $description = $_POST['description'];
+  $link = $_POST['link'];
+  $footer_text1 = $_POST['footer_text1'];
+  $footer_text2 = $_POST['footer_text2'];
+  $footer_text3 = $_POST['footer_text3'];
+  $footer_text4 = $_POST['footer_text4'];
+
+  $imgFile = $_FILES['user_image']['name'];
+  $tmp_dir = $_FILES['user_image']['tmp_name'];
+  $imgSize = $_FILES['user_image']['size'];
+
+  $imgFile2 = $_FILES['user_image2']['name'];
+  $tmp_dir2 = $_FILES['user_image2']['tmp_name'];
+  $imgSize2 = $_FILES['user_image2']['size'];
+
+  $imgFile3 = $_FILES['user_image3']['name'];
+  $tmp_dir3 = $_FILES['user_image3']['tmp_name'];
+  $imgSize3 = $_FILES['user_image3']['size'];
+
+  $imgFile4 = $_FILES['user_image4']['name'];
+  $tmp_dir4 = $_FILES['user_image4']['tmp_name'];
+  $imgSize4 = $_FILES['user_image4']['size'];
+
 
 
   if (empty($speed)) {
-    $errMSG = "Por favor insira a velocidade";
+    $errMSG = "Por favor insira a velocidade do plano";
+  }
+
+  else {
+    $upload_dir = 'uploads/icons/'; // upload directory
+
+    $imgExt =  strtolower(pathinfo($imgFile, PATHINFO_EXTENSION));
+    $imgExt2 =  strtolower(pathinfo($imgFile2, PATHINFO_EXTENSION));
+    $imgExt3 =  strtolower(pathinfo($imgFile3, PATHINFO_EXTENSION));
+    $imgExt4 =  strtolower(pathinfo($imgFile4, PATHINFO_EXTENSION));
+
+    $valid_extensions = array('jpeg', 'jpg', 'png'); // valid extensions
+    // rename uploading image
+    $city2 = preg_replace("/\s+/", "", $city);
+
+    $userpic = "icon1-" . $city2 . "." . $imgExt;
+    $userpic2 = "icon2-" . $city2 . "." . $imgExt2;
+    $userpic3 = "icon3-" . $city2 . "." . $imgExt3;
+    $userpic4 = "icon4-" . $city2 . "." . $imgExt4;
+
+    // allow valid image file formats
+    if (in_array($imgExt, $valid_extensions)) {
+      // Check file size '5MB'
+      if ($imgSize < 5000000) {
+        move_uploaded_file($tmp_dir, $upload_dir . $userpic);
+      } else {
+        $errMSG = "Imagem muito grande.";
+      }
+    }
+    if (in_array($imgExt2, $valid_extensions)) {
+      // Check file size '5MB'
+      if ($imgSize2 < 5000000) {
+        move_uploaded_file($tmp_dir2, $upload_dir . $userpic2);
+      } else {
+        $errMSG = "Imagem muito grande.";
+      }
+    }
+    if (in_array($imgExt3, $valid_extensions)) {
+      // Check file size '5MB'
+      if ($imgSize3 < 5000000) {
+        move_uploaded_file($tmp_dir3, $upload_dir . $userpic3);
+      } else {
+        $errMSG = "Imagem muito grande.";
+      }
+    }
+    if (in_array($imgExt4, $valid_extensions)) {
+      // Check file size '5MB'
+      if ($imgSize4 < 5000000) {
+        move_uploaded_file($tmp_dir4, $upload_dir . $userpic4);
+      } else {
+        $errMSG = "Imagem muito grande.";
+      }
+    }
   }
 
   if (!isset($errMSG)) {
-    $stmt = $DB_con->prepare('INSERT INTO plans (speed,price,city) VALUES(:uspeed,:uprice,:ucity)');
+    $stmt = $DB_con->prepare('INSERT INTO plans (speed,price,city, description, type,footer_text1, footer_text2, footer_text3, footer_text4, footer_icon1, footer_icon2, footer_icon2, footer_icon3, footer_icon4) VALUES(:uspeed,:uprice,:ucity,:udescription,:utype,:ufooter_text1,:ufooter_text2,:ufooter_text3,:ufooter_text4,:upic,:upic2,:upic3,:upic4)');
     $stmt->bindParam(':uspeed', $speed);
     $stmt->bindParam(':uprice', $price);
     $stmt->bindParam(':ucity',  $city);
-
+    $stmt->bindParam(':udescription',  $description);
+    $stmt->bindParam(':utype', $type);
+    $stmt->bindParam(':ufooter_text1',  $footer_text1);
+    $stmt->bindParam(':ufooter_text2',  $footer_text2);
+    $stmt->bindParam(':ufooter_text3',  $footer_text3);
+    $stmt->bindParam(':ufooter_text4',  $footer_text4);
+    $stmt->bindParam(':upic', $userpic);
+    $stmt->bindParam(':upic2', $userpic2);
+    $stmt->bindParam(':upic3', $userpic3);
+    $stmt->bindParam(':upic4', $userpic4);
     if ($stmt->execute()) {
       header("Location: painel-planos.php");
     } else {
@@ -64,7 +149,6 @@ if (isset($_POST['btnsave'])) {
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 </head>
-
 <body>
 
   <?php include "components/header.php" ?>
@@ -84,7 +168,7 @@ if (isset($_POST['btnsave'])) {
     </div><!-- End Page Title -->
     <section class="section">
       <div class="row">
-        <div class="col-lg-6">
+        <div class="col-lg-12">
 
           <div class="card">
             <div class="card-body">
@@ -101,8 +185,12 @@ if (isset($_POST['btnsave'])) {
                   <input value="<?php echo $price; ?>" name="price" type="text" placeholder="Digite o valor do plano" class="form-control">
                 </div>
                 <div class="col-12">
+                  <label class="form-label">Descrição</label>
+                  <input value="<?php echo $description; ?>" name="description" type="text" placeholder="Digite descrição para o plano" class="form-control">
+                </div>
+                <div class="col-12">
                   <label class="form-label">Cidade</label>
-                  <select name="city" class="form-select">
+                  <select  name="city" class="form-select">
                     <option value="teresina">TERESINA</option>
                     <option value="demerval">DEMERVAL</option>
                     <option value="lagoa">LAGOA PI</option>
@@ -112,38 +200,9 @@ if (isset($_POST['btnsave'])) {
                 </div>
                 <div class="col-12">
                   <label class="form-label">Tipo do Plano</label>
-                  <select name="city" class="form-select">
-                    <option value="teresina">Internet</option>
-                    <option value="demerval">Internet + TV</option>
-                    <option value="lagoa">Internet + Streaming</option>
-                    <option value="monsenhor">Internet + Telefonia</option>
+                  <select name="type" class="form-select">
+                    <option value="1">Internet</option>
                   </select>
-                </div>
-                <div class="col-12">
-                  <label class="form-label">TV</label>
-                  <select name="city" class="form-select">
-                  <option value="teresina">Selecione um tv (opcional)</option>
-                    <option value="teresina">DIGITAL HD</option>
-                    <option value="demerval">TOP HD</option>
-                    <option value="lagoa">PREMIUM HD</option>
-                  </select>
-                </div>
-                <div class="col-12">
-                  <label class="form-label">Streaming</label>
-                  <select name="city" class="form-select">
-                  <option value="teresina">Selecione uma streaming (opcional)</option>
-                    <option value="teresina">DIGITAL HD</option>
-                    <option value="demerval">TOP HD</option>
-                    <option value="lagoa">PREMIUM HD</option>
-                  </select>
-                </div>
-                <div class="col-12">
-                  <label class="form-label">Quantidade de canais</label>
-                  <input value="<?php echo $price; ?>" name="price" type="text" placeholder="Quantidade de Canais" class="form-control">
-                </div>
-                <div class="col-12">
-                  <label class="form-label">Quantidade de telas</label>
-                  <input value="<?php echo $price; ?>" name="price" type="text" placeholder="Quantidade de telas" class="form-control">
                 </div>
                 <div class="text-center">
                   <button type="submit" name="btnsave" class="btn btn-primary">Adicionar</button>

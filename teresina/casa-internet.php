@@ -33,22 +33,6 @@ include "../admin/insert_form.php";
   <link href="../assets/css/main.css" rel="stylesheet">
   <link href="../assets/css/style.css" rel="stylesheet">
 </head>
-<style>
-  #box {
-    display: none;
-    background-color: blueviolet;
-    color: white;
-    width: 100px;
-    height: 100px;
-  }
-
-  #box2 {
-    background-color: blue;
-    color: white;
-    width: 100px;
-    height: 100px;
-  }
-</style>
 
 <body>
   <?php include "navbar.php"; ?>
@@ -359,24 +343,6 @@ include "../admin/insert_form.php";
   <script src="../assets/js/main.js"></script>
   <script src="../assets/js/jquery-1.10.2.js" type="text/javascript"></script>
   <script src="../assets/js/login-register.js" type="text/javascript"></script>
-  <script>
-    const box = document.getElementById('box');
-
-    function handleRadioClick() {
-      if (document.getElementById('show').checked) {
-        box.style.display = 'block';
-        box2.style.display = 'none';
-      } else {
-        box.style.display = 'none';
-        box2.style.display = 'block';
-      }
-    }
-
-    const radioButtons = document.querySelectorAll('input[name="example"]');
-    radioButtons.forEach(radio => {
-      radio.addEventListener('click', handleRadioClick);
-    });
-  </script>
 </body>
 
 </html>
