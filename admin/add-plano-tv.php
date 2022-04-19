@@ -14,8 +14,11 @@ if (isset($_POST['btnsave'])) {
   $description = $_POST['description'];
   $link = $_POST['link'];
   $price = $_POST['price'];
+  $price_display = $_POST['price_display'];
   $city = $_POST['city'];
   $type = $_POST['type'];
+  $channels = $_POST['channels'];
+  $tv = $_POST['channels'];
 
   $footer_text1 = $_POST['footer_text1'];
   $footer_text2 = $_POST['footer_text2'];
@@ -94,12 +97,15 @@ if (isset($_POST['btnsave'])) {
 
 
   if (!isset($errMSG)) {
-    $stmt = $DB_con->prepare('INSERT INTO plans (speed,price,city, link,description,type,footer_text1,footer_text2,footer_text3,footer_text4,footer_icon1,footer_icon2,footer_icon3,footer_icon4) VALUES(:uspeed,:uprice,:ucity,:ulink,:udescription,:utype,:ufooter_text1,:ufooter_text2,:ufooter_text3,:ufooter_text4,:upic,:upic2,:upic3,:upic4)');
+    $stmt = $DB_con->prepare('INSERT INTO plans (speed,price,city, link,tv,description,channels,price_display,type,footer_text1,footer_text2,footer_text3,footer_text4,footer_icon1,footer_icon2,footer_icon3,footer_icon4) VALUES(:uspeed,:uprice,:ucity,:ulink,:utv,:udescription,:uchannels,:uprice_display, :utype,:ufooter_text1,:ufooter_text2,:ufooter_text3,:ufooter_text4,:upic,:upic2,:upic3,:upic4)');
     $stmt->bindParam(':uspeed', $speed);
     $stmt->bindParam(':uprice', $price);
+    $stmt->bindParam(':uprice_display', $price_display);
     $stmt->bindParam(':ucity',  $city);
     $stmt->bindParam(':ulink',  $link);
+    $stmt->bindParam(':utv',  $tv);
     $stmt->bindParam(':udescription',  $description);
+    $stmt->bindParam(':uchannels',  $channels);
     $stmt->bindParam(':utype', $type);
     $stmt->bindParam(':ufooter_text1',  $footer_text1);
     $stmt->bindParam(':ufooter_text2',  $footer_text2);
@@ -198,19 +204,19 @@ if (isset($_POST['btnsave'])) {
                       <label class="form-label">Velocidade</label>
                       <input value="<?php echo $speed; ?>" name="speed" type="text" placeholder="Digite a velocidade do plano" class="form-control">
                     </div>
-                    <div class="col-12">
+                    <div class="col-12 pt-2">
                       <label class="form-label">Valor</label>
                       <input value="<?php echo $price; ?>" name="price" type="text" placeholder="Digite o valor do plano" class="form-control">
                     </div>
-                    <div class="col-12">
+                    <div class="col-12 pt-2">
                       <label class="form-label">Descrição</label>
                       <input value="<?php echo $description; ?>" name="description" type="text" placeholder="Digite descrição para o plano" class="form-control">
                     </div>
-                    <div class="col-12">
+                    <div class="col-12 pt-2">
                       <label class="form-label">Link</label>
                       <input value="<?php echo $link; ?>" name="link" type="text" placeholder="Link para plano" class="form-control">
                     </div>
-                    <div class="col-12">
+                    <div class="col-12 pt-2">
                       <label class="form-label">Cidade</label>
                       <select name="city" class="form-select">
                         <option value="teresina">TERESINA</option>
@@ -220,11 +226,27 @@ if (isset($_POST['btnsave'])) {
                         <option value="curralinhos">CURRALINHOS</option>
                       </select>
                     </div>
-                    <div class="col-12">
+                    <div class="col-12 pt-2">
                       <label class="form-label">Tipo do Plano</label>
                       <select name="type" class="form-select">
-                        <option value="1">Internet</option>
+                        <option value="2">Internet + TV</option>
                       </select>
+                    </div>
+                    <div class="col-12 pt-2">
+                      <label class="form-label">TV</label>
+                      <select name="tv" class="form-select">
+                        <option value="DIGITAL HD">DIGITAL HD</option>
+                        <option value="TOP HD">TOP HD</option>
+                        <option value="PREMIUM HD">PREMIUM HD</option>
+                      </select>
+                    </div>
+                    <div class="col-12 pt-2">
+                      <label class="form-label">Quantidade de Canais</label>
+                      <input value="<?php echo $channels; ?>" name="channels" type="text" placeholder="Preço 2, com mais telas" class="form-control">
+                    </div>
+                    <div class="col-12 pt-2">
+                      <label class="form-label">Preço 2 (Mais  telas)</label>
+                      <input value="<?php echo $price_display; ?>" name="price_display" type="text" placeholder="Preço 2, com mais telas" class="form-control">
                     </div>
                     <div class="col-12 pt-2">
                       <label class="form-label">Rodapé Texto 1</label>

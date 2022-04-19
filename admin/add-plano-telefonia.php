@@ -223,7 +223,7 @@ if (isset($_POST['btnsave'])) {
                     <div class="col-12">
                       <label class="form-label">Tipo do Plano</label>
                       <select name="type" class="form-select">
-                        <option value="1">Internet</option>
+                        <option value="3">Internet + Telefonia</option>
                       </select>
                     </div>
                     <div class="col-12 pt-2">
