@@ -85,12 +85,11 @@ if (isset($_GET['delete_id'])) {
 
             <div class="col-lg-4">
               <div class="card">
-                <img class="img-fluid" src="./uploads/usuarios/<?php echo $row['img']; ?>">
+                <img class="img-fluid"  onerror="this.src='./assets/img/semperfil.png'" src="./uploads/usuarios/<?php echo $row['img']; ?> ">
                 <div class="card-body">
                   <h5 class="card-title text-center"><?php echo $name; ?></h5>
                   <div class="d-flex justify-content-center">
                     <div>
-                      <button type="button" class="btn btn-success">Editar</button>
                       <a href="?delete_id=<?php echo $row['id']; ?>">
                         <button type="button" class="btn btn-danger">Excluir</button>
                       </a>

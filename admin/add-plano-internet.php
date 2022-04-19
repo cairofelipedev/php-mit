@@ -198,11 +198,11 @@ if (isset($_POST['btnsave'])) {
                       <label class="form-label">Velocidade</label>
                       <input value="<?php echo $speed; ?>" name="speed" type="text" placeholder="Digite a velocidade do plano" class="form-control">
                     </div>
-                    <div class="col-12">
+                    <div class="col-12 pt-2">
                       <label class="form-label">Valor</label>
                       <input value="<?php echo $price; ?>" name="price" type="text" placeholder="Digite o valor do plano" class="form-control">
                     </div>
-                    <div class="col-12">
+                    <div class="col-12 pt-2">
                       <label class="form-label">Descrição</label>
                       <input value="<?php echo $description; ?>" name="description" type="text" placeholder="Digite descrição para o plano" class="form-control">
                     </div>
@@ -210,7 +210,7 @@ if (isset($_POST['btnsave'])) {
                       <label class="form-label">Link</label>
                       <input value="<?php echo $link; ?>" name="link" type="text" placeholder="Link para plano" class="form-control">
                     </div>
-                    <div class="col-12">
+                    <div class="col-12 pt-2">
                       <label class="form-label">Cidade</label>
                       <select name="city" class="form-select">
                         <option value="teresina">TERESINA</option>
@@ -220,7 +220,7 @@ if (isset($_POST['btnsave'])) {
                         <option value="curralinhos">CURRALINHOS</option>
                       </select>
                     </div>
-                    <div class="col-12">
+                    <div class="col-12 pt-2">
                       <label class="form-label">Tipo do Plano</label>
                       <select name="type" class="form-select">
                         <option value="1">Internet</option>
