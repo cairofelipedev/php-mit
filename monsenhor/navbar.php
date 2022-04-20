@@ -28,10 +28,10 @@
         <form id="loc" action="#">
           <select class="form-control select-city selectoptions">
             <option value="teresina/home.php">Teresina</option>
-            <option value="demerval/home.php">Demerval</option>
-            <option value="lagoa-pi/home.php">Lagoa PI</option>
-            <option value="monsenhor/home.php">Monsenhor</option>
-            <option value="curralinhos/home.php">Curralinhos e povoados</option>
+            <option value="demerval/home.php">Demerval Lobão</option>
+            <option value="lagoa-pi/home.php">Lagoa do PI</option>
+            <option value="monsenhor/home.php">Monsenhor Gil</option>
+            <option value="curralinhos/home.php">Curralinhos e Região</option>
           </select>
         </form>
         <i data-bs-toggle="modal" data-bs-target="#exampleModal" class="bi bi-geo-alt-fill"></i>
@@ -112,7 +112,7 @@
             </div>
           </div>
         </li>
-           <!-- <li class="nav-item">
+        <!-- <li class="nav-item">
           <a class="nav-link " href="ofertas.php">Melhor oferta</a>
         </li>-->
       </ul>
