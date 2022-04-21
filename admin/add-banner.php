@@ -142,6 +142,9 @@ if (isset($_POST['btnsave'])) {
                     <select name="type" class="form-select">
                       <option value="home">HOME</option>
                       <option value="empresas">EMPRESAS</option>
+                      <option value="igbi">IGBI</option>
+                      <option value="auto">AUTOATENDIMENTO</option>
+                      <option value="new">NOVIDADES</option>
                     </select>
                   </div>
                   <div class="col-12">

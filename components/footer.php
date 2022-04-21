@@ -65,7 +65,7 @@
                 <i class="bi bi-chevron-right"></i> <a href="https://mitinternet.com.br/teresina/home.php">Teresina</a>
               </li>
               <li class="item-list-a">
-                <i class="bi bi-chevron-right"></i> <a href="https://mitinternet.com.br/curralinhos/home.php">Curralinhos</a>
+                <i class="bi bi-chevron-right"></i> <a href="https://mitinternet.com.br/curralinhos/home.php">Curralinhos e Região</a>
               </li>
               <li class="item-list-a">
                 <i class="bi bi-chevron-right"></i> <a href="https://mitinternet.com.br/monsenhor/home.php">Monsenhor Gil</a>

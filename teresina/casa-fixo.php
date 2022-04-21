@@ -32,14 +32,6 @@ include "../admin/insert_form.php";
   <!-- Template Main CSS File -->
   <link href="../assets/css/main.css" rel="stylesheet">
   <link href="../assets/css/style.css" rel="stylesheet">
-  <style>
-    .Div2,
-    .Div3,
-    .Div4,
-    .Div5 {
-      display: none;
-    }
-  </style>
 </head>
 
 <body>
@@ -95,7 +87,7 @@ include "../admin/insert_form.php";
         </div>
         <div class="row">
           <div class="col-md-3">
-            <div class="card-body-f pt-2 pb-2">
+            <div class="card-body-f pt-2 pb-2 mb-2">
               <div class="container">
                 <p class="content-c">
                 <i class="bi bi-headset"></i> Secretária Eletônica
@@ -105,7 +97,7 @@ include "../admin/insert_form.php";
             </div>
           </div>
           <div class="col-md-3">
-            <div class="card-body-f pt-2 pb-2">
+            <div class="card-body-f pt-2 pb-2 mb-2">
               <div class="container">
                 <p class="content-c">
                 <i class="bi bi-voicemail"></i> Identificador de chamadas
@@ -115,7 +107,7 @@ include "../admin/insert_form.php";
             </div>
           </div>
           <div class="col-md-3">
-            <div class="card-body-f pt-2 pb-2">
+            <div class="card-body-f pt-2 pb-2 mb-2">
               <div class="container">
                 <p class="content-c">
                 <i class="bi bi-phone-fill"></i> Siga-me

@@ -82,11 +82,11 @@ include "../admin/insert_form.php";
                               </p>
                               <p class="text-center">1 tela</p>
                               <p class="text-center">
-                                <a  data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                <a  data-bs-toggle="collapse" href="#collapseTv" role="button" aria-expanded="false" aria-controls="collapseTv">
                                   + telas valores
                                 </a>
                               </p>
-                              <div class="collapse" id="collapseExample">
+                              <div class="collapse" id="collapseTv">
                                 <div class="card card-body">
                                  2 telas, com adicional de <?php echo $price_display; ?> reais na mensalidade
                                 </div>

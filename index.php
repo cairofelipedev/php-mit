@@ -46,16 +46,23 @@ require_once './admin/dbconfig.php';
         </div>
       </div>
       <div class="col-md-6 d-md-block d-none">
-        <center><img src="assets/img/logo-nova.png" width="300px"></center>
+        <center><img src="assets/img/logo-mit.png" width="300px"></center>
       </div>
       <div class="col-md-6 d-block d-md-none">
-        <center><img src="assets/img/logo-nova.png" width="300px"></center>
+        <center><img src="assets/img/logo-mit.png" width="250px"></center>
       </div>
       <div class="col-md-6 d-block d-md-none">
-        <div class="d-grid gap-2">
-          <button class="btn btn-mit" type="button"><a href="cidade.php">SOU CLIENTE</a></button>
-          <button class="btn btn-mit" type="button"><a href="cidade.php">NÃO SOU CLIENTE</a></button>
-        </div>
+
+        <a href="cidade.php">
+          <div class="d-grid gap-2">
+            <button class="text-white btn-mit btn" type="button">SOU CLIENTE</button>
+          </div>
+        </a>
+        <a href="cidade.php">
+          <div class="d-grid gap-2 mt-2">
+            <button class="text-white btn btn-mit" type="button">NÃO SOU CLIENTE</button>
+          </div>
+        </a>
       </div>
     </div>
   </div>

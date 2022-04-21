@@ -40,7 +40,7 @@ require_once './admin/dbconfig.php';
   <div class="container">
     <div class="row justify-content-center align-items-center">
       <div class="col-md-6">
-        <center><img src="assets/img/logo-nova.png" width="300px"></center>
+        <center><img src="assets/img/logo-mit.png" width="300px"></center>
         <div class="select-citys">
           <p>
             Escolha sua localização <i class="bi bi-geo-alt-fill"></i>
@@ -48,10 +48,10 @@ require_once './admin/dbconfig.php';
           <select class="form-control select-city">
             <option> Escolha sua localização</option>
             <option value="teresina/home.php">Teresina</option>
-            <option value="demerval/home.php">Demerval</option>
-            <option value="lagoa-pi/home.php">Lagoa PI</option>
-            <option value="monsenhor/home.php">Monsenhor</option>
-            <option value="curralinhos/home.php">Curralinhos e povoados</option>
+            <option value="demerval/home.php">Demerval Lobão</option>
+            <option value="lagoa-pi/home.php">Lagoa do PI</option>
+            <option value="monsenhor/home.php">Monsenhor Gil</option>
+            <option value="curralinhos/home.php">Curralinhos e Região</option>
           </select>
         </div>
       </div>

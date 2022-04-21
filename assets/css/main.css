@@ -1,5 +1,5 @@
 .navbar {
-  padding-top   : 0%;
+  padding-top: 0%;
   padding-bottom: 0%;
 }
 
@@ -16,28 +16,28 @@
 }
 
 .text-brand {
-  color       : #000000;
-  font-size   : 1rem;
-  font-weight : 600;
+  color: #000000;
+  font-size: 1rem;
+  font-weight: 600;
   padding-left: 30px;
 }
 
 
 .navbar-footer {
-  z-index         : 2;
-  text-align      : center;
+  z-index: 2;
+  text-align: center;
   background-color: white;
-  height          : 80px;
+  height: 80px;
 }
 
 .navbar-footer .contents {
   padding-top: 20px;
-  color      : #135c91;
+  color: #135c91;
 }
 
 .navbar-footer .btn-footer {
   background-color: #135c91;
-  color           : white;
+  color: white;
 }
 
 .navbar-footer .d-grid {
@@ -45,14 +45,14 @@
 }
 
 .card-box-c {
-  border       : solid 2px #37BD3F;
+  border: solid 2px #37BD3F;
   border-radius: 5px;
 }
 
 .btn-plan {
   background-color: #37BD3F;
-  color           : white;
-  margin          : 10px 0px 20px 0px;
+  color: white;
+  margin: 10px 0px 20px 0px;
 }
 
 .card-body-c {
@@ -61,12 +61,12 @@
 
 .card-body-c i {
   font-size: 40px;
-  color    : #135c91;
+  color: #135c91;
 }
 
 .card-body-f {
   background-color: #37BD3F;
-  border-radius   : 10px;
+  border-radius: 10px;
 }
 
 .card-body-f i {
@@ -78,15 +78,15 @@
 }
 
 .content-c {
-  color        : #000000;
-  font-weight  : 500;
+  color: #000000;
+  font-weight: 500;
   margin-bottom: 0%;
 }
 
 .bg-image {
-  background-repeat    : no-repeat;
+  background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size      : contain;
+  background-size: contain;
 }
 
 .title-a {
@@ -99,45 +99,45 @@
 }
 
 .carousel-pagination-oferece .swiper-pagination-bullet {
-  width           : 18px;
-  height          : 10px;
+  width: 18px;
+  height: 10px;
   background-color: #555;
-  margin          : 0 4px;
-  border-radius   : 0;
-  opacity         : 1;
-  transition      : 0.3s;
+  margin: 0 4px;
+  border-radius: 0;
+  opacity: 1;
+  transition: 0.3s;
 }
 
 .carousel-pagination-oferece .swiper-pagination-bullet-active {
   background-color: #135c91;
-  width           : 36px;
+  width: 36px;
 }
 
 .container-a-i {
   background: radial-gradient(circle at 5% 200%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
-  padding   : 10px;
+  padding: 10px;
   text-align: center;
-  color     : white;
-  font-size : 16px;
+  color: white;
+  font-size: 16px;
 }
 
 .container-a-f {
   background: #2050b3;
-  padding   : 10px;
+  padding: 10px;
   text-align: center;
-  color     : white;
-  font-size : 16px;
+  color: white;
+  font-size: 16px;
 }
 
 .btn-primary-form {
   background-color: #135c91;
-  color           : white;
+  color: white;
 }
 
 .custom-select {
   border-radius: 5px;
-  width        : 300px;
-  border-color : #313131;
+  width: 300px;
+  border-color: #313131;
 }
 
 .custom-select:hover,
@@ -151,27 +151,27 @@
 }
 
 .contact-nav {
-  position     : fixed;
-  bottom       : 100px;
-  right        : 10px;
-  z-index      : 3;
-  background   : #0079a4;
-  width        : 50px;
-  height       : 50px;
+  position: fixed;
+  bottom: 100px;
+  right: 10px;
+  z-index: 3;
+  background: #0079a4;
+  width: 50px;
+  height: 50px;
   border-radius: 50px;
-  overflow     : hidden;
-  float        : left;
+  overflow: hidden;
+  float: left;
 
   transition: 0.3s ease;
 }
 
 .btn-contact-nav {
-  width      : 60px;
+  width: 60px;
   padding-top: 7px;
 }
 
 .btn-contact-nav i {
-  color    : white;
+  color: white;
   font-size: 22px;
 }
 
@@ -181,23 +181,19 @@
 
 .btn-mit {
   background: #0079a4;
-
   border-radius: 0%;
 }
 
-.btn-mit a {
-  color: white;
-}
 
 .select-citys {
   background: #0079a4;
   margin-top: 20px;
-  padding   : 40px;
+  padding: 40px;
 }
 
 .select-citys p {
   text-align: center;
-  color     : white;
+  color: white;
 }
 
 .itens-card {
@@ -213,19 +209,19 @@
 }
 
 .plans-internet .nav-link {
-  background   : none;
-  font-size    : 18px;
-  font-weight  : 400;
-  color        : var(--color-secondary);
-  padding      : 12px 0;
+  background: none;
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--color-secondary);
+  padding: 12px 0;
   margin-bottom: -2px;
   border-radius: 0;
-  font-family  : var(--font-secondary);
+  font-family: var(--font-secondary);
 }
 
 .plans-internet .nav-link.active {
-  color        : #37BD3F;
-  background   : none;
+  color: #37BD3F;
+  background: none;
   border-bottom: 3px solid #37BD3F;
 }
 
@@ -236,17 +232,17 @@
 }
 
 .plans-internet .tab-content h4 {
-  font-size  : 18px;
-  margin     : 0;
+  font-size: 18px;
+  margin: 0;
   font-weight: 700;
-  color      : var(--color-secondary);
+  color: var(--color-secondary);
 }
 
 .plans-internet .tab-content i {
-  font-size   : 22px;
-  line-height : 0;
+  font-size: 22px;
+  line-height: 0;
   margin-right: 8px;
-  color       : var(--color-primary);
+  color: var(--color-primary);
 }
 
 .card-body-services {
@@ -258,21 +254,21 @@
 }
 
 .card-body-services h5 {
-  font-size  : 16px;
-  color      : #0079a4;
+  font-size: 16px;
+  color: #0079a4;
   font-weight: bold;
 }
 
 .content-services p {
-  color      : #0079a4;
+  color: #0079a4;
   font-weight: bold;
 }
 
 @media (min-width: 767px) {
   .intro {
-    height  : 70vh;
+    height: 70vh;
     position: relative;
-    color   : #ffffff;
+    color: #ffffff;
   }
 
   .igbi-img img {
@@ -288,7 +284,7 @@
   }
 
   .title-wrap {
-    display        : flex;
+    display: flex;
     justify-content: space-between;
   }
 
@@ -304,9 +300,9 @@
 @media (max-width: 767px) {
 
   .igbi-img img {
-    width         : 50%;
+    width: 50%;
     padding-bottom: 10px;
-    padding-top   : 10px;
+    padding-top: 10px;
   }
 
   .navbar-footer .btn-footer {
