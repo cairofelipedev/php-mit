@@ -52,8 +52,8 @@ if (isset($_POST['btnsave'])) {
         $errMSG = "Imagem muito grande.";
       }
     }
-     // allow valid image file formats
-     if (in_array($imgExt2, $valid_extensions)) {
+    // allow valid image file formats
+    if (in_array($imgExt2, $valid_extensions)) {
       // Check file size '5MB'
       if ($imgSize2 < 5000000) {
         move_uploaded_file($tmp_dir2, $upload_dir . $userpic2);
@@ -63,7 +63,7 @@ if (isset($_POST['btnsave'])) {
     }
   }
   if (!isset($errMSG)) {
-    $stmt = $DB_con->prepare('INSERT INTO posts (title,subtitle,category,category_2,link,link_2, status, text_1, text_2, text_3,img,img2) VALUES(:utitle,:usubtitle,:ucategory,:ucategory_2,:ulink,:ulink2,:ustatus,:utext_1,:utext_2,:utext_3,:upic,:upic2)');
+    $stmt = $DB_con->prepare('INSERT INTO posts (title,subtitle,category,category_2,link,link_2, status, text_1, text_2, text_3,img,img2) VALUES(:utitle,:usubtitle,:ucategory,:ucategory_2,:ulink,:ulink_2,:ustatus,:utext_1,:utext_2,:utext_3,:upic,:upic2)');
     $stmt->bindParam(':utitle', $title);
     $stmt->bindParam(':usubtitle', $subtitle);
     $stmt->bindParam(':ucategory', $category);
@@ -162,13 +162,15 @@ if (isset($_POST['btnsave'])) {
                     <label class="form-label">Subtitulo do Post</label>
                     <input value="<?php echo $subtitle; ?>" name="subtitle" type="text" placeholder="Titulo do Post" class="form-control">
                   </div>
-                  <div class="col-6 pb-3 pt-2">
-                    <label class="form-label">Categoria 1</label>
-                    <input value="<?php echo $category; ?>" name="category" type="text" placeholder="Categoria 1" class="form-control">
-                  </div>
-                  <div class="col-6 pb-3 pt-2">
-                    <label class="form-label">Categoria 2</label>
-                    <input value="<?php echo $subtitle; ?>" name="subtitle" type="text" placeholder="Titulo do Post" class="form-control">
+                  <div class="row">
+                    <div class="col-6 pb-3 pt-2">
+                      <label class="form-label">Categoria 1</label>
+                      <input value="<?php echo $category; ?>" name="category" type="text" placeholder="Categoria 1" class="form-control">
+                    </div>
+                    <div class="col-6 pb-3 pt-2">
+                      <label class="form-label">Categoria 2</label>
+                      <input value="<?php echo $category_2; ?>" name="category_2" type="text" placeholder="Titulo do Post" class="form-control">
+                    </div>
                   </div>
                   <div class="col-md-12 pb-3">
                     <div class="form-floating">

@@ -66,6 +66,7 @@ if (isset($_POST['btnsave'])) {
   $footer_text2 = $_POST['footer_text2'];
   $footer_text3 = $_POST['footer_text3'];
   $footer_text4 = $_POST['footer_text4'];
+  $destak = $_POST['destak'];
 
   $imgFile = $_FILES['user_image']['name'];
   $tmp_dir = $_FILES['user_image']['tmp_name'];
@@ -186,7 +187,8 @@ if (isset($_POST['btnsave'])) {
     footer_icon1=:upic,
     footer_icon2=:upic2,
     footer_icon3=:upic3,
-    footer_icon4=:upic4
+    footer_icon4=:upic4,
+    destak=:udestak
     WHERE id=:uid');
     $stmt->bindParam(':uspeed', $speed);
     $stmt->bindParam(':uprice', $price);
@@ -197,6 +199,7 @@ if (isset($_POST['btnsave'])) {
     $stmt->bindParam(':ufooter_text2',  $footer_text2);
     $stmt->bindParam(':ufooter_text3',  $footer_text3);
     $stmt->bindParam(':ufooter_text4',  $footer_text4);
+    $stmt->bindParam(':udestak',  $destak);
     $stmt->bindParam(':upic', $userpic);
     $stmt->bindParam(':upic2', $userpic2);
     $stmt->bindParam(':upic3', $userpic3);
@@ -327,6 +330,21 @@ $type_plan = $_GET['type'];
                     <div class="col-12 pt-2">
                       <label class="form-label">Rodapé Texto 4</label>
                       <input value="<?php echo $footer_text4; ?>" name="footer_text4" type="text" placeholder="Texto 4 do Rodapé" class="form-control">
+                    </div>
+                    <div class="col-12 pt-2">
+                      <label class="form-label">Cidade</label>
+                      <select name="destak" class="form-select">
+                        <option value="<?php echo $destak; ?>">
+                          <?php 
+                           if ($destak == 's') {
+                          echo "plano destacado"; 
+                           } else {
+                            echo "sem destaque";
+                           }?>
+                        </option>
+                        <option value="s">destaque</option>
+                        <option value="n">sem destaque</option>
+                      </select>
                     </div>
                     <?php if ($type_plan == 2) { ?>
                       <div class="col-12 pt-2">

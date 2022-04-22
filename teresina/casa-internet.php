@@ -61,14 +61,15 @@ include "../admin/insert_form.php";
                       extract($row);
                   ?>
                       <div class="col-md-3">
-                        <div class="card-box-c">
+                      <?php if($destak =='s'){ echo "<div class='col-5'><p class='destak'>Mais vendido</p></div>";} ;?>
+                        <div class="card-box-c"  <?php if($destak =='s'){ echo "style='border:2px solid #135c91;'";} ;?>>
                           <div class="container">
                             <h2 class="title-c pt-2" style="padding-bottom:50px;"><?php echo $speed; ?> Mega</h2>
                             <h3>R$ <?php echo $price; ?> </h3>
                             <p class="text-black"><?php echo $description; ?></p>
                           </div>
                           <div class="d-grid gap-2 container">
-                            <a href="<?php echo $link; ?>">
+                            <a href="<?php echo $link."de ".$speed." Mega"; ?>">
                               <button class="btn btn-plan" type="button">FALE COM UM CONSULTOR</button>
                             </a>
                           </div>
@@ -217,7 +218,7 @@ include "../admin/insert_form.php";
                         <div class="card-box-c">
                           <div class="container">
                             <h2 class="title-c pt-2"><?php echo $speed; ?> Mega</h2>
-                            <p class="text-black" style="padding-bottom:50px;"><?php echo $description; ?></p>
+                            <p class="text-black" style="padding-bottom:50px;"><?php echo $description; ?> + </p>
                             <h3>R$ <?php echo $price; ?> </h3>
                           </div>
                           <div class="d-grid gap-2 container">

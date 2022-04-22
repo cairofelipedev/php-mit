@@ -9,14 +9,6 @@ else :
 endif;
 error_reporting(~E_ALL);
 
-if (isset($_GET['delete_id'])) {
-  // it will delete an actual record from db
-  $stmt_delete = $DB_con->prepare('DELETE FROM banners WHERE id =:uid');
-  $stmt_delete->bindParam(':uid', $_GET['delete_id']);
-  $stmt_delete->execute();
-
-  header("Location: painel-banners.php");
-}
 
 ?>
 <!DOCTYPE html>

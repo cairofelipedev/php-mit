@@ -39,19 +39,12 @@
           <span>Usuários</span>
         </a>
       </li>
-      <!--  <li class="nav-item">
-        <a class="nav-link collapsed" href="#">
-          <i class="bi bi-briefcase-fill"></i>
-          <span>Serviços</span>
-        </a>
-      </li>
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#">
+        <a class="nav-link collapsed" href="painel-faqs.php">
           <i class="fas fa-question"></i>
           <span>F.A.Q</span>
         </a>
       </li>
-      -->
       <li class="nav-item">
         <a class="nav-link collapsed" href="logout.php">
           <i class="fas fa-sign-out-alt"></i>

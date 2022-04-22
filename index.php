@@ -40,10 +40,16 @@ require_once './admin/dbconfig.php';
   <div class="container">
     <div class="row justify-content-center align-items-center">
       <div class="col-md-4 d-md-block d-none">
-        <div class="d-grid gap-2">
-          <button class="btn btn-mit" type="button"> <a href="cidade.php">SOU CLIENTE </a></button>
-          <button class="btn btn-mit" type="button"> <a href="cidade.php">NÃO SOU CLIENTE </a></button>
-        </div>
+        <a href="cidade.php">
+          <div class="d-grid gap-2">
+            <button class="text-white btn-mit btn" type="button">SOU CLIENTE</button>
+          </div>
+        </a>
+        <a href="cidade.php">
+          <div class="d-grid gap-2 mt-2">
+            <button class="text-white btn btn-mit" type="button">NÃO SOU CLIENTE</button>
+          </div>
+        </a>
       </div>
       <div class="col-md-6 d-md-block d-none">
         <center><img src="assets/img/logo-mit.png" width="300px"></center>

@@ -41,12 +41,6 @@
                   <i class="bi bi-chevron-right"></i> <a href="combos-internet-telefonia-tv.php">Internet + Telefonia + TV</a>
                 </li>
                 <li class="item-list-a">
-                  <i class="bi bi-chevron-right"></i> <a href="#">Produtos</a>
-                </li>
-                <li class="item-list-a">
-                  <i class="bi bi-chevron-right"></i> <a href="#">Serviços</a>
-                </li>
-                <li class="item-list-a">
                   <i class="bi bi-chevron-right"></i> <a href="https://api.whatsapp.com/send?phone=558632202386&text=Oi%20MIT%20Internet%20Site">Contato</a>
                 </li>
               </ul>

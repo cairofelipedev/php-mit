@@ -11,11 +11,11 @@ error_reporting(~E_ALL);
 
 if (isset($_GET['delete_id'])) {
   // it will delete an actual record from db
-  $stmt_delete = $DB_con->prepare('DELETE FROM posts WHERE id =:uid');
+  $stmt_delete = $DB_con->prepare('DELETE FROM faqs WHERE id =:uid');
   $stmt_delete->bindParam(':uid', $_GET['delete_id']);
   $stmt_delete->execute();
 
-  header("Location: painel-blog.php");
+  header("Location: painel-banners.php");
 }
 
 ?>
@@ -59,38 +59,35 @@ if (isset($_GET['delete_id'])) {
   <main id="main" class="main">
 
     <div class="pagetitle">
-      <h1>Blog</h1>
+      <h1>FAQ do site</h1>
       <div class="d-flex justify-content-between">
         <nav>
           <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="index.php">Home</a></li>
-            <li class="breadcrumb-item active">Blog</li>
+            <li class="breadcrumb-item active">Faqs</li>
           </ol>
         </nav>
-        <a href="add-post.php">
-          <button type="submit" name="btnsave" class="btn btn-primary"><i class="bi bi-plus-circle-fill"></i> Adicionar Post</button>
-        </a>
       </div>
     </div><!-- End Page Title -->
 
     <section class="section">
       <div class="row">
         <?php
-        $stmt = $DB_con->prepare('SELECT id, title, img FROM posts ORDER BY id DESC');
+        $stmt = $DB_con->prepare('SELECT * FROM faqs ORDER BY id DESC');
         $stmt->execute();
         if ($stmt->rowCount() > 0) {
           while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
             extract($row);
         ?>
 
-            <div class="col-lg-4">
+            <div class="col-lg-3">
               <div class="card">
-                <img class="img-fluid" src="./uploads/blog/<?php echo $row['img']; ?>">
                 <div class="card-body">
-                  <h5 class="card-title text-center"><?php echo $title; ?></h5>
+                  <p class="text-center pt-3"><?php echo $data_create; ?></p>
+                  <h5><?php echo $question; ?></h5>
                   <div class="d-flex justify-content-center">
                     <div>
-                      <button type="button" class="btn btn-success">Editar</button>
+                      <!-- <button type="button" class="btn btn-success">Editar</button> -->
                       <a href="?delete_id=<?php echo $row['id']; ?>">
                         <button type="button" class="btn btn-danger">Excluir</button>
                       </a>
@@ -105,7 +102,7 @@ if (isset($_GET['delete_id'])) {
           ?>
           <div>
             <div>
-              <p  class="alert alert-warning">Sem Post cadastrado ...</p>
+              <p class="alert alert-warning">Sem banner cadastrado ...</p>
             </div>
           </div>
         <?php

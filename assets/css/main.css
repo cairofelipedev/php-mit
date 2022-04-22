@@ -337,3 +337,15 @@
     font-size: 18px;
   }
 }
+
+.destak {
+  background-color: #135c91;
+  margin:0%;
+  color:white;
+  font-size:14px;
+  position: relative;
+  top:20px;
+  text-align: center;
+  padding:2px;
+  border-radius: 2px;
+}

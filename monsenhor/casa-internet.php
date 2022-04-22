@@ -33,22 +33,6 @@ include "../admin/insert_form.php";
   <link href="../assets/css/main.css" rel="stylesheet">
   <link href="../assets/css/style.css" rel="stylesheet">
 </head>
-<style>
-  #box {
-    display: none;
-    background-color: blueviolet;
-    color: white;
-    width: 100px;
-    height: 100px;
-  }
-
-  #box2 {
-    background-color: blue;
-    color: white;
-    width: 100px;
-    height: 100px;
-  }
-</style>
 
 <body>
   <?php include "navbar.php"; ?>
@@ -70,14 +54,15 @@ include "../admin/insert_form.php";
               <div class="tab-pane fade show active" id="tab1">
                 <div class="row">
                   <?php
-                  $stmt = $DB_con->prepare('SELECT * FROM plans where city="monsenhor" and type="1" ORDER BY id DESC');
+                  $stmt = $DB_con->prepare('SELECT * FROM plans where city="teresina" and type="1" ORDER BY id DESC');
                   $stmt->execute();
                   if ($stmt->rowCount() > 0) {
                     while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
                       extract($row);
                   ?>
                       <div class="col-md-3">
-                        <div class="card-box-c">
+                      <?php if($destak =='s'){ echo "<div class='col-5'><p class='destak'>Mais vendido</p></div>";} ;?>
+                        <div class="card-box-c"  <?php if($destak =='s'){ echo "style='border:2px solid #135c91;'";} ;?>>
                           <div class="container">
                             <h2 class="title-c pt-2" style="padding-bottom:50px;"><?php echo $speed; ?> Mega</h2>
                             <h3>R$ <?php echo $price; ?> </h3>
@@ -127,7 +112,7 @@ include "../admin/insert_form.php";
               <div class="tab-pane fade show" id="tab2">
                 <div class="row">
                   <?php
-                  $stmt = $DB_con->prepare('SELECT * FROM plans where city="monsenhor" and channels="netflix" and type="4" ORDER BY id DESC');
+                  $stmt = $DB_con->prepare('SELECT * FROM plans where city="teresina" and channels="netflix" and type="4" ORDER BY id DESC');
                   $stmt->execute();
                   if ($stmt->rowCount() > 0) {
                     while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
@@ -223,7 +208,7 @@ include "../admin/insert_form.php";
 
                 <div class="row">
                   <?php
-                  $stmt = $DB_con->prepare('SELECT * FROM plans where city="monsenhor" and channels="disney" and type="4" ORDER BY id DESC');
+                  $stmt = $DB_con->prepare('SELECT * FROM plans where city="teresina" and channels="disney" and type="4" ORDER BY id DESC');
                   $stmt->execute();
                   if ($stmt->rowCount() > 0) {
                     while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
@@ -233,7 +218,7 @@ include "../admin/insert_form.php";
                         <div class="card-box-c">
                           <div class="container">
                             <h2 class="title-c pt-2"><?php echo $speed; ?> Mega</h2>
-                            <p class="text-black" style="padding-bottom:50px;"><?php echo $description; ?></p>
+                            <p class="text-black" style="padding-bottom:50px;"><?php echo $description; ?> + </p>
                             <h3>R$ <?php echo $price; ?> </h3>
                           </div>
                           <div class="d-grid gap-2 container">
@@ -283,7 +268,7 @@ include "../admin/insert_form.php";
 
                 <div class="row">
                   <?php
-                  $stmt = $DB_con->prepare('SELECT * FROM plans where city="monsenhor" and channels="amazon" and type="4" ORDER BY id DESC');
+                  $stmt = $DB_con->prepare('SELECT * FROM plans where city="teresina" and channels="amazon" and type="4" ORDER BY id DESC');
                   $stmt->execute();
                   if ($stmt->rowCount() > 0) {
                     while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
@@ -359,24 +344,6 @@ include "../admin/insert_form.php";
   <script src="../assets/js/main.js"></script>
   <script src="../assets/js/jquery-1.10.2.js" type="text/javascript"></script>
   <script src="../assets/js/login-register.js" type="text/javascript"></script>
-  <script>
-    const box = document.getElementById('box');
-
-    function handleRadioClick() {
-      if (document.getElementById('show').checked) {
-        box.style.display = 'block';
-        box2.style.display = 'none';
-      } else {
-        box.style.display = 'none';
-        box2.style.display = 'block';
-      }
-    }
-
-    const radioButtons = document.querySelectorAll('input[name="example"]');
-    radioButtons.forEach(radio => {
-      radio.addEventListener('click', handleRadioClick);
-    });
-  </script>
 </body>
 
 </html>
