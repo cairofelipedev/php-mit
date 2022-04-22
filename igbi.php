@@ -1,7 +1,3 @@
-<?php
-require_once 'dbconfig.php';
-include "insert_form.php";
-?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -199,33 +195,17 @@ include "insert_form.php";
 
         <div class="section-title">
           <h2>JUNTOS CRESCEMOS MAIS!</h2>
-          <p>Preencha o formulário abaixo e receba atendimento especializado</p>
+          <p>DEIXE SUA MENSAGEM EM NOSSO WHATS-APP</p>
         </div>
 
         <div class="row justify-content-center">
 
           <div class="col-lg-6">
-            <form action="" method="POST">
-              <div class="row">
-                <div class="col-md-6 form-group">
-                  <input type="text" name="nome" class="form-control" id="nome" placeholder="Nome" required>
-                </div>
-                <div class="col-md-6 form-group mt-3 mt-md-0 pb-3">
-                  <input size="20" maxlength="14" type="tel" class="form-control" name="whats" placeholder="Seu número" required>
-                </div>
-                <div class="col-md-12 form-group mt-3 mt-md-0">
-                  <input type="text" class="form-control" name="email" id="email" placeholder="E-mail" required>
-                </div>
-              </div>
-
-              <div class="form-group mt-3">
-                <textarea class="form-control" name="msg" rows="3" placeholder="Esreva sua mensagem"></textarea>
-              </div>
-              <input type="hidden" name="tipo" value="1">
-              <div class="text-center pt-3">
-                <button type="submit" class="btn btn-igbi" name="submit">Enviar</button>
-              </div>
-            </form>
+            <div class="text-center pt-3">
+              <a href="https://api.whatsapp.com/send?phone=5586994516787">
+                <button class="btn btn-igbi">Enviar Mensagem</button>
+              </a>
+            </div>
           </div>
 
         </div>

@@ -32,17 +32,20 @@ include "../admin/insert_form.php";
   <!-- Template Main CSS File -->
   <link href="../assets/css/main.css" rel="stylesheet">
   <link href="../assets/css/style.css" rel="stylesheet">
-  <style>
-    .Div2,
-    .Div3,
-    .Div4,
-    .Div5 {
-      display: none;
-    }
-  </style>
+  <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KH99KST');</script>
+<!-- End Google Tag Manager -->
 </head>
 
 <body>
+  <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KH99KST"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
   <?php include "navbar.php"; ?>
   <main id="main">
     <section id="about" class="about pt-4">
@@ -95,7 +98,7 @@ include "../admin/insert_form.php";
         </div>
         <div class="row">
           <div class="col-md-3">
-            <div class="card-body-f pt-2 pb-2">
+            <div class="card-body-f pt-2 pb-2 mb-2">
               <div class="container">
                 <p class="content-c">
                 <i class="bi bi-headset"></i> Secretária Eletônica
@@ -105,7 +108,7 @@ include "../admin/insert_form.php";
             </div>
           </div>
           <div class="col-md-3">
-            <div class="card-body-f pt-2 pb-2">
+            <div class="card-body-f pt-2 pb-2 mb-2">
               <div class="container">
                 <p class="content-c">
                 <i class="bi bi-voicemail"></i> Identificador de chamadas
@@ -115,7 +118,7 @@ include "../admin/insert_form.php";
             </div>
           </div>
           <div class="col-md-3">
-            <div class="card-body-f pt-2 pb-2">
+            <div class="card-body-f pt-2 pb-2 mb-2">
               <div class="container">
                 <p class="content-c">
                 <i class="bi bi-phone-fill"></i> Siga-me

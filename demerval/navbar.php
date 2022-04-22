@@ -18,7 +18,7 @@
       <span></span>
     </button>
     <div class="container d-none d-md-block">
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand" href="../">
         <img class="igm-fluid" src="../assets/img/logo-mit.png">
       </a>
       <a class="text-brand" href="#"><span class="color-b active">Para você</span></a>
@@ -186,14 +186,14 @@
         <p class="text-center pt-3">OU</p>
         <div class="row justify-content-center pb-3">
           <div class="col-4">
-            <a href="">
+            <a href="https://www.instagram.com/mitinternet/">
               <div class="container-a-i rounded">
                 <i class="bi bi-instagram"></i> Instagram
               </div>
             </a>
           </div>
           <div class="col-4">
-            <a href="">
+            <a href="https://www.facebook.com/minhamit/">
               <div class="container-a-f rounded">
                 <i class="bi bi-facebook"></i> Facebook
               </div>

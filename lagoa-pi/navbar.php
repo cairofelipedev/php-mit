@@ -18,7 +18,7 @@
       <span></span>
     </button>
     <div class="container d-none d-md-block">
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand" href="../">
         <img class="igm-fluid" src="../assets/img/logo-mit.png">
       </a>
       <a class="text-brand" href="#"><span class="color-b active">Para você</span></a>
@@ -26,7 +26,7 @@
     <div class="title-link text-center pb-2">
       <div class="d-flex ">
         <form id="loc" action="#">
-          <select class="form-control select-city selectoptions"  name="SelectOptions" id="SelectOptions" required>
+          <select class="form-control select-city selectoptions">
             <option value="teresina/home.php">Teresina</option>
             <option value="demerval/home.php">Demerval Lobão</option>
             <option value="lagoa-pi/home.php">Lagoa do PI</option>
@@ -112,7 +112,7 @@
             </div>
           </div>
         </li>
-           <!-- <li class="nav-item">
+        <!-- <li class="nav-item">
           <a class="nav-link " href="ofertas.php">Melhor oferta</a>
         </li>-->
       </ul>
@@ -186,14 +186,14 @@
         <p class="text-center pt-3">OU</p>
         <div class="row justify-content-center pb-3">
           <div class="col-4">
-            <a href="">
+            <a href="https://www.instagram.com/mitinternet/">
               <div class="container-a-i rounded">
                 <i class="bi bi-instagram"></i> Instagram
               </div>
             </a>
           </div>
           <div class="col-4">
-            <a href="">
+            <a href="https://www.facebook.com/minhamit/">
               <div class="container-a-f rounded">
                 <i class="bi bi-facebook"></i> Facebook
               </div>
