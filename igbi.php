@@ -189,6 +189,41 @@
 
       </div>
     </section><!-- End Services Section -->
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>PARCEIROS IGBI</h2>
+          <p></p>
+        </div>
+
+        <div class="row gy-4">
+          <div class="col-lg-2 col-2 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+            <img class="img-fluid" src="igbi/belasartes.jpg">
+          </div>
+
+          <div class="col-lg-2 col-2 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="200">
+            <img class="img-fluid" src="igbi/burguer.jpg">
+          </div>
+
+          <div class="col-lg-2 col-2 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="300">
+            <img class="img-fluid" src="igbi/elicionete.jpg">
+          </div>
+
+          <div class="col-lg-2 col-2 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+            <img class="img-fluid" src="igbi/extremeliss.jpg">
+          </div>
+          <div class="col-lg-2 col-2 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+            <img class="img-fluid" src="igbi/kibacana.jpg">
+          </div>
+          <div class="col-lg-2 col-2 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+            <img class="img-fluid" src="igbi/pachecos.jpg">
+          </div>
+        </div>
+
+      </div>
+    </section>
 
     <section id="contact" class="contact section-bg">
       <div class="container" data-aos="fade-up">
