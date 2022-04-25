@@ -128,8 +128,8 @@
   <div class="container">
     <div class="d-flex justify-content-center contents">
       <div class="col-md-2 pt-2">
-        <a href="https://api.whatsapp.com/send?phone=558632202386&text=Oi%20MIT%20Internet%20Site">
-          Fala com um consultor
+        <a href="https://api.whatsapp.com/send?phone=558640098383&text=Oi%20MIT%20Internet%20Site">
+          Falar com um corretor
         </a>
       </div>
       <div class="col-md-2">
@@ -143,7 +143,7 @@
       </div>
       <div class="col-md-2">
         <div class="d-grid">
-          <a href="https://api.whatsapp.com/send?phone=558632202386&text=Oi%20MIT%20Internet%20Site">
+          <a href="https://api.whatsapp.com/send?phone=558640098383&text=Oi%20MIT%20Internet%20Site">
             <button class="btn btn-footer btn-lg" type="button">Ligue agora</button>
           </a>
         </div>

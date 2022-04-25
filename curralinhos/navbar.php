@@ -18,7 +18,7 @@
       <span></span>
     </button>
     <div class="container d-none d-md-block">
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand" href="../">
         <img class="igm-fluid" src="../assets/img/logo-mit.png">
       </a>
       <a class="text-brand" href="#"><span class="color-b active">Para você</span></a>
@@ -112,7 +112,6 @@
             </div>
           </div>
         </li>
-
         <!-- <li class="nav-item">
           <a class="nav-link " href="ofertas.php">Melhor oferta</a>
         </li>-->
@@ -129,8 +128,8 @@
   <div class="container">
     <div class="d-flex justify-content-center contents">
       <div class="col-md-2 pt-2">
-        <a href="https://api.whatsapp.com/send?phone=558632202386&text=Oi%20MIT%20Internet%20Site">
-          Fala com um consultor
+        <a href="https://api.whatsapp.com/send?phone=558640098383&text=Oi%20MIT%20Internet%20Site">
+          Falar com um corretor
         </a>
       </div>
       <div class="col-md-2">
@@ -144,7 +143,7 @@
       </div>
       <div class="col-md-2">
         <div class="d-grid">
-          <a href="https://api.whatsapp.com/send?phone=558632202386&text=Oi%20MIT%20Internet%20Site">
+          <a href="https://api.whatsapp.com/send?phone=558640098383&text=Oi%20MIT%20Internet%20Site">
             <button class="btn btn-footer btn-lg" type="button">Ligue agora</button>
           </a>
         </div>
@@ -187,14 +186,14 @@
         <p class="text-center pt-3">OU</p>
         <div class="row justify-content-center pb-3">
           <div class="col-4">
-            <a href="">
+            <a href="https://www.instagram.com/mitinternet/">
               <div class="container-a-i rounded">
                 <i class="bi bi-instagram"></i> Instagram
               </div>
             </a>
           </div>
           <div class="col-4">
-            <a href="">
+            <a href="https://www.facebook.com/minhamit/">
               <div class="container-a-f rounded">
                 <i class="bi bi-facebook"></i> Facebook
               </div>
