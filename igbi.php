@@ -200,25 +200,31 @@
 
         <div class="row gy-4">
           <div class="col-lg-2 col-2 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-            <img class="img-fluid" src="igbi/belasartes.jpg">
+            <img class="img-fluid" src="igbi/1.png">
           </div>
 
           <div class="col-lg-2 col-2 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="200">
-            <img class="img-fluid" src="igbi/burguer.jpg">
+            <img class="img-fluid" src="igbi/2.png">
           </div>
 
           <div class="col-lg-2 col-2 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="300">
-            <img class="img-fluid" src="igbi/elicionete.jpg">
+            <img class="img-fluid" src="igbi/3.png">
           </div>
 
           <div class="col-lg-2 col-2 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-            <img class="img-fluid" src="igbi/extremeliss.jpg">
+            <img class="img-fluid" src="igbi/4.png">
           </div>
           <div class="col-lg-2 col-2 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-            <img class="img-fluid" src="igbi/kibacana.jpg">
+            <img class="img-fluid" src="igbi/5.png">
           </div>
           <div class="col-lg-2 col-2 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-            <img class="img-fluid" src="igbi/pachecos.jpg">
+            <img class="img-fluid" src="igbi/6.png">
+          </div>
+          <div class="col-lg-2 col-2 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+            <img class="img-fluid" src="igbi/7.png">
+          </div>
+          <div class="col-lg-2 col-2 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+            <img class="img-fluid" src="igbi/8.png">
           </div>
         </div>
 
@@ -302,7 +308,7 @@
   <!-- End Google Tag Manager (noscript) -->
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-  <div id="preloader"></div>
+  <!-- <div id="preloader"></div> -->
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/purecounter/purecounter.js"></script>
