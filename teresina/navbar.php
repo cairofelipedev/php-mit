@@ -129,7 +129,7 @@
     <div class="d-flex justify-content-center contents">
       <div class="col-md-2 pt-2">
         <a href="https://api.whatsapp.com/send?phone=558640098383&text=Oi%20MIT%20Internet%20Site">
-          Falar com um corretor
+          Falar com um consultor
         </a>
       </div>
       <div class="col-md-2">
