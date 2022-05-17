@@ -95,6 +95,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       }
     }
   </script>
+  <script src="https://wbot.chat/index.js" token="2998fabffea7af67db001d1e807684e6"></script>
 </body>
 
 </html>
