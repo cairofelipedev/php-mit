@@ -1,3 +1,6 @@
+<?php
+require_once './admin/dbconfig.php';
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -86,7 +89,18 @@
           <div><a href="#about" class="btn-get-started scrollto">Saiba mais</a></div>
         </div>
         <div class="col-xl-4 col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="150">
-          <img src="assets/img/maquinacartao.png" class="img-fluid animated" alt="">
+          <?php
+          $stmt = $DB_con->prepare('SELECT id, nome, img,link FROM banners where type="igbi1" ORDER BY id DESC');
+          $stmt->execute();
+          if ($stmt->rowCount() > 0) {
+            while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+              extract($row);
+          ?>
+              <img src="./admin/uploads/banners/<?php echo $row['img']; ?>" class="img-fluid animated" alt="">
+          <?php
+            }
+          }
+          ?>
         </div>
       </div>
     </div>
@@ -101,7 +115,18 @@
 
         <div class="row">
           <div class="col-lg-6 order-1 order-lg-2" data-aos="zoom-in" data-aos-delay="150">
-            <img src="assets/img/cashimg.png" class="img-fluid" alt="">
+          <?php
+          $stmt = $DB_con->prepare('SELECT id, nome, img,link FROM banners where type="igbi2" ORDER BY id DESC');
+          $stmt->execute();
+          if ($stmt->rowCount() > 0) {
+            while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+              extract($row);
+          ?>
+              <img src="./admin/uploads/banners/<?php echo $row['img']; ?>" class="img-fluid" alt="">
+          <?php
+            }
+          }
+          ?>
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content" data-aos="fade-right">
             <h3>UMA PLATAFORMA COMPLETA E FOCADA NO CRESCIMENTO DE NEGÓCIOS LOCAIS.</h3>
@@ -117,7 +142,7 @@
               <li><i class="bi bi-check-circle"></i>Experiência de compra diferenciada</li>
               <li><i class="bi bi-check-circle"></i>Aumento nas vendas e lucro da sua empresa</li>
             </ul>
-            <a href="#" class="read-more">Baixe agora <i class="bi bi-long-arrow-right"></i></a>
+            <a href="https://play.google.com/store/apps/details?id=com.smartbis.igbiplay" class="read-more">Baixe agora <i class="bi bi-long-arrow-right"></i></a>
           </div>
         </div>
 

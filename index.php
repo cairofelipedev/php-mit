@@ -31,23 +31,33 @@ require_once './admin/dbconfig.php';
   <!-- Template Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
   <link href="assets/css/style.css" rel="stylesheet">
-    <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-KH99KST');</script>
-<!-- End Google Tag Manager -->
+  <!-- Google Tag Manager -->
+  <script>
+    (function(w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({
+        'gtm.start': new Date().getTime(),
+        event: 'gtm.js'
+      });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src =
+        'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-KH99KST');
+  </script>
+  <!-- End Google Tag Manager -->
 </head>
 <style>
 
 </style>
 
 <body class="home">
-    <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KH99KST"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KH99KST" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
   <div class="container">
     <div class="row justify-content-center align-items-center">
       <div class="col-md-4 d-md-block d-none">
@@ -104,7 +114,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       location.href = 'index.php';
     }
   </script>
-  <script src="https://wbot.chat/index.js" token="2998fabffea7af67db001d1e807684e6"></script>
+  <call-us style="position: fixed; right: 20px; bottom: 20px; 
+         font-family: Arial; 
+         z-index: 99999; 
+         --call-us-form-header-background:#00c154;
+         --call-us-main-button-background:#003f77;
+         --call-us-client-text-color:#d4d4d4;
+         --call-us-agent-text-color:#eeeeee;
+         --call-us-form-height:330px;" id="wp-live-chat-by-3CX" channel-url="https://mittele.my3cx.com.br:5001" files-url="https://mittele.my3cx.com.br:5001" minimized="true" animation-style="none" party="outros" minimized-style="BubbleRight" allow-call="true" allow-video="false" allow-soundnotifications="true" enable-mute="true" enable-onmobile="true" offline-enabled="true" enable="true" ignore-queueownership="false" authentication="both" operator-name="Atendimento Online" show-operator-actual-name="true" channel="phone" aknowledge-received="true" gdpr-enabled="false" gdpr-message="I agree that my personal data to be processed and for the use of cookies in order to engage in a chat processed by COMPANY, for the purpose of Chat/Support for the time of  30 day(s) as per the GDPR." message-userinfo-format="both" message-dateformat="both" start-chat-button-text="Chat" window-title="Live Chat & Talk" button-icon-type="Default" invite-message="Hello! How can we help you today?" authentication-message="Could we have your name and email?" unavailable-message="We are away, leave us a message!" offline-finish-message="We received your message and we'll contact you soon." ending-message="Your session is over. Please feel free to contact us again!" greeting-visibility="none" greeting-offline-visibility="none" chat-delay="2000" offline-name-message="Could we have your name?" offline-email-message="Could we have your email?" offline-form-invalid-name="I'm sorry, the provided name is not valid." offline-form-maximum-characters-reached="Maximum characters reached" offline-form-invalid-email="I'm sorry, that doesn't look like an email address. Can you try again?" enable-direct-call="true" enable-ga="false">
+  </call-us>
+  <script defer src="https://cdn.3cx.com/livechat/v1/callus.js" id="tcx-callus-js"></script>
 </body>
 
 </html>
