@@ -145,6 +145,8 @@ if (isset($_POST['btnsave'])) {
                       <option value="igbi">IGBI</option>
                       <option value="auto">AUTOATENDIMENTO</option>
                       <option value="new">NOVIDADES</option>
+                      <option value="igbi1">PÁGINA IGBI - 1</option>
+                      <option value="igbi2">PÁGINA IGBI - 2</option>
                     </select>
                   </div>
                   <div class="col-12">

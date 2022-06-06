@@ -16,7 +16,7 @@ if (isset($_GET['edit_id']) && !empty($_GET['edit_id'])) {
   $edit_row = $stmt_edit->fetch(PDO::FETCH_ASSOC);
   extract($edit_row);
 } else {
-  header("Location: painel-servicos.php");
+  header("Location: painel-planos.php");
 }
 
 if (isset($_GET['delete_img'])) {

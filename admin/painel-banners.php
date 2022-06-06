@@ -76,7 +76,7 @@ if (isset($_GET['delete_id'])) {
     <section class="section">
       <div class="row">
         <?php
-        $stmt = $DB_con->prepare('SELECT id, nome, img FROM banners ORDER BY id DESC');
+        $stmt = $DB_con->prepare('SELECT * FROM banners ORDER BY id DESC');
         $stmt->execute();
         if ($stmt->rowCount() > 0) {
           while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
@@ -88,6 +88,31 @@ if (isset($_GET['delete_id'])) {
                 <img class="img-fluid" src="./uploads/banners/<?php echo $row['img']; ?>">
                 <div class="card-body">
                   <h5 class="card-title text-center"><?php echo $nome; ?></h5>
+                  <h5 class="text-center">
+                    <?php
+                    if ($type == "home") {
+                      echo "HOME BANNERS";
+                    }
+                    if ($type == "empresas") {
+                      echo "EMPRESAS PRINCIPAL";
+                    }
+                    if ($type == "igbi") {
+                      echo "HOME IGBI";
+                    }
+                    if ($type == "auto") {
+                      echo "HOME AUTOATENDIMENTO";
+                    }
+                    if ($type == "new") {
+                      echo "HOME NOVIDADES";
+                    }
+                    if ($type == "igbi1") {
+                      echo "IGBI HOME 1";
+                    }
+                    if ($type == "igbi2") {
+                      echo "IGBI HOME 2";
+                    }
+                    ?>
+                  </h5>
                   <div class="d-flex justify-content-center">
                     <div>
                       <a href="editar-banner.php?edit_id=<?php echo $row['id']; ?>">
@@ -115,7 +140,6 @@ if (isset($_GET['delete_id'])) {
         ?>
       </div>
     </section>
-
   </main><!-- End #main -->
 
   <?php include "components/footer.php"; ?>

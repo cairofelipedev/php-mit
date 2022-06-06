@@ -119,7 +119,7 @@ endif;
             </div>
 
             <div class="col-xxl-3 col-md-6">
-              <a href="painel-banners.php">
+              <a href="painel-leads.php">
                 <div class="card info-card revenue-card">
                   <div class="card-body">
                     <h5 class="card-title">Leads</h5>
